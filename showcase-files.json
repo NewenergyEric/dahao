@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "files": {
+    "assets/readme/direction-zh.png": {
+      "bytes": 132483,
+      "sha256": "42706411144f7884730fc63534a0ea5a9be80397285f33dbfdd32c7ba78db87d"
+    },
+    "motion/public/fonts/setup-sans.woff2": {
+      "bytes": 79964,
+      "sha256": "394a780f1d2e2ed7c8a1eca26ea33359d84aa5c68479c22451d6309a4b6809ee"
+    }
+  }
+}

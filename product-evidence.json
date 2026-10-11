@@ -1,0 +1,69 @@
+{
+  "schema_version": "1",
+  "capabilities": [
+    {
+      "id": "CAP-LOCAL",
+      "claim": "Configure, replay, update and recover the pinned local example package",
+      "status": "verified",
+      "evidence_ids": [
+        "E-DEMO"
+      ]
+    },
+    {
+      "id": "CAP-SYSTEM-GUIDE",
+      "claim": "Read-only Windows/Mac and local/other-machine routing, with unimplemented execution clearly blocked",
+      "status": "verified",
+      "evidence_ids": [
+        "E-SYSTEM-GUIDE"
+      ]
+    },
+    {
+      "id": "CAP-AGENT-COMPUTER",
+      "claim": "Guide a nontechnical user from an empty computer to an installed Agent, loaded Skills and a real task",
+      "status": "planned",
+      "evidence_ids": []
+    }
+  ],
+  "evidence": [
+    {
+      "id": "E-DEMO",
+      "kind": "behavioral_trial",
+      "path": "docs/evidence.json",
+      "sha256": "39500a4a112a570ed655a4d859a766e64b73e8a4a58a537fb7652b7f2b8e3abf",
+      "outcome": "pass",
+      "scope": "Windows local sandbox with synthetic orders only; agent loading not verified"
+    },
+    {
+      "id": "E-SYSTEM-GUIDE",
+      "kind": "tool_run",
+      "path": "docs/system-guide-evidence.json",
+      "sha256": "5609c4685005873e1c0d9e4f7dc8ebb64f0f0e4d97aed1d5691430e6144de86a",
+      "outcome": "pass",
+      "scope": "Windows subprocess CLI and unit tests; Mac input routing simulated, not tested on a Mac; no remote or Agent installation"
+    }
+  ],
+  "cases": [
+    {
+      "id": "CASE-DEMO",
+      "request": "Install, replay, update, inject interruption and resume the synthetic example",
+      "status": "passed",
+      "evidence_ids": [
+        "E-DEMO"
+      ]
+    },
+    {
+      "id": "CASE-SYSTEM-GUIDE",
+      "request": "Route local Windows, Mac and existing remote access without installation or connections; reject path escape",
+      "status": "passed",
+      "evidence_ids": [
+        "E-SYSTEM-GUIDE"
+      ]
+    },
+    {
+      "id": "CASE-REAL-AGENT",
+      "request": "Configure a real assistant computer and complete a user task through a loaded Skill",
+      "status": "not_run",
+      "evidence_ids": []
+    }
+  ]
+}
