@@ -1,3 +1,19 @@
+# 当前发布：原创粉色插画与双语短片 · 2026-10-12
+
+- 用户反馈：清单已更新，但 GitHub 的介绍与素材仍是旧方向稿。此次明确只更新粉色 Agent Gift；蓝色 FDE 保留。
+- 目标读者：想给爱人、客户或自己准备小助手电脑的非技术用户。没有新增客户访谈或转化数据；沿用用户已说明的用途。
+- 主张：给在乎的人，一个用得上的小助手。用七步清单减少准备顺序的不确定性，保留选择，留下接续入口。
+- 当前产品事实：清单、选择项、通用行为模板、Windows 沙箱安装/更新/恢复验证；真实 Agent 安装、规则/Skill 加载仍未接入。
+- 视觉：粉色、奶油色、莓果色。两张原创生图作为主体，独立文字与动画排版；没有将旧 SVG 电脑方向稿当作新成品。
+- 内容：中文首页与英文辅助页、24 秒双语 MP4/WebP/GIF、静态封面与周末任务示意、七步清单、实际运行验证链接。
+- 真实性：任务板为原创合成示意；已有 Python 订单示例证据不被改写成旅行任务或 Agent 执行成功。
+- 发布目标：现有私有 agent-gift 仓库；不新增公开目标、不选择许可证。仅上传逐项白名单文件。
+- 重建与检查：motion/README.md、motion/illustration-prompts.json、assets/readme/media-manifest.json、docs/media-validation.json。
+
+以下是历史工作单。旧“本次只有方向稿/没有全片”等描述只对应原阶段。
+
+---
+
 # Agent Gift · 上市与产品化底稿
 
 采用作者的 skill-launch-studio / launch-workbook、copy-and-page，以及 skill-productization / workbook 和证据契约。

@@ -32,6 +32,10 @@ BINARY_SLOTS = {f"assets/readme/hero-{lang}.{ext}" for lang in ("zh", "en") for 
 BINARY_SLOTS |= {f"assets/readme/case-board-{lang}.png" for lang in ("zh", "en")}
 BINARY_SLOTS.add("motion/public/fonts/setup-sans.woff2")
 BINARY_SLOTS.add("assets/readme/direction-zh.png")
+# Individually reviewed original campaign images and the exact new font subset.
+BINARY_SLOTS |= {"motion/public/illustrations/gift-scene.png",
+                 "motion/public/illustrations/weekend-scene.png",
+                 "motion/public/fonts/gift-sans.woff2"}
 RULES = {
     "private_key": re.compile(r"-----BEGIN (?:RSA |EC |DSA |OPENSSH |ENCRYPTED )?PRIVATE KEY-----"),
     "provider_token": re.compile(r"\b(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-(?:proj-)?[A-Za-z0-9_-]{20,}|AKIA[A-Z0-9]{16}|xox[baprs]-[A-Za-z0-9-]{20,})\b"),

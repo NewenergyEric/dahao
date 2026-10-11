@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "date_utc": "2026-10-11T15:10:11+00:00",
+  "date_utc": "2026-10-11T16:40:18+00:00",
   "project": "agent-gift",
   "status": "passed",
   "scope": "fresh_allowlisted_export_on_Windows_with_bundled_synthetic_orders",

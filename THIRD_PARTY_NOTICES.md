@@ -1,3 +1,15 @@
+# 本轮素材来源增补 · 2026-10-12
+
+项目维持私有开发交付，许可证与版权仍由作者决定。本节记录素材来源，不代选公开许可。
+
+- 本轮电脑礼物与周末出行插画由内置 image_gen 工具生成；第一张使用本次新写的文字提示，第二张使用第一张作身份和材质参考。提示词在 motion/illustration-prompts.json。没有使用客户照片、私人聊天、凭据或现有商业角色。
+- 新版中英文文案、六段动画与旅行示意由本项目编写。旅行内容为合成示意，非真实客户案例或运行器录屏。
+- 媒体打包与检查脚本复用同一作者的 skill-launch-studio 工具；Remotion 固定依赖和原模板许可仍分别见 motion/package-lock.json 与 motion/UPSTREAM-LICENSE.txt。
+- gift-sans.woff2 为已有 Noto Sans SC 原字体的字形子集，沿用 motion/public/fonts/OFL.txt 的 SIL OFL 1.1 声明；原 setup-sans.woff2 为旧方向稿保留。
+- 下方“没有完整影片”的说明只描述旧方向稿阶段。新版交付已有独立来源与媒体检查记录，见 docs/media-validation.json。
+
+---
+
 # 来源与许可状态
 
 Agent Gift 的项目许可证尚待作者选择，本项目未公开发布。以下记录材料来源，不替作者选择两个项目的授权条款。

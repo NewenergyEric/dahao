@@ -1,26 +1,78 @@
-# Agent Gift
+# Agent Gift · A useful assistant for someone you care about
 
-**Prepare a computer that can help someone you care about.** A warm, simple guide for a loved one, a client, or yourself.
+**Prepare the computer without handing over a pile of setup instructions.**
 
-[中文](README.md) · [Interactive guide (Chinese)](docs/getting-started.html) · [Installation checklist](docs/installation-checklist.md) · [Isolated validation](docs/installation-verification.json)
+[简体中文](README.md) · Private development preview
 
-Download the HTML and open it locally to use its checklist and copy controls.
+Start with one everyday task. Choose the tools, work through a clear checklist and set the assistant's working rules. Prepare it for a partner, a customer or yourself—and keep the next update in the same place.
 
-Describe one task. The intended journey is needs → computer/access checks → dependencies and Agent → Skills → a real task → a continuation record. This complete journey is a product goal, not an implemented installer.
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/hero-en.png">
+  <img src="assets/readme/hero-en.webp" width="100%" alt="A 24-second original pink illustrated film: a thoughtful computer gift, seven preparation steps, OpenClaw or Hermes choices, working rules and Skills, a weekend packing example, and a clear next step. Real Agent installation is not connected.">
+</picture>
 
-![Pink product direction](assets/readme/direction-zh.png)
+[Download English MP4](assets/readme/hero-en.mp4?raw=true) · [GIF](assets/readme/hero-en.gif?raw=true) · [Transcript](docs/demo.md) · [Local player](docs/watch.html)
 
-Choose Windows or Mac and whether the executor is already on the target. Local execution needs no SSH. Another computer requires verified, explicitly authorized access. Current execution is only the Windows local synthetic package; Mac has a read-only guidance branch and has not been tested on a Mac.
+**Available today:** the complete seven-step checklist, tool choices, a general working-rules template and a verified Windows sandbox example. Real Agent installation and runtime loading remain unimplemented. [Support matrix](docs/support-matrix.md)
 
-Open the repository in Codex and use [.agents/skills/agent-gift/SKILL.md](.agents/skills/agent-gift/SKILL.md). Python 3.12+ is needed for the current scripts; empty-machine bootstrapping remains unimplemented.
+## Start with the checklist
+
+After obtaining repository access, choose **Code → Download ZIP**, extract it and open [`docs/getting-started.html`](docs/getting-started.html) in a browser. The interactive checklist is currently in Chinese. Choose a plan, track progress, and copy, download or print it.
+
+| Step | Your choice |
+|---|---|
+| 1. Dependencies | Windows / Mac, this / another computer; inspect what is already present |
+| 2. Network access | Reuse working access, or select Clash or another tool |
+| 3. Codex / IDE | Choose the workspace that guides preparation |
+| 4. Daily Agent | OpenClaw by default, Hermes or another Agent if preferred |
+| 5. Working rules | Task flow, tools, permissions and confirmation boundaries |
+| 6. Skills | Begin with the few Skills needed for the first task |
+| 7. Verify and continue | Check installation, actual loading and task results separately |
+
+Check marks record manual progress; they do not run an installer. Changing the plan clears the previous checks. The page does not collect credentials or subscription URLs.
+
+## Give your Agent one concrete request
+
+Open this project in Codex or your existing workspace and use the [agent-gift Skill](.agents/skills/agent-gift/SKILL.md).
+
+- “Help me prepare an assistant computer. The first task is a weekend packing list.” → Receive a preparation checklist, choices, gaps and completion criteria.
+- “How far along are we?” → Check existing state and separate completed, unconfirmed and unsupported steps.
+- “Add a Skill and keep my preferences.” → Review the source and changes within the supported scope, preserving explicit overrides.
+
+## One small task is enough to begin
+
+“We are going away for two days. Help me pack light and separate what to bring from what to check.”
+
+![Original weekend packing illustration showing what to pack, what to check and missing details; not executed by a real Agent](assets/readme/case-board-en.png)
+
+This is an **original illustration of the intended task outcome**, not a live Agent result. [Read the input and example checklist](examples/first-task/weekend.md).
+
+## Set the working boundaries first
+
+The [general AGENTS template](examples/behavior/AGENTS.template.md) covers inspection, tool permissions, secret references, verification and continuation. It borrows the generic layering approach from Cici Foundry without importing private instances, SOUL or USER files. Adapt and verify the actual runtime entry point before claiming the rules are loaded. [Behavior checks](docs/behavior-baseline.md)
+
+<details>
+<summary>Runnable example, evidence and maintenance</summary>
+
+With Windows and Python 3.12+ already available, no Python dependencies are required:
 
 ```powershell
-python -B client_setup.py configure --customer sample --brief examples/computer-local.json
 python -B demo.py
 ```
 
-Only configure, check and update are user entries. --brief generates guidance without installation or connections. The sandbox example supports pinned sources, reviewable diffs, preserved overrides, idempotent replay, drift detection and interrupted update recovery. Agent loading and real user-task acceptance remain unverified.
+The isolated example installs package 1.0.0, repeats it, upgrades to 1.1.0, preserves overrides and resumes an interrupted update. The synthetic order result is two orders totaling CNY 47.50, with a largest order of 27.50. This validates the local configuration mechanism, not real Agent deployment or the travel example.
 
-[Support matrix](docs/support-matrix.md) · [Guide](docs/computer-guide.md) · [Current executable workflow](docs/workflow.md)
+[Installation evidence](docs/installation-verification.json) · [Configuration workflow](docs/workflow.md) · [Media validation](docs/media-validation.json) · [Film rebuild](motion/README.md)
 
-Separate from the blue FDE Client Setup product. Private repository delivery is authorized; no public open-source release or project license has been selected. No App, web backend, database or persistent management service.
+```powershell
+python -B -m unittest discover -s tests -v
+python -B tools/release.py check
+```
+
+The product commands remain configure / check / update. Mac and remote-computer branches provide read-only guidance. The current implementation does not install globally, connect to customer machines, modify system networking or read existing secrets.
+
+[Publishing scope](docs/publishing.md) · [Sources and licensing](THIRD_PARTY_NOTICES.md)
+
+</details>
+
+Agent Gift keeps its independent pink identity. This repository remains private; the author has not yet chosen a license for public open-source release.

@@ -1,0 +1,92 @@
+{
+  "schema": 1,
+  "date": "2026-10-12",
+  "status": "passed",
+  "encoding": {
+    "valid": true,
+    "errors": [],
+    "observed": [
+      {
+        "file": "hero-en.mp4",
+        "fps": 30.0,
+        "frames": 720,
+        "seconds": 24.0,
+        "bytes": 1182232
+      },
+      {
+        "file": "hero-en.webp",
+        "frames": 480,
+        "frame_ms": 50.0,
+        "seconds": 24.0,
+        "bytes": 1223332
+      },
+      {
+        "file": "hero-en.gif",
+        "frames": 480,
+        "frame_ms": 50.0,
+        "seconds": 24.0,
+        "bytes": 2884897
+      },
+      {
+        "file": "hero-zh.mp4",
+        "fps": 30.0,
+        "frames": 720,
+        "seconds": 24.0,
+        "bytes": 1087536
+      },
+      {
+        "file": "hero-zh.webp",
+        "frames": 480,
+        "frame_ms": 50.0,
+        "seconds": 24.0,
+        "bytes": 1145768
+      },
+      {
+        "file": "hero-zh.gif",
+        "frames": 480,
+        "frame_ms": 50.0,
+        "seconds": 24.0,
+        "bytes": 2777212
+      }
+    ]
+  },
+  "font": {
+    "loaded": true,
+    "missing_glyphs": 0
+  },
+  "visual_review": {
+    "opening": "passed",
+    "dense_work_rules": "passed",
+    "task_board": "passed",
+    "ending": "passed",
+    "languages": [
+      "zh",
+      "en"
+    ],
+    "full_playback": "passed"
+  },
+  "reference": "../assets/readme/media-manifest.json",
+  "product_boundary": "Illustrated preparation route and synthetic travel-task example; real Agent installation and runtime loading remain unverified.",
+  "browser_review": {
+    "scope": "read_only_loopback_preview",
+    "playback": {
+      "zh": {
+        "duration_seconds": 24,
+        "ended_at_seconds": 24,
+        "ended": true,
+        "error": null
+      },
+      "en": {
+        "duration_seconds": 24,
+        "ended_at_seconds": 24,
+        "ended": true,
+        "error": null
+      }
+    },
+    "language_switch_and_download_target": "passed",
+    "console_errors": [],
+    "readme_rendering": "GitHub Markdown API output reviewed locally; new animation and task-board image decoded",
+    "authenticated_GitHub_page": "not_verified_browser_not_signed_in",
+    "remote_content_verification": "performed_separately_after_push"
+  }
+}

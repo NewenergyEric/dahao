@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "date": "2026-10-12",
+  "tool": "image_gen.imagegen (built-in)",
+  "model": "not provided by tool",
+  "seed": "not provided by tool",
+  "style_reference": "Soft volume and matte-material principles from visual-material-lab, reinterpreted for the authorized dusty-pink Agent Gift brand. The first generation used a text description, not an image attachment.",
+  "images": [
+    {
+      "file": "motion/public/illustrations/gift-scene.png",
+      "kind": "original_generation",
+      "prompt": "Create a polished original editorial product illustration for Agent Gift, a friendly guide for preparing an AI assistant computer for someone you care about. Landscape 16:9, high resolution, raster illustration. A real cohesive desk scene fills the right 65 percent: a rose-pink slim laptop in three-quarter view, its screen a clean pale illuminated surface with NO interface text; a small original matte porcelain companion beside it, rounded pearl-cream body with muted rose ears/side shapes and two understated plum eyes, charming but mature and not a children's toy mascot; a folded cream linen ribbon and a thoughtfully wrapped pale pink gift, an open paper notebook with a few understated blank ruled lines, a small berry-colored pen and warm ceramic cup. Objects feel grounded, tactile and physically credible. Style: premium soft sculptural 3D mixed with subtle painterly finishing, smooth organic volume, fine paper and ceramic grain, warm large soft light, gentle ambient occlusion, carefully restrained detail. Palette strictly warm ivory, dusty rose, pale blush and deep berry accents, no dominant blue or purple. Warm pink seamless studio/desk background, generous quiet creamy pink negative space in the left 35 percent for typeset title added separately. Beautiful editorial composition with flowing light and broad areas of calm. Show the emotional act of making a useful thoughtful gift, not a software screenshot. No people, no hands, no logos, no letters, no numbers, no watermark. No presentation slides, no dashboard cards, no vector clipart, no infographic, no cartoon heart bubbles, no glossy plastic, no grid, no neon, no fake app UI. Do not copy any existing character. This is a concept illustration, not proof of product functionality."
+    },
+    {
+      "file": "motion/public/illustrations/weekend-scene.png",
+      "kind": "scene_edit",
+      "reference": "motion/public/illustrations/gift-scene.png",
+      "prompt": "Create a companion scene for this Agent Gift campaign, using the supplied illustration as the identity and material reference. Keep exactly the small cream ceramic companion with dusty pink side ears and two plum eyes, the same warm ivory/dusty rose palette, premium softly sculpted editorial finish, warm soft light and quiet tactile surfaces. Change the subject arrangement to a carefully prepared weekend travel flat-lay on a pale rose table: a small rose canvas overnight bag, neatly folded cream scarf, simple compact camera, berry pen, a closed blank cream notebook, a few blank luggage labels, and the same small ceramic companion standing beside them. Three-quarter overhead view with physical depth, refined and warm, aimed at adult nontechnical users. Objects on the right 62 percent; left 38 percent has calm warm ivory/pink negative space for a separately typeset task checklist. Landscape 16:9. No laptop in this scene. No people or hands, no passport details, no tickets with private data, no readable writing, no numbers, no interface, no logos, no watermark, no boxes or card grid, no PowerPoint infographic or vector shapes. This is an original task illustration, not a claim that an Agent has executed the task. Preserve the character identity and restrained mature pink style; replace only the scene and props."
+    }
+  ],
+  "scope": "Concept illustrations; no product UI or actual Agent execution claimed. No private customer data or credentials were supplied."
+}

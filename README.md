@@ -1,104 +1,86 @@
-# Agent Gift · 送她一台会帮忙的电脑
+# Agent Gift · 给在乎的人，一个用得上的小助手
 
-**送她一台会帮忙的电脑。也为客户和自己，准备一个用得上的 Agent。**
+**想帮她准备好电脑，却不想把一堆安装说明也一起送过去。**
 
-[English](README.en.md) · 本地开发预览
+[English](README.en.md) · 私有开发预览
 
-[用户价值与 HTML 流程](docs/getting-started.html) · [安装 checklist](docs/installation-checklist.md) · [当前版本独立验证](docs/installation-verification.json)
+从“想让它帮哪件小事”开始，用一张清单选好工具、理清准备步骤、定下工作规则。给爱人、客户，也给自己。下一次要加一个 Skill，仍从这里接着走。
 
-HTML 下载后用浏览器打开，可保存勾选进度、复制提示和打印。
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/hero-zh.png">
+  <img src="assets/readme/hero-zh.webp" width="100%" alt="24 秒粉色原创插画短片：从一份电脑礼物到七步清单，选择 OpenClaw 或 Hermes，准备行为规则与 Skills，以周末旅行清单说明目标成果，再留下接续记录。真实 Agent 安装尚未接入。">
+</picture>
 
-你说想让它帮什么忙，Agent 带着你检查电脑、准备环境、配置工具与 Skills，再一起完成一件真实的事。以后换需求、加能力、更新 Skill，也从同一个项目接着走。
+[下载中文 MP4](assets/readme/hero-zh.mp4?raw=true) · [GIF](assets/readme/hero-zh.gif?raw=true) · [短片与文字稿](docs/demo.md) · [本地播放器](docs/watch.html)
 
-![粉色产品方向稿：从一台电脑到用得上的小助手](assets/readme/direction-zh.png)
+**今天可以用：** 完整七步清单、工具选择项、通用行为模板，以及已验证的 Windows 沙箱示例。真实 Agent 安装、规则与 Skill 加载仍待接入。[查看当前边界](docs/support-matrix.md)
 
-**这是产品目标与视觉方向稿。** 当前可执行的是 Windows 项目内的安全示例包配置、更新和恢复。空电脑的依赖安装、远程接入、真实 Agent 安装及 Skill 加载尚未接通；不能把示例成功当成整机交付完成。
+## 从一张清单开始
 
-## 先选她的电脑
+取得仓库访问权限后，点击 **Code → Download ZIP** 并解压，用浏览器打开 [`docs/getting-started.html`](docs/getting-started.html)。选择你的方案，再逐项确认；进度保存在当前浏览器，可以复制、下载或打印。
 
-**Windows 还是 Mac？就在这台，还是另一台？** Agent 先确定这两件事，再带你准备。Windows 本机示例已经跑通；Mac 目前只有引导分支，尚未实现或实测安装。已有本地执行器时无需 SSH；另一台电脑要先核实已有访问权限，当前不会自动建立连接。
+**[打开七步安装清单](docs/getting-started.html)** · [纯文字版](docs/installation-checklist.md)
 
-## 把项目交给 Agent，从一句需求开始
-
-在目标电脑的 Codex 中打开本项目，读 [agent-gift Skill](.agents/skills/agent-gift/SKILL.md)。如果电脑还没有可用的执行器，让现在与你对话的 Agent 先按[电脑准备引导](docs/computer-guide.md)带你准备；当前脚本本身需要已有 Python。
-
-> 我想给爱人准备一台小助手电脑，先帮她整理旅行清单。她不想研究命令。请先判断你是否就在那台电脑上，检查还缺什么，给我一个简单方案；每次改动前说明影响，最后用她的一件真实任务验收。
-
-Agent 先弄清“给谁用、做什么、在哪台电脑”，只追问影响下一步的缺失信息。它应该交出一个适合这台电脑的准备计划，而不是让你先填一长串技术表格。
-
-- **就在目标电脑上：** 使用本地执行器，先核对身份与权限，无需为了配置再启用 SSH。
-- **是另一台电脑：** 先确认系统和现有可用连接；优先复用你明确授权的访问方式。没有连接时给出待办和原因，不能假装已经检查过目标电脑。
-- **没有确定真实运行器：** 先按用途选择，再核实官方来源、版本和安装方式。未知版本保持待配置，不猜命令。
-
-## 只记住配置、检查、更新
-
-| 你说的话 | Agent 应该带你完成什么 |
+| 按顺序准备 | 你需要决定什么 |
 |---|---|
-| “帮我配置这台电脑” | 了解任务 → 检查环境与接入 → 展示差异 → 确认后配置 → 实际任务验收 → 留下接续记录 |
-| “看看现在能不能用” | 核对目标身份、环境、文件漂移、未完成操作，并分别检查安装、加载、业务结果 |
-| “给它加一个 Skill，保留我的习惯” | 核实固定来源和版本，比较变化，保留个人覆盖，确认后更新，失败可恢复 |
+| 1. 依赖环境 | Windows / Mac、这台 / 另一台；先检查已有环境 |
+| 2. 网络通路 | 复用可用网络，或选 Clash 等工具 |
+| 3. Codex / IDE | 选一个带你准备电脑的工具，也可沿用现有工具 |
+| 4. 日常 Agent | 默认 OpenClaw，可选 Hermes 或指定其他 Agent |
+| 5. 行为约束 | 怎样做事、能用什么工具、什么时候需要确认 |
+| 6. Skills | 先选第一件任务用得上的少量技能 |
+| 7. 验收接续 | 分别检查安装、实际加载、任务结果，留下下一步 |
 
-这些是完整引导的职责。每一步是否已有自动执行能力，见下表；Agent 不应把建议写成已执行。
+勾选只记录人工进度，不运行安装。已有可用环境直接复用；换方案会清空旧勾选。页面不接收 token、订阅地址或其他秘密值。
 
-## 今天能跑什么，还差什么
+## 把第一句话交给 Agent
 
-| 环节 | 当前能力 | 真实整机配置还需要 |
-|---|---|---|
-| 需求与目标分流 | 可执行的只读引导计划：本机 / 另一台、系统、现有接入、运行器选择 | 由用户确认实际目标与任务 |
-| 环境与依赖 | Windows 本地 Python/工具版本探测；示例运行器仅标准库 | 各依赖的固定安装配方、权限检查与安装后验证 |
-| 网络 | Clash 仅可选 PATH/版本探测 | 针对已选官方端点的网络诊断；当前不改代理、TUN、防火墙 |
-| 目标接入 | 引导判断是否需连接；优先复用已授权通道 | 具体目标的连接身份验证与执行适配；当前不建立 SSH 或持久访问 |
-| Agent 安装 | Codex / OpenClaw / Hermes 只读探测；未配置明确报告 | 一个明确版本的安装、配置与退出/恢复适配 |
-| Skills 与更新 | 已跑通固定 hash 示例包、差异确认、客户覆盖、重复执行、漂移检测、中断恢复 | 真实运行器的 Skill 放置与加载验证 |
-| 任务与交接 | 已跑通合成订单脚本和接续回执 | 在实际 Agent 中完成用户任务，验证 Skill 被加载并产生业务结果 |
+在 Codex 或已有工具里打开项目，使用 [agent-gift Skill](.agents/skills/agent-gift/SKILL.md)，从下面任意一句开始。
 
-[完整支持矩阵与最小接入顺序](docs/support-matrix.md) · [引导协议](docs/computer-guide.md)
+| 你说 | 当前会拿到什么 |
+|---|---|
+| “给她准备一个小助手，先帮她整理周末旅行清单。” | 目标电脑与工具选择、七步准备清单、缺口和完成条件 |
+| “看看现在准备到哪一步了。” | 检查已有状态，区分已完成、待确认与尚未接入 |
+| “想加一个 Skill，保留我的习惯。” | 在当前支持范围内检查来源、比较变化、保留明确的覆盖项 |
 
-## 先试当前已实现的部分
+不必先研究每个命令。先说明想做的事，Agent 再解释下一步与当前能执行的范围。
 
-Windows + Python 3.12+，无需安装 Python 依赖。先看只读整机准备计划：
+## 第一件事，可以很小
 
-```powershell
-python -B client_setup.py configure --customer sample --brief examples/computer-local.json
-```
+“周末出去两天，想轻装。帮我分清要带什么、出发前确认什么。”
 
-计划只报告下一步和阻塞项，不安装依赖、不连接别的电脑。将 `--brief` 用在 `check` 或 `update` 也只读；实际示例配置仍用下面的流程。
+![原创周末旅行任务示意：随身物品、出发前确认和待补充问题分开整理；尚未由真实 Agent 执行](assets/readme/case-board-zh.png)
+
+这是**原创目标任务示意**，方便你判断“小助手该交出什么”；尚未由真实 Agent 执行。[查看完整输入与清单](examples/first-task/weekend.md)
+
+## 先定工作边界，再加本领
+
+[通用行为模板](examples/behavior/AGENTS.template.md)覆盖检查、工具权限、秘密引用、验证和接续。借鉴 Cici Foundry 的通用分层方法，未复制私人实例、SOUL 或 USER；需要按所选运行器核对实际加载入口。[行为验收方法](docs/behavior-baseline.md)
+
+Skills 从第一件任务所需开始。当前合成示例已验证更新、保留覆盖和中断恢复；真实运行器加载仍需后续接入。
+
+<details>
+<summary>当前可运行的示例、证据与维护说明</summary>
+
+已有 Windows + Python 3.12+ 时，无需安装 Python 依赖。在项目目录执行：
 
 ```powershell
 python -B demo.py
 ```
 
-演示在新的独立沙箱中，跑完安装 1.0.0、重复执行、更新 1.1.0、注入中断与恢复。验收使用随包合成订单，不接触个人数据。
+新的独立沙箱会演示配置包 1.0.0 安装、重复执行、升级 1.1.0、保留覆盖、中断与恢复。合成订单结果为 2 笔、CNY 47.50，最大单笔 27.50。**这证明配置机制可运行，不代表旅行任务或真实 Agent 已部署。**
 
-| 已有验证 | 结果 |
-|---|---|
-| 重复执行 | 受管文件内容与修改时间保持不变 |
-| 更新与定制 | 公共包升级，客户的金额单位和筛选条件保留 |
-| 中断恢复 | 发现未完成操作，用原计划继续 |
-| 合成业务结果 | 2 笔合格订单，总额 CNY 47.50，最大单笔 27.50 |
-| 真实 Agent 加载 | **未验证** |
-
-[可执行演示](demo.py) · [合成任务证据](docs/evidence.json) · [配置与恢复命令](docs/workflow.md)
-
-下一段对话可以直接说：
-
-> 读取本项目的 agent-gift Skill。先确认目标电脑与当前执行位置，再读取该实例已有的交付记录并检查状态。告诉我安装、加载和业务结果分别到了哪一步，接着完成我的需求。
-
-## 给下一次使用留下余地
-
-公共模板、个人/客户覆盖与机器差异分开。只管理列明的文件，写入前检查实例身份和前镜像 hash；漂移、路径越界或来源不符时停止。凭据只接受引用，工具不读取引用值，不打包现有密钥、订阅、cookie、聊天或客户数据。
-
-当前没有 App、Web 后台、数据库或常驻平台。当前按作者授权交付私有开发仓库；未作公开开源发布，许可证待作者选择。
-
-<details>
-<summary>维护与验证</summary>
+[隔离安装验证](docs/installation-verification.json) · [配置与恢复](docs/workflow.md) · [只读电脑引导](docs/computer-guide.md) · [素材与媒体验证](docs/media-validation.json) · [重建短片](motion/README.md)
 
 ```powershell
 python -B -m unittest discover -s tests -v
 python -B tools/release.py check
-python -B tools/release.py build
 ```
 
-[支持矩阵](docs/support-matrix.md) · [实际使用的 Skill](docs/skill-usage.md) · [发布边界](docs/publishing.md) · [来源与许可](THIRD_PARTY_NOTICES.md) · [关键帧重建](motion/README.md)
+用户入口仍为 configure / check / update。Mac 和另一台电脑只提供只读引导；不全局安装、不连接客户机器、不修改系统网络、不读取既有凭据或订阅。
+
+[发布边界](docs/publishing.md) · [来源与许可](THIRD_PARTY_NOTICES.md) · [Skill 使用](docs/skill-usage.md)
 
 </details>
+
+Agent Gift 独立维护粉色亲民版。仓库保持私有，公开开源所需的许可证与版权仍由作者决定。
