@@ -5,6 +5,7 @@
   "files": [
     ".agents/skills/dahao/SKILL.md",
     ".agents/skills/dahao/agents/openai.yaml",
+    ".agents/skills/dahao/scripts/discover_target.py",
     ".gitattributes",
     ".github/workflows/validate.yml",
     ".gitignore",
@@ -29,6 +30,7 @@
     "docs/behavior-baseline.md",
     "docs/brand.md",
     "docs/computer-guide.md",
+    "docs/connection-checklist.md",
     "docs/demo.md",
     "docs/evidence.json",
     "docs/getting-started.html",
@@ -37,6 +39,8 @@
     "docs/launch-workbook.md",
     "docs/media-validation.json",
     "docs/publishing.md",
+    "docs/remote-access-verification.json",
+    "docs/remote-workflow.md",
     "docs/skill-usage.md",
     "docs/support-matrix.md",
     "docs/system-guide-evidence.json",
@@ -92,6 +96,7 @@
     "sources.lock.json",
     "tests/test_client_setup.py",
     "tests/test_computer_guide.py",
+    "tests/test_discover_target.py",
     "tests/test_release.py",
     "tools/computer_guide.py",
     "tools/release.py"

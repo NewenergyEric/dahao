@@ -22,6 +22,14 @@
       "claim": "Guide a nontechnical user from an empty computer to an installed Agent, loaded Skills and a real task",
       "status": "planned",
       "evidence_ids": []
+    },
+    {
+      "id": "CAP-DISCOVER-PROBE",
+      "claim": "Passive local discovery and a single confirmed LAN IPv4 TCP 22 / SSH banner check; no authentication or installation",
+      "status": "verified",
+      "evidence_ids": [
+        "E-DISCOVER-PROBE"
+      ]
     }
   ],
   "evidence": [
@@ -40,6 +48,14 @@
       "sha256": "5609c4685005873e1c0d9e4f7dc8ebb64f0f0e4d97aed1d5691430e6144de86a",
       "outcome": "pass",
       "scope": "Windows subprocess CLI and unit tests; Mac input routing simulated, not tested on a Mac; no remote or Agent installation"
+    },
+    {
+      "id": "E-DISCOVER-PROBE",
+      "kind": "tool_run",
+      "path": "docs/remote-access-verification.json",
+      "sha256": "d75806dac3e123a2f70e66778217ed061622b9c297c21611811a751339e5d43c",
+      "outcome": "pass",
+      "scope": "Windows passive inventory plus synthetic endpoint and Mac parser tests; real-target SSH and installation not verified"
     }
   ],
   "cases": [

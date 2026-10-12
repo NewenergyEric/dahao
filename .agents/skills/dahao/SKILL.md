@@ -1,26 +1,31 @@
 ---
 name: dahao
-description: 为不太会 AI 的人准备助手电脑，帮助维护者给爱人、家人、朋友或自己部署和接续使用 AI，选择 Windows/Mac 与本机/另一台访问路径。当前可执行基础仅为 Windows 项目沙箱示例的配置、检查、更新；真实 Agent 安装与加载尚未接入。
+description: 本机 Agent 帮用户为另一台 Windows 或 Mac 电脑部署 AI 助手：发现和确认设备、建立 SSH 接入、检查环境、安装配置、验证并接续。适用于给不太会 AI 的爱人、家人、朋友准备电脑，以及检查或更新已有部署。默认 OpenClaw，可选 Hermes 或其他 Agent；按具体目标授权执行，分别报告连接、安装、加载和任务证据。
 ---
 
 # 搭好 · dahao
 
-把 AI 搭好，让你用得起来。面向不熟悉 AI 的使用者，以及帮他们准备电脑的人；从一件想完成的小事开始，不要求使用者先懂模型、Agent 或命令行。
+把 AI 搭好，让你用得起来。你是本机的协助 Agent，目标通常是另一台电脑；不是把整份技术清单交回给用户。用户入口仍是配置、检查、更新。先帮助完成一件小事，再增加能力。
 
-把用户想做成的一件事，转为目标电脑的准备计划、可验证的执行和下次能接续的记录。用户入口仅配置、检查、更新；用简单语言解释下一步，不先堆技术问题。
+定位同时有 README.md、client_setup.py、sources.lock.json 的项目根目录，读 README.md；DELIVERY.md 若存在仅作私有接续记录。用项目相对路径，不依赖开发者的机器。
 
-先定位同时包含 README.md、client_setup.py、sources.lock.json 的项目根目录并切换过去，读 README.md；若有私有 DELIVERY.md，读作接续记录。所有来源使用此项目的相对路径，不依赖开发者机器或别的项目。
+## 工作主线
 
-1. 确认给谁用、第一件真实任务、Windows/Mac、当前执行器是否就在目标电脑。只问尚缺且影响下一步的信息。本机走本地执行器，无需 SSH；另一台先核实系统并复用明确授权的现有连接。尚无访问或依赖时，按 docs/computer-guide.md 引导，不冒充已检查目标。
-2. 按 docs/support-matrix.md 区分已实现与待接入。将无秘密的选择写成 examples/computer-local.json 所示简报；`python -B client_setup.py configure --customer <id> --brief <项目内相对路径>` 输出只读引导。check/update 同样支持 --brief；该计划不能批准成安装。Mac 执行、依赖安装、网络诊断、远端访问与真实 Agent 安装适配都未完成，未知版本不猜命令。
-3. 用户选 Windows 本机安全示例时，使用 docs/workflow.md：先 check，再 configure/update 预览。客户/实例只用安全代号。首次 not_installed 的 check 不证明身份已核验；确认前核对预览中的 host、target、customer、instance。
-4. 保留公共模板、客户覆盖、机器差异。仅合并用户明确更改的 currency/minimum_total/credential_refs；凭据仅 env:名称引用，不读值。展示 add/replace/keep、前后 hash、设置差异及 plan_id，具体计划获得确认后，以原命令加 --approve 执行。用户已明确授权的合成隔离演示可自行确认自己的示例计划。
-5. 发现 pending 用原计划 resume；rollback 先说明恢复内容。漂移、身份、来源/hash或路径错误即停止，不强制覆盖或自动重新 pin。只管理列出的文件，不复制个人上下文。
-6. 验收分别显示安装、加载与真实任务。示例仅证明本地 Python 合成订单业务，agent_runtime=not_verified 如实保留。没有真实运行器证据就不宣称小助手电脑已交付。
-7. 留下 .control/latest/<客户>--<实例>.json 回执和下一条 check 命令，真实 Agent 未接入的缺口另说明；下一段对话先检查再继续。
+1. **确定目的。** 已知信息不重复问。只补给谁用、目标 Windows/Mac、第一件任务等缺项。自行检查本机系统及 SSH 客户端；不要以“先给我 IP、用户名和 sshd 状态”作为使用门槛。
+2. **发现并确认。** 按 [远端工作流](../../../docs/remote-workflow.md) 调用本 Skill 的 `scripts/discover_target.py discover`，读取本机已有局域网记录，展示少量候选与下一步。候选不是身份凭据，不能自动选择第一台。空结果时才引导目标端查看电脑名/IP，或由目标端打开已有执行器；不静默全网扫描。
+3. **建立接入。** 使用 [Windows / Mac 连接清单](../../../docs/connection-checklist.md)。用户确认目标后才检查其 SSH；未开启时，给目标操作者最短的系统对应步骤。无法远程开启一个尚无管理通道的目标。新增服务、防火墙规则或持久访问先展示具体变化与恢复方法；已有授权覆盖时继续，不重复询问。指纹经目标端核对后，使用原生 SSH 完成认证和身份检查。密码由用户在自己的终端输入，密钥只引用，不读取内容。
+4. **检查并准备计划。** 连接后在目标上取得 OS、架构、权限、依赖和版本的必要元数据，确认命令实际运行在哪台机器、哪个账户、Windows 还是 WSL。按 [安装清单](../../../docs/installation-checklist.md) 准备依赖 → 网络 → 工具 → Agent（默认 OpenClaw）→ 行为文件 → Skills → 验收。用已有工具执行已授权、可恢复的步骤；安装前核对官方来源、明确版本与校验信息，展示目标、目录、配置差异和恢复方式。不要把 `--brief` 输出当作安装器。
+5. **实施与验证。** 每阶段记录真实结果。只合并用户选择的行为键，不导入 SOUL、USER、私人记忆、聊天或凭据。读取 [行为基线](../../../docs/behavior-baseline.md)，按实际运行器适配规则入口与工具权限。依次验证安装版本、规则/Skill 实际加载、第一件用户任务；任何一层没测就留待完成。权限或工具不足时给精确的一步操作，再接着做，不退回整份手工清单。
+6. **接续。** 将目标代号、身份核对状态、来源/版本/hash、已做动作、差异、证据与下一步留在私有记录。下次先检查连接和目标身份，再接续原计划；漂移、指纹变化、来源不符时停在具体问题，不覆盖或重新 pin。
 
-当前仅本地工程和隔离示例；不全局安装 Skill、不连接另一台电脑、不建立持久访问、不启停现有 Agent、不改代理/TUN/SSH/防火墙、安全设置或读取秘密。未来具体目标的操作需要对应授权。公共包固定在 sources.lock.json；公开制品只用 release-files.json，客户数据、回执和私有记录不进入发布包。
+## 能力与证据
 
-首次上手时主动给出 docs/getting-started.html 和 docs/installation-checklist.md，按清单逐项报告证据与未完成项。当前版本安装验证用新建隔离示例，用户授权后可运行 demo.py；不得把项目示例通过扩展为真实 Agent 已安装。交付或发布材料沿用此清单，执行能力仍以上述范围为准。
+阅读 [支持矩阵](../../../docs/support-matrix.md)。Skill 提供 Agent 操作流程；随包工具目前实现本机被动发现、单个已确认局域网 IPv4 的 22 端口/SSH 标识检查，以及 Windows 沙箱配置引擎。原生 SSH 可由 Agent 的终端工具调用，但当前版本没有真实 Windows/Mac 目标的认证和安装验收记录；不得写成已测通。Mac 发现解析仅有合成测试。
 
-安装清单按用户最新选择依次组织：依赖环境 → Clash 等网络通路 → Codex/IDE → 日常 Agent（默认 OpenClaw，可选 Hermes 或用户指定）→ 行为约束文件 → Skills → 验收与接续。清单默认沿用现有环境，只显示选择项与完成条件；本轮不扩展真实安装。行为规则参考 docs/behavior-baseline.md 与 examples/behavior/AGENTS.template.md，不导入 SOUL、USER 或私人资料。
+`client_setup.py --brief` 仍只读分流，不连接、不安装。用户明确选择 Windows 合成示例时才读 [配置与恢复](../../../docs/workflow.md)：先 check，再预览，核对 host/target/customer/instance 和 plan_id 后批准；中断用原计划 resume。示例成功仅证明 Python 配置机制，agent_runtime=not_verified。
+
+## 数据与交付
+
+不读取或复制现有密钥、订阅、cookie、聊天、客户数据，不索要秘密值或完整环境转储。凭据只保留 `env:名称` 或用户指定路径引用，原生客户端在授权下使用它们。发现结果、地址、账号、指纹和原始输出只留私有记录；公共材料使用代号与通过/未验证状态。禁止跳过主机密钥校验、代理转发或擅自扫描/修改其他设备。
+
+首次主动给出 HTML 清单与文字清单。交付包含用户价值、docs/getting-started.html、docs/installation-checklist.md、连接/安装/加载/任务各自证据及未完成项。发布只取 release-files.json 白名单，执行敏感信息检查；不把本次授权推广到其他电脑或公开发布。公开许可由作者决定。

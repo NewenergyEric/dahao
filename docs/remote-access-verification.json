@@ -1,0 +1,34 @@
+{
+  "schema": 1,
+  "date_utc": "2026-10-12T05:10:28+00:00",
+  "scope": "passive_controller_inventory_and_synthetic_single_endpoint_tests",
+  "status": "passed_for_stated_scope",
+  "unit_tests": {
+    "total_passed": 70,
+    "discovery_and_probe": 14
+  },
+  "windows_controller_passive_inventory": "passed",
+  "ssh_client_version": "OpenSSH_for_Windows_9.5p2, LibreSSL 3.8.2",
+  "mac_discovery_parser": "passed_synthetic_fixture_only",
+  "single_endpoint_probe": "passed_synthetic_connection_tests_only",
+  "confirmed_target_probe": "not_run",
+  "real_target_ssh_authentication": "not_verified",
+  "host_identity_verification": "not_verified",
+  "remote_installation": "not_verified",
+  "mac_real_device": "not_verified",
+  "real_agent_loading_and_task": "not_verified",
+  "network_sweep_performed": false,
+  "remote_connections_made": false,
+  "system_settings_changed": false,
+  "existing_secrets_read": false,
+  "helper_sha256": "7ed085d6ed5911c2fb10e710c4371559ec5a14a5b5a2890a9d2b0fd8feea76f1",
+  "test_sha256": "f9165c269b2a0284b851ea8e9dd0c3c5e953b2902e21b0ed5f89aa445d9c6f24",
+  "redaction": "No addresses, usernames, fingerprints, raw banners or command output are included.",
+  "html_review": {
+    "windows_and_mac_branches": "passed",
+    "progress_persistence_after_reload": "passed",
+    "reset_defaults": "Windows_other_OpenClaw_zero_of_eight",
+    "console_errors": [],
+    "screenshot": "dahao-connection-checklist.jpg"
+  }
+}

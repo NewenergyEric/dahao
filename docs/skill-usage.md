@@ -1,3 +1,9 @@
+# 远端协作流程更新 · 2026-10-12
+
+使用 skill-creator 复核项目 Skill：改为本机 Agent 协助另一台电脑，补齐发现、确认、Windows/Mac 接入、安装计划与逐层验收；新增标准库只读发现和单目标 SSH 标识检查 helper。真实 SSH 认证、远端安装与 Mac 实机结果仍未验证。粉色风格、既有媒体与蓝色 FDE 保留。以下制作记录按历史理解。
+
+---
+
 # 搭好改版实际使用 · 2026-10-12
 
 沿用 github-product-launch、visual-material-lab 与 skill-launch-studio；结合 remotion-best-practices 复核按帧运动、字体加载与代表帧。视觉从上一版静物图转向 A1 手绘语言，使用内置 image_gen 实际生成透明交接素材，并采用具有个性的标题字体。全片分别制作中英文版，完整播放与编码单独验证。

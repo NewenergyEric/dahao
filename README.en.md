@@ -4,7 +4,7 @@
 
 [简体中文](README.md) · Private development preview
 
-Dahao is a setup-preparation Skill for people who are new to AI, and for anyone helping a partner, family member or friend get started. Begin with one useful task, choose tools, inspect the environment and set working rules. Keep choices and next steps ready for the next session.
+Dahao lets an Agent on your computer help prepare another Windows or Mac computer for a partner, family member or friend who is new to AI. The Agent leads discovery, target confirmation, SSH access, environment checks, installation, configuration and verification. The user handles choices and any necessary first-time access on the target.
 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/hero-en.png">
@@ -13,7 +13,7 @@ Dahao is a setup-preparation Skill for people who are new to AI, and for anyone 
 
 [Download English MP4](assets/readme/hero-en.mp4?raw=true) · [GIF](assets/readme/hero-en.gif?raw=true) · [Transcript](docs/demo.md) · [Local player](docs/watch.html)
 
-**Available today:** the complete seven-step checklist, tool choices, a general working-rules template and a verified Windows sandbox example. Real Agent installation and runtime loading remain unimplemented. [Support matrix](docs/support-matrix.md)
+**Available today:** connection step 0 plus the seven-step checklist, Windows/Mac connection instructions, passive LAN discovery, a single selected target SSH-banner check and a verified Windows sandbox example. Real-target SSH authentication, remote Agent installation and loading remain unverified. [Support matrix](docs/support-matrix.md)
 
 ## Start with the checklist
 
@@ -21,6 +21,7 @@ After obtaining repository access, choose **Code → Download ZIP**, extract it 
 
 | Step | Your choice |
 |---|---|
+| 0. Discover and connect | The local Agent finds candidates; you confirm the target and establish verified access |
 | 1. Dependencies | Windows / Mac, this / another computer; inspect what is already present |
 | 2. Network access | Reuse working access, or select Clash or another tool |
 | 3. Codex / IDE | Choose the workspace that guides preparation |
@@ -69,7 +70,7 @@ python -B -m unittest discover -s tests -v
 python -B tools/release.py check
 ```
 
-The product commands remain configure / check / update. Mac and remote-computer branches provide read-only guidance. The current implementation does not install globally, connect to customer machines, modify system networking or read existing secrets.
+The product commands remain configure / check / update; `--brief` still only generates guidance. The [remote workflow](docs/remote-workflow.md) uses the Agent’s tools within authorization for a specific target. The helper does not authenticate, install software or read existing secrets. [Connection evidence](docs/remote-access-verification.json) distinguishes fixture tests from real-target verification.
 
 [Publishing scope](docs/publishing.md) · [Sources and licensing](THIRD_PARTY_NOTICES.md)
 

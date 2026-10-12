@@ -6,7 +6,7 @@
 
 [English](README.en.md) · 私有开发预览
 
-搭好是一个面向 AI 新手的部署准备 Skill，也帮助你给爱人、家人或朋友配置助手电脑。从“想让它帮哪件小事”开始，选择工具、检查环境、定好行为规则，再验证第一件任务。下一次添加或更新 Skill，继续沿用清单和接续记录。
+搭好让本机 Agent 帮你给另一台电脑部署 AI 助手，适合给不太会 AI 的爱人、家人或朋友准备电脑。从“想让它帮哪件小事”开始，Agent 带着发现目标、建立连接、检查环境、安装配置，再验证第一件任务。你只参与目标确认、选择和必要的首次接入；下一次沿用记录继续。
 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/hero-zh.png">
@@ -15,16 +15,17 @@
 
 [下载中文 MP4](assets/readme/hero-zh.mp4?raw=true) · [GIF](assets/readme/hero-zh.gif?raw=true) · [短片与文字稿](docs/demo.md) · [本地播放器](docs/watch.html)
 
-**今天可以用：** 完整七步清单、工具选择项、通用行为模板，以及已验证的 Windows 沙箱示例。真实 Agent 安装、规则与 Skill 加载仍待接入。[查看当前边界](docs/support-matrix.md)
+**今天可以用：** 第 0 步连接 + 七步安装清单、Windows/Mac 接入流程、本机被动设备发现、单个已确认目标的 SSH 标识检查，以及已验证的 Windows 沙箱示例。真实 SSH 认证、远端 Agent 安装与加载尚未实机验证。[查看当前边界](docs/support-matrix.md)
 
 ## 从一张清单开始
 
 取得仓库访问权限后，点击 **Code → Download ZIP** 并解压，用浏览器打开 [`docs/getting-started.html`](docs/getting-started.html)。选择你的方案，再逐项确认；进度保存在当前浏览器，可以复制、下载或打印。
 
-**[打开七步准备清单](docs/getting-started.html)** · [纯文字版](docs/installation-checklist.md)
+**[打开连接与安装清单](docs/getting-started.html)** · [纯文字版](docs/installation-checklist.md)
 
 | 按顺序准备 | 你需要决定什么 |
 |---|---|
+| 0. 发现与连接 | 本机 Agent 找候选，你确认目标；按 Windows/Mac 路线建立并核验 SSH |
 | 1. 依赖环境 | Windows / Mac、这台 / 另一台；先检查已有环境 |
 | 2. 网络通路 | 复用可用网络，或选 Clash 等工具 |
 | 3. Codex / IDE | 选一个带你准备电脑的工具，也可沿用现有工具 |
@@ -41,7 +42,7 @@
 
 | 你说 | 当前会拿到什么 |
 |---|---|
-| “给她准备一个小助手，先帮她整理周末旅行清单。” | 目标电脑与工具选择、七步准备清单、缺口和完成条件 |
+| “帮我给同 Wi-Fi 的另一台 Windows 装好助手，先带我找到它。” | 本机 Agent 发现候选、引导确认和接入，再按安装清单推进；未验证项明确保留 |
 | “看看现在准备到哪一步了。” | 检查已有状态，区分已完成、待确认与尚未接入 |
 | “想加一个 Skill，保留我的习惯。” | 在当前支持范围内检查来源、比较变化、保留明确的覆盖项 |
 
@@ -79,7 +80,7 @@ python -B -m unittest discover -s tests -v
 python -B tools/release.py check
 ```
 
-用户入口仍为 configure / check / update。Mac 和另一台电脑只提供只读引导；不全局安装、不连接客户机器、不修改系统网络、不读取既有凭据或订阅。
+用户入口仍为 configure / check / update。[远端工作流](docs/remote-workflow.md)由 Agent 的终端工具在目标授权下推进；`--brief` 仍只读。新 helper 不认证、不安装；不读取既有凭据或订阅。[连接能力验证](docs/remote-access-verification.json)与真实目标验收分别记录。
 
 [发布边界](docs/publishing.md) · [来源与许可](THIRD_PARTY_NOTICES.md) · [Skill 使用](docs/skill-usage.md)
 

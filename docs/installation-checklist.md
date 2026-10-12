@@ -2,19 +2,28 @@
 
 [交互清单](getting-started.html) · [当前示例验证记录](installation-verification.json)
 
-给爱人、客户或自己：先选工具，再做完清单，让第一件小事真正跑起来。
+让本机 Agent 帮你给另一台电脑搭好助手；你确认目标与选择，Agent 带着发现、连接、安装配置和验收。
 
-本轮交付完整路线与选择项，保留当前执行范围；真实系统安装与网络修改仍未接入。手动勾选不代表自动验收。默认 OpenClaw，可选 Hermes 或用户指定的 Agent。
+先做第 0 步，再做后面的 7 步。Skill 可指导终端操作；随包程序目前只提供发现、单目标 SSH 标识检查和 Windows 合成示例，真实目标登录与 Agent 安装尚未验证。手动勾选不代表自动验收。默认 OpenClaw，可选 Hermes 或用户指定的 Agent。
 
 ## 先选择
 
-- 电脑：Windows / Mac；就在这台 / 另一台。
+- 目标电脑：Windows / Mac；默认另一台，也可就在这台。
 - 网络：复用可用通路或直连 / Clash Verge Rev / 用户指定工具。
-- 准备工具：Codex / VS Code + Agent 扩展 / Cursor / 现有工具。
+- 本机准备工具：Codex / VS Code + Agent 扩展 / Cursor / 现有工具；目标端确有需要时再安装。
 - 日常 Agent：OpenClaw（默认）/ Hermes / 用户指定。
 - Skills：第一件任务所需 / 用户审核清单 / 检查现有 Skills。
 
-选择改变后重新核对完成项。另一台电脑先由当地执行器检查，不自动建立连接。只准备实际需要的依赖，不把所有选项一起安装。
+选择改变后重新核对完成项。另一台电脑由本机 Agent 先发现并引导建立接入，缺少接入时才请目标操作者完成必要的开启步骤。只准备实际需要的依赖，不把所有选项一起安装。
+
+## 0. 发现并连接目标电脑
+
+- [ ] 本机 Agent 检查控制端工具，读取已有局域网候选；用户确认目标，不先索要整套网络参数。
+- [ ] 确认后检查该目标 SSH；未开启时走 [Windows / Mac checklist](connection-checklist.md) 的对应分支。
+- [ ] 核对目标公钥指纹，用户私下认证；Agent 确认远端电脑、账户、系统并重连。
+- [ ] 连接成功后继续检查环境；无证据的阶段保留未完成，不将端口打开写成已登录。
+
+本机就在目标上时只需确认身份与项目目录，无需 SSH。完整职责与命令见 [Agent 远端工作流](remote-workflow.md)。
 
 ## 1. 依赖环境
 
@@ -22,7 +31,7 @@
 - [ ] 按选定 Agent 发行版的官方要求补齐依赖，记录版本；原生系统或 WSL2 由实际支持和用户选择决定。
 - [ ] 在实际执行环境验证所需工具可运行。当前项目示例要求 Python 3.12+，只使用标准库。
 
-来源：[OpenClaw 安装要求](https://docs.openclaw.ai/install)、[Hermes 安装说明](https://hermes-agent.nousresearch.com/docs)。
+来源：[OpenClaw 安装要求](https://docs.openclaw.ai/install)、[Hermes 安装说明](https://hermes-agent.nousresearch.com/docs/getting-started/installation)。
 
 ## 2. Clash 等网络通路
 
@@ -30,7 +39,7 @@
 - [ ] 用户在自己的客户端配置订阅或登录。本清单、项目与聊天均不接收秘密值。
 - [ ] 分别验证安装工具及 Agent 所需端点可达；仅浏览器能访问不等于运行器通路已好。
 
-来源：[Clash Verge Rev 维护者下载](https://github.com/clash-verge-rev/clash-verge-rev/releases)、[维护者文档](https://www.clashverge.dev/)。本轮不改系统代理、TUN、防火墙或 SSH。
+来源：[Clash Verge Rev 维护者下载](https://github.com/clash-verge-rev/clash-verge-rev/releases)、[维护者文档](https://www.clashverge.dev/)。需要修改目标代理/TUN 时，先展示具体变化和恢复方式，并核对对应授权；不读取订阅。
 
 ## 3. Codex / IDE
 
@@ -80,6 +89,6 @@
 
 ## 交给 Agent 的话
 
-> 读取本项目 Skill 和安装清单。按我选择的方案逐项检查：依赖环境、网络通路、Codex/IDE、日常 Agent、行为约束文件、Skills 与验收。默认 OpenClaw，保留现有设置；不导入 SOUL、USER 或任何私人资料。只执行当前支持且获授权的步骤，逐项留下证据、待办和下一步，不把勾选当作安装成功。
+> 读取本项目 Skill 和安装清单。由本机 Agent 先发现并确认另一台目标电脑，带我建立并核验连接；然后按我选择的方案逐项检查：依赖环境、网络通路、Codex/IDE、日常 Agent、行为约束文件、Skills 与验收。默认 OpenClaw，保留现有设置；不导入 SOUL、USER 或任何私人资料。只执行当前支持且获授权的步骤，逐项留下证据、待办和下一步，不把勾选当作安装成功。
 
-官方入口核对日期：2026-10-11。实际安装前按选定发行版本重新核对要求；本清单未将实时 latest 固定成项目的可执行配方。
+官方入口核对日期：2026-10-12。实际安装前按选定发行版本重新核对要求；本清单未将实时 latest 固定成项目的可执行配方。
