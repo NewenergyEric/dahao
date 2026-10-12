@@ -20,13 +20,14 @@ import client_setup as cs
 
 PRIVATE = {"customers", "machines", "sandboxes", ".control", ".demo-runs", ".test-runs", ".local-tests",
            "validation", ".private", ".release", ".git", "__pycache__", "node_modules", "out"}
-PRIVATE_FILES = {"delivery.md", "open_source_prep.md", "demo-latest.json"}
+PRIVATE_FILES = {"delivery.md", "open_source_prep.md", "demo-latest.json", "request.json",
+                 "known_hosts", "authorized_keys", "administrators_authorized_keys",
+                 "client_key", "temporary-access.json", "ssh_config"}
 SAFE_TOP = {"docs", "examples", "packages", "recipes", "tests", "tools", ".agents", "motion", "assets", ".github"}
 SAFE_ROOT = {"README.md", "AGENTS.md", "THIRD_PARTY_NOTICES.md", "client_setup.py", "demo.py",
              "sources.lock.json", "release-files.json", ".gitignore", ".gitattributes", "LICENSE",
              "README.en.md", "product-evidence.json", "showcase-files.json"}
-SKILL_FILES = {".agents/skills/dahao/SKILL.md", ".agents/skills/dahao/agents/openai.yaml",
-               ".agents/skills/dahao/scripts/discover_target.py"}
+SKILL_FILES = {'.agents/skills/dahao/references/windows-connect.md', '.agents/skills/dahao/references/chat-connection-checklist.md', '.agents/skills/dahao/references/windows-helper.md', '.agents/skills/dahao/references/remote-workflow.md', '.agents/skills/dahao/references/behavior-baseline.md', '.agents/skills/dahao/references/support-matrix.md', '.agents/skills/dahao/scripts/build_windows_connect.py', '.agents/skills/dahao/scripts/discover_target.py', '.agents/skills/dahao/references/installation-checklist.md', '.agents/skills/dahao/assets/AGENTS.template.md', '.agents/skills/dahao/assets/windows-connect/DahaoAuthorize.cs', '.agents/skills/dahao/assets/windows-connect/DahaoConnect.cs', '.agents/skills/dahao/assets/windows-connect/app.manifest', '.agents/skills/dahao/references/connection-checklist.md', '.agents/skills/dahao/references/safety.md', '.agents/skills/dahao/agents/openai.yaml', '.agents/skills/dahao/SKILL.md'}
 MAX_TOTAL = 64 * 1024 * 1024
 MAX_BINARY = 8 * 1024 * 1024
 BINARY_SLOTS = {f"assets/readme/hero-{lang}.{ext}" for lang in ("zh", "en") for ext in ("mp4", "gif", "webp", "png")}
@@ -91,7 +92,7 @@ def allowed_path(root, name):
     if any(p in PRIVATE for p in lowered) or lowered[-1] in PRIVATE_FILES:
         stop("private_path_excluded")
     leaf = lowered[-1]
-    if leaf.startswith((".env", "delivery", "open_source_prep", "id_rsa", "id_ed25519")) or any(word in leaf for word in ("cookie", "credential", "subscription")) or leaf.endswith((".key", ".pem", ".p12", ".pfx", ".log", ".zip", ".pyc")):
+    if leaf.startswith((".env", "delivery", "open_source_prep", "id_rsa", "id_ed25519")) or any(word in leaf for word in ("cookie", "credential", "subscription")) or leaf.endswith((".key", ".pem", ".p12", ".pfx", ".pub", ".log", ".zip", ".pyc")):
         stop("private_path_excluded")
     if len(parts) == 1:
         if name not in SAFE_ROOT:

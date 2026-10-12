@@ -26,3 +26,14 @@ Thumbs.db
 
 node_modules/
 motion/out/
+
+# Target-specific SSH materials never belong in source or an installed Skill.
+request.json
+known_hosts
+authorized_keys
+administrators_authorized_keys
+client_key
+client_key.pub
+id_ed25519*
+id_rsa*
+*.pub

@@ -17,42 +17,50 @@
 
 **今天可以用：** 第 0 步连接 + 七步安装清单、Windows/Mac 接入流程、Windows 双击连接小助手（本地未签名预览）、本机被动设备发现、单个已确认目标的 SSH 标识检查，以及已验证的 Windows 沙箱示例。已在一台 Windows 上实测指纹核对、只有 PIN 时的临时授权、SSH 登录，以及现有 OpenClaw 的健康检查与合成任务；临时接入已撤销并验证拒绝重连。全新安装、规则/Skill 加载、Mac 实机与真实扫码仍待验证。[查看当前边界](docs/support-matrix.md)
 
-## 从一张清单开始
+## 在帮助者的 Codex 里安装一次，然后说一句话
 
-取得仓库访问权限后，点击 **Code → Download ZIP** 并解压，用浏览器打开 [`docs/getting-started.html`](docs/getting-started.html)。选择你的方案，再逐项确认；进度保存在当前浏览器，可以复制、下载或打印。
+把下面的话发给本机 Codex：
 
-**[打开连接与安装清单](docs/getting-started.html)** · [纯文字版](docs/installation-checklist.md) · **[飞书 / 微信扫码清单](docs/chat-connection-checklist.html)**
+> 请安装 https://github.com/NewenergyEric/dahao 中 `.agents/skills/dahao` 这个 Skill。先审阅来源和代码，安装完成后告诉我。
 
-| 按顺序准备 | 你需要决定什么 |
-|---|---|
-| 0. 发现与连接 | 本机 Agent 找候选，你确认目标；按 Windows/Mac 路线建立并核验 SSH |
-| 1. 依赖环境 | Windows / Mac、这台 / 另一台；先检查已有环境 |
-| 2. 网络通路 | 复用可用网络，或选 Clash 等工具 |
-| 3. Codex / IDE | 选一个带你准备电脑的工具，也可沿用现有工具 |
-| 4. 日常 Agent | 默认 OpenClaw，可选 Hermes 或指定其他 Agent |
-| 5. 行为约束 | 怎样做事、能用什么工具、什么时候需要确认 |
-| 6. Skills | 先选第一件任务用得上的少量技能 |
-| 7. 验收接续 | 分别检查安装、实际加载、任务结果，留下下一步 |
+安装后，下一轮直接说：
 
-安装后可按独立扫码清单接入飞书或个人微信，覆盖 OpenClaw/Hermes 四种路线。先核对来源和权限，默认本人私聊；二维码、密码和 token 不公开，扫码与真实可用分别验收。
+> $dahao 帮我给同 Wi-Fi 下爱人的 Windows 电脑准备 AI 助手。默认 OpenClaw，先带我找到并确认电脑，再连接、检查、安装和验证。一步一步来，安全放在第一位。
 
-勾选只记录人工进度，不运行安装。已有可用环境直接复用；换方案会清空旧勾选。页面不接收 token、订阅地址或其他秘密值。
+**只安装 Skill 即可开始，不必下载整个仓库或网页。** 发现脚本、连接/安装/扫码清单、行为模板和 Windows 小助手源码都在 Skill 内。Codex 或兼容 Agent 仍需具备终端/文件工具；Python helper 使用标准库，Windows GUI 在 Windows 上用已有 .NET Framework 构建。Skill 提供操作流程和工具，不会绕过目标确认、系统授权或自动取得另一台电脑的控制权。仓库目前私有，安装者暂需访问权限。
 
-## 把第一句话交给 Agent
+接受帮助的爱人或朋友不用研究 Codex、Git 或命令行。你带着本机 Agent 推进，对方只需要：
 
-在 Codex 或已有工具里打开项目，使用 [`$dahao` Skill](.agents/skills/dahao/SKILL.md)，从下面任意一句开始。
+1. 确认哪台是自己的电脑；Windows 可双击只读小助手交接信息。
+2. 必要时看清权限，点击本次临时授权；只有 PIN 也有已实测路线。
+3. 选择用途、亲自在官方界面登录或扫码，体验第一件小任务。
 
-| 你说 | 当前会拿到什么 |
-|---|---|
-| “帮我给同 Wi-Fi 的另一台 Windows 装好助手，先带我找到它。” | 本机 Agent 发现候选、引导确认和接入，再按安装清单推进；未验证项明确保留 |
-| “看看现在准备到哪一步了。” | 检查已有状态，区分已完成、待确认与尚未接入 |
-| “想加一个 Skill，保留我的习惯。” | 在当前支持范围内检查来源、比较变化、保留明确的覆盖项 |
+Agent 在对话里维护清单：**确认与连接 → 依赖 → 网络 → 工具（按需）→ OpenClaw/Hermes → 行为规则 → Skills → 验收与收回权限**。已有环境先验证再复用，未测项明确保留；Mac 已有清单但未实机验证。
 
-Windows 新手可以让 Agent 提供[双击连接小助手](docs/windows-connect.md)：拷到目标电脑，确认后复制必要连接信息。只检查、不改系统，账号和地址只用于本次协助；遇到安全拦截先停下，不关闭系统保护。
+可直接继续说：“检查上次做到哪里了”或“给它加一个 Skill，保留原来的习惯”。目标信息和进度保存在本机私有目录，不写进安装好的 Skill 或 GitHub。
 
-只有 PIN 也可以继续：Agent 准备独立的临时授权小助手，你核对范围后点击，完成后收回本次接入。它允许执行命令，管理员账户权限较高；只读连接小助手和授权小助手是两个不同程序。
+[独立 Skill 验证](docs/skill-install-verification.json)
 
-不必先研究每个命令。先说明想做的事，Agent 再解释下一步与当前能执行的范围。
+<details>
+<summary>可选参考：文字清单、网页与扫码步骤</summary>
+
+[安装清单](docs/installation-checklist.md) · [Windows/Mac 连接](docs/connection-checklist.md) · [飞书/微信](docs/chat-connection-checklist.md) · [可选 HTML 清单](docs/getting-started.html)
+
+这些是参考资料，不是使用前置条件，不需要部署网站。扫码清单覆盖 OpenClaw/Hermes 与飞书/个人微信；本人扫码、允许范围、真实回复和重连分别验收。
+
+</details>
+
+## 小助手包里有什么，哪些不能公开
+
+**公开的是通用工具；每次接入现场生成私人授权包。**
+
+| 材料 | 是否包含真实连接资料 | 怎样处理 |
+|---|---|---|
+| Skill、通用连接/授权程序 | 不带目标、私钥、密码或 token | 审核通过后分发；通用授权程序单独不能接入电脑 |
+| 本次目标授权包 | 有账户、地址、新公钥、主机校验码；没有私钥、密码或 token | 仅交给本次目标所有者，不能公开或复用 |
+| 临时私钥 | 留在帮助者电脑的受限目录 | 不读取、不传给目标、不上传；撤销并验证后删除 |
+
+点击授权意味着允许帮助者以所示账户执行命令，当前管理员路线权限较高；60 分钟限制新登录，已开始的命令可能继续。完工撤销本次授权并验证拒绝新登录。Windows 小助手目前未签名，若被拦截先核验来源，不关闭系统保护。[安全说明](.agents/skills/dahao/references/safety.md)
 
 ## 第一件事，可以很小
 
@@ -88,7 +96,7 @@ python -B tools/release.py check
 
 本次现有 OpenClaw 2026.9.6 已完成一项合成旅行清单测试；这是独立于上方原创示意的实测案例。安全审计为 0 项严重、8 条提醒，尚未全部处理，不能称为安全验收完成。[脱敏实测记录](docs/live-connection-verification.json)
 
-用户入口仍为 configure / check / update。[远端工作流](docs/remote-workflow.md)由 Agent 的终端工具在目标授权下推进；`--brief` 仍只读。新 helper 不认证、不安装；不读取既有凭据或订阅。[连接能力验证](docs/remote-access-verification.json)与真实目标验收分别记录。
+用户入口仍为 configure / check / update。[远端工作流](docs/remote-workflow.md)由 Agent 的终端工具在目标授权下推进；`--brief` 仍只读。被动发现 helper 不认证、不安装；不读取既有凭据或订阅。[连接能力验证](docs/remote-access-verification.json)与真实目标验收分别记录。
 
 [发布边界](docs/publishing.md) · [来源与许可](THIRD_PARTY_NOTICES.md) · [Skill 使用](docs/skill-usage.md)
 

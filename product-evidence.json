@@ -54,6 +54,14 @@
       "evidence_ids": [
         "E-LIVE-HANDOFF"
       ]
+    },
+    {
+      "id": "CAP-STANDALONE-SKILL",
+      "claim": "Install only the Skill folder and use its references, discovery CLI and local Windows helper builder without a repository or webpage",
+      "status": "verified_in_isolated_Windows_directory",
+      "evidence_ids": [
+        "E-STANDALONE-SKILL"
+      ]
     }
   ],
   "evidence": [
@@ -88,6 +96,14 @@
       "sha256": "6cd220812de8f5f8f1876f2d6e16d606e97f341b91088c3b36f56cd357de17cb",
       "outcome": "pass",
       "scope": "One Windows GUI handoff, temporary SSH authentication and revocation; existing OpenClaw health and synthetic task; fresh installation, rule/Skill loading, Mac hardware, actual QR login and complete hardening remain unverified"
+    },
+    {
+      "id": "E-STANDALONE-SKILL",
+      "kind": "tool_run",
+      "path": "docs/skill-install-verification.json",
+      "sha256": "b28bdd22ecf9fdcdfcc66116e921f8f9c71c4800653efde49e821d365eafa97e",
+      "outcome": "pass",
+      "scope": "76 tests; isolated Skill-only copy, local references and Windows authorizer build; no new target connection or installation"
     }
   ],
   "cases": [
