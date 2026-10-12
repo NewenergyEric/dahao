@@ -2,9 +2,9 @@
   "schema": 1,
   "date": "2026-10-12",
   "scope": "standalone_Skill_in_isolated_directory_without_repository_or_webpage",
-  "skill_files": 17,
+  "skill_files": 18,
   "unit_tests": {
-    "passed": 76,
+    "passed": 77,
     "failures": 0,
     "errors": 0
   },
@@ -22,7 +22,8 @@
   "Mac_hardware_and_live_QR_login": "not_verified",
   "live_windows_history": "existing_OpenClaw_task_passed_temporary_SSH_revoked_see_live_connection_verification",
   "source_sha256": {
-    "SKILL.md": "dff5132a7b1521ca89697d642276075936e979f9581287439f69474f5459771b",
+    "LICENSE": "491ca2870583ab96c3e1c52d80a2f2266d0b4f8d66824b1faff6abffafc01f35",
+    "SKILL.md": "23608aadf8aed8ea708f4314be47b89d1aef68c61a84cefa664bab5b86a3c99c",
     "agents/openai.yaml": "7d4b9c564fba3c4ef283ec3f20891a7fe20b498ab149a9f20f42c7b5108cdfd8",
     "assets/AGENTS.template.md": "65fb4e5754dc53d64793d9c401a069310bf2f9f5a465101439f1e2785be1814b",
     "references/behavior-baseline.md": "7aff6e6ed6b12c7ace1038f5c1a12bc2e1860d9b333b6e0f04ee28f128b9e4b0",
@@ -30,18 +31,19 @@
     "references/connection-checklist.md": "c52c0f64ec9cf60e86e9c07e32f419b4887709ff415d999608ea976c756618bd",
     "references/installation-checklist.md": "bfebf532609115777321e4199ef510796b52531f857f6dc335722fea3f116205",
     "references/remote-workflow.md": "cf10ed501f0b11fff983a0cfdf5f2191f1c53458f3e3c1b4c1fbf37a23546af2",
-    "references/safety.md": "1b607d37966a1656a496de08c67d4f38789a6d8fe8db4ec5050b73021d68b011",
+    "references/safety.md": "6bf1ff66d5dc87ed1fd8e3681531841c143b6996e87da7baa333646309cca131",
     "references/support-matrix.md": "12997e41ae0f28b38e75407a8313be84e550a0ae35db1b082638ee689cff2956",
     "references/windows-connect.md": "a129b1f25040c3d463238d31ca64a9d1db894ad203601f9a2e97184df886a61a",
-    "references/windows-helper.md": "87669682076f764971c0e8f81a4dd983f08aa08c08717f59e757afa97393a3de",
-    "scripts/build_windows_connect.py": "24f4ac49486eca9ee2d324bcf90202cec8a17688670be69f08fb9cfe8816c39f",
+    "references/windows-helper.md": "cea1467c40a9dd0b8c0daba6d2090c6e72a183cd2744129cd6eae17b9d6d5638",
+    "scripts/build_windows_connect.py": "be385588aaf150e11f9e341dfd525ec6a25273edf103812b7acfa6921c769205",
     "scripts/discover_target.py": "7ed085d6ed5911c2fb10e710c4371559ec5a14a5b5a2890a9d2b0fd8feea76f1",
     "assets/windows-connect/app.manifest": "b51ce4d0602f9f04c3bab35555b251868b3b89ed73db39e00f0f6574e5a0728c",
     "assets/windows-connect/DahaoAuthorize.cs": "fdde829734a1fbc1499e2336f4904410f9032d62f2aab662f628785a2cb84c53",
     "assets/windows-connect/DahaoConnect.cs": "b2f68b4ec88464b3d85b5df5435761b28cdab8768591753c7a8e830deff54d6c"
   },
   "redaction": "No target addresses, accounts, public fingerprints, request files, private keys or credential values.",
-  "github_download_trial": {
+  "ci_path_handling": "resolve_Windows_short_temporary_path_before_containment_check",
+  "previous_github_download_trial": {
     "commit": "3e83f7dca5a2964352f06a30852184f976fd848b",
     "installer": "Codex_bundled_skill_installer",
     "method": "authenticated_git",
@@ -50,5 +52,10 @@
     "installed_files_match_reviewed_commit": true,
     "installed_authorizer_build_and_self_test": "passed"
   },
-  "ci_path_handling": "resolve_Windows_short_temporary_path_before_containment_check"
+  "license_distribution": {
+    "license": "MIT",
+    "project_and_skill_bytes_match": true,
+    "windows_authorizer_archive_includes_license": true,
+    "mismatched_skill_license_blocks_release": true
+  }
 }

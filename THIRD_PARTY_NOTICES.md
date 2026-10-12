@@ -1,3 +1,13 @@
+# 当前许可范围 · 2026-10-12
+
+项目自有代码、Skill、文档、模板与展示素材按根目录 [MIT](LICENSE) 提供，署名 NewenergyEric and contributors。独立 Skill 与通用 Windows 构建包均附同一许可证。
+
+第三方材料保留原许可：Noto Sans SC 与得意黑的字体子集沿用各自 SIL OFL 1.1 声明；Remotion 展示模板保留 motion/UPSTREAM-LICENSE.txt，构建依赖遵守各自条款，不随项目许可重新授权。独立 Skill 不捆绑字体、影片或 node_modules。
+
+下面是按制作阶段保存的来源记录；其中“私有/许可待选”描述的是当时状态，当前授权以上述说明为准。素材未包含真实客户照片、聊天、密钥或操作录屏。
+
+---
+
 # 搭好更名与动效改版 · 2026-10-12
 
 - 产品与项目 Skill 经用户确认更名为「搭好 · dahao」。当前范围继续为七步清单和 Windows 项目内合成示例。

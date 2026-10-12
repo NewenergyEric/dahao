@@ -1,8 +1,9 @@
 {
   "schema": 1,
-  "license_status": "not_selected",
+  "license_status": "selected",
   "upstream_review": "completed",
   "files": [
+    ".agents/skills/dahao/LICENSE",
     ".agents/skills/dahao/SKILL.md",
     ".agents/skills/dahao/agents/openai.yaml",
     ".agents/skills/dahao/assets/AGENTS.template.md",
@@ -24,6 +25,7 @@
     ".github/workflows/validate.yml",
     ".gitignore",
     "AGENTS.md",
+    "LICENSE",
     "README.en.md",
     "README.md",
     "THIRD_PARTY_NOTICES.md",

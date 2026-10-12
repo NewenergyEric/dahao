@@ -4,7 +4,7 @@
 
 **给不太会 AI 的人，准备一个能开始的入口。**
 
-[English](README.en.md) · 私有开发预览
+[English](README.en.md) · [MIT](LICENSE) · 开发预览
 
 搭好让本机 Agent 帮你给另一台电脑部署 AI 助手，适合给不太会 AI 的爱人、家人或朋友准备电脑。从“想让它帮哪件小事”开始，Agent 带着发现目标、建立连接、检查环境、安装配置，再验证第一件任务。你只参与目标确认、选择和必要的首次接入；下一次沿用记录继续。
 
@@ -27,7 +27,7 @@
 
 > $dahao 帮我给同 Wi-Fi 下爱人的 Windows 电脑准备 AI 助手。默认 OpenClaw，先带我找到并确认电脑，再连接、检查、安装和验证。一步一步来，安全放在第一位。
 
-**只安装 Skill 即可开始，不必下载整个仓库或网页。** 发现脚本、连接/安装/扫码清单、行为模板和 Windows 小助手源码都在 Skill 内。Codex 或兼容 Agent 仍需具备终端/文件工具；Python helper 使用标准库，Windows GUI 在 Windows 上用已有 .NET Framework 构建。Skill 提供操作流程和工具，不会绕过目标确认、系统授权或自动取得另一台电脑的控制权。仓库目前私有，安装者暂需访问权限。
+**只安装 Skill 即可开始，不必下载整个仓库或网页。** 发现脚本、连接/安装/扫码清单、行为模板和 Windows 小助手源码都在 Skill 内。Codex 或兼容 Agent 仍需具备终端/文件工具；Python helper 使用标准库，Windows GUI 在 Windows 上用已有 .NET Framework 构建。Skill 提供操作流程和工具，不会绕过目标确认、系统授权或自动取得另一台电脑的控制权。公开分发内容不含真实连接请求或密钥。
 
 接受帮助的爱人或朋友不用研究 Codex、Git 或命令行。你带着本机 Agent 推进，对方只需要：
 
@@ -102,4 +102,4 @@ python -B tools/release.py check
 
 </details>
 
-搭好独立维护粉色亲民版，面向不太会 AI 的使用者。仓库保持私有，公开开源所需的许可证与版权仍由作者决定。
+搭好独立维护粉色亲民版，面向不太会 AI 的使用者。项目原创部分采用 [MIT](LICENSE)；第三方字体与模板保留各自许可，见[来源说明](THIRD_PARTY_NOTICES.md)。

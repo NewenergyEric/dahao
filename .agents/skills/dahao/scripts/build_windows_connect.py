@@ -54,9 +54,10 @@ def build(output: Path, authorize: bool = False) -> dict:
               "self_test": "passed", "real_target_execution": "not_verified", "kind": "authorization_ui_without_request" if authorize else "read_only_handoff"}
     (output / "build-record.json").write_text(json.dumps(record, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (output / "先读我.txt").write_text((ROOT / "references/windows-helper.md").read_text(encoding="utf-8"), encoding="utf-8-sig")
+    (output / "LICENSE").write_bytes((ROOT / "LICENSE").read_bytes())
     bundle = output / ("dahao-authorize-generic.zip" if authorize else "dahao-connect-windows.zip")
     with zipfile.ZipFile(bundle, "w", compression=zipfile.ZIP_DEFLATED) as archive:
-        for name in (exe.name, "build-record.json", "先读我.txt"):
+        for name in (exe.name, "build-record.json", "先读我.txt", "LICENSE"):
             archive.write(output / name, name)
         for name in record["source_sha256"]:
             archive.write(SOURCE / name, "source/" + name)

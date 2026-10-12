@@ -27,7 +27,7 @@ Windows Hello PIN 不直接用于 SSH。优先由本机 Agent 准备本次专用
 
 可选源码 DahaoAuthorize.cs 仅适配已确认的 Windows 本地管理员账户与默认 OpenSSH 授权文件。它要求正确目标账户和主机公钥；只追加本次带来源、到期和强制命令约束的公钥。强制命令再核对目标账户，避免共享管理员授权文件把权限扩展到其他管理员。禁用端口/Agent 转发、PTY 和用户 rc；60 分钟后拒绝新登录，不终止已有命令。撤销只移除本次完整公钥和标记，原子保留其他字节及 ACL；不改变 SSH 服务、防火墙、密码或已有权限。旧文件权限不合适时拒绝授权，不自动放宽。
 
-维护者使用 python -B scripts/build_windows_connect.py --authorize 构建通用程序，不生成密钥或真实 request.json。私有请求只允许 schema、id、target、target_address、controller_address、public_key、host_fingerprint 七个字段；本机 Agent 从已核验的目标信息生成，专用私钥保存在本机受限目录，仅由 SSH 客户端使用。公钥校验信息、网络地址、请求文件及目标专用 ZIP 都不进入发布白名单。通用构建包没有请求文件，不能直接授权。
+维护者使用 python -B scripts/build_windows_connect.py --authorize 构建通用程序，不生成密钥或真实 request.json。私有请求只允许 schema、id、target、target_address、controller_address、public_key、host_fingerprint 七个字段；本机 Agent 从已核验的目标信息生成，专用私钥保存在本机受限目录，仅由 SSH 客户端使用。公钥校验信息、网络地址、请求文件及目标专用 ZIP 都不进入发布白名单。通用构建包附 MIT 许可证，没有请求文件，不能直接授权。
 
 授权后的首次验收必须实际确认来源限制、账户强制命令和真实登录生效；不支持这些限制的 SSH 应拒绝该钥匙，不能降级为不受限授权。结束后按约定由 Agent 只撤销本次条目，或由用户点击撤销，再实测新登录被拒绝并删除本次控制端私钥。到期不自动清理文件里的条目，撤销按钮负责清理。公司域、Entra ID、自定义授权路径与非管理员账户仍需另外适配。
 

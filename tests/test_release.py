@@ -30,12 +30,16 @@ class ReleaseTests(unittest.TestCase):
     def write_manifest(self):
         (self.root / "release-files.json").write_bytes(cs.encode(self.manifest))
 
-    def test_clean_source_passes_without_claiming_publication_ready(self):
+    def test_clean_source_respects_explicit_license_state(self):
         report, payloads = release.check(self.root)
         self.assertEqual(report["status"], "passed")
         self.assertEqual(set(payloads), set(self.manifest["files"]))
-        self.assertFalse(report["publication_ready"])
-        self.assertIn("license_not_selected", report["publication_blockers"])
+        self.assertNotIn("license_not_selected", report["publication_blockers"])
+        self.manifest["license_status"] = "not_selected"
+        self.write_manifest()
+        unlicensed, _ = release.check(self.root)
+        self.assertFalse(unlicensed["publication_ready"])
+        self.assertIn("license_not_selected", unlicensed["publication_blockers"])
         self.assertEqual("upstream_license_review_pending" in report["publication_blockers"], self.manifest["upstream_review"] != "completed")
 
     def test_private_files_are_never_read_or_archived(self):
@@ -183,8 +187,14 @@ class ReleaseTests(unittest.TestCase):
 
     def test_license_cannot_be_marked_selected_without_file(self):
         self.manifest["license_status"] = "selected"
+        self.manifest["files"].remove("LICENSE")
         self.write_manifest()
         with self.assertRaisesRegex(release.ReleaseError, "license_file_missing"):
+            release.check(self.root)
+
+    def test_skill_license_must_match_the_reviewed_project_license(self):
+        (self.root / ".agents/skills/dahao/LICENSE").write_text("SYNTHETIC_CHANGED_LICENSE", encoding="utf-8")
+        with self.assertRaisesRegex(release.ReleaseError, "skill_license_mismatch"):
             release.check(self.root)
 
 

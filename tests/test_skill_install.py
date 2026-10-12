@@ -62,10 +62,11 @@ class SkillInstallTests(unittest.TestCase):
         self.assertEqual(process.returncode, 0, process.stderr.decode('utf-8', errors='replace'))
         result = json.loads(process.stdout)
         self.assertEqual(result['self_test'], 'passed')
-        expected = {'Dahao-Authorize.exe', 'build-record.json', '先读我.txt',
+        expected = {'Dahao-Authorize.exe', 'build-record.json', '先读我.txt', 'LICENSE',
                     'source/DahaoConnect.cs', 'source/DahaoAuthorize.cs', 'source/app.manifest'}
         with zipfile.ZipFile(result['bundle']) as archive:
             self.assertEqual(set(archive.namelist()), expected)
+            self.assertEqual(archive.read("LICENSE"), (cs.ROOT / "LICENSE").read_bytes())
             self.assertFalse(any(b'SYNTHETIC_DO_NOT_PACKAGE' in archive.read(n) for n in archive.namelist()))
         self.assertFalse((output / 'request.json').exists())
         self.assertFalse((output / 'client_key').exists())

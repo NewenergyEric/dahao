@@ -2,7 +2,7 @@
 
 **AI setup, for the rest of us.**
 
-[简体中文](README.md) · Private development preview
+[简体中文](README.md) · [MIT](LICENSE) · Development preview
 
 Dahao lets an Agent on your computer help prepare another Windows or Mac computer for a partner, family member or friend who is new to AI. The Agent leads discovery, target confirmation, SSH access, environment checks, installation, configuration and verification. The user handles choices and any necessary first-time access on the target.
 
@@ -25,7 +25,7 @@ On the next turn:
 
 > $dahao Help me prepare an AI assistant for my partner’s Windows computer on the same Wi-Fi. Use OpenClaw by default. Find the target and let me confirm it before connecting; guide us through setup and verification, with safety first.
 
-The Skill contains the discovery script, connection/setup/chat checklists, behavior template and Windows helper source. No repository checkout, website or HTML download is required. The local Agent needs terminal/file tools; Python helpers use the standard library, and Windows GUI builds require Windows and its installed .NET Framework compiler. Repository access is currently required while the repository is private.
+The Skill contains the discovery script, connection/setup/chat checklists, behavior template and Windows helper source. No repository checkout, website or HTML download is required. The local Agent needs terminal/file tools; Python helpers use the standard library, and Windows GUI builds require Windows and its installed .NET Framework compiler. The public distribution contains no real connection request or keys.
 
 The recipient confirms their computer, reviews and clicks any necessary temporary authorization, then logs in or scans a code in the official application. Codex maintains the checklist in the conversation. Reuse existing installations, keep unverified steps visible, and store target/session records outside the installed Skill in a private workspace. Mac instructions exist but have not been tested on hardware.
 
@@ -77,4 +77,4 @@ The product commands remain configure / check / update; `--brief` still only gen
 
 </details>
 
-Dahao keeps its independent pink identity. This repository remains private; the author has not yet chosen a license for public open-source release.
+Dahao keeps its independent pink identity. Original project materials are provided under [MIT](LICENSE); third-party fonts and templates retain their own licenses. See [source notices](THIRD_PARTY_NOTICES.md).
