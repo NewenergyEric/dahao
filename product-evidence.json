@@ -101,7 +101,7 @@
       "id": "E-STANDALONE-SKILL",
       "kind": "tool_run",
       "path": "docs/skill-install-verification.json",
-      "sha256": "b28bdd22ecf9fdcdfcc66116e921f8f9c71c4800653efde49e821d365eafa97e",
+      "sha256": "14bed74aff8f11a1f910c9b19e52c18b508d0d4db10ac1f14a3b4b2ae42d7911",
       "outcome": "pass",
       "scope": "76 tests; isolated Skill-only copy, local references and Windows authorizer build; no new target connection or installation"
     }

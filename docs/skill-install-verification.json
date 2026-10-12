@@ -40,5 +40,15 @@
     "assets/windows-connect/DahaoAuthorize.cs": "fdde829734a1fbc1499e2336f4904410f9032d62f2aab662f628785a2cb84c53",
     "assets/windows-connect/DahaoConnect.cs": "b2f68b4ec88464b3d85b5df5435761b28cdab8768591753c7a8e830deff54d6c"
   },
-  "redaction": "No target addresses, accounts, public fingerprints, request files, private keys or credential values."
+  "redaction": "No target addresses, accounts, public fingerprints, request files, private keys or credential values.",
+  "github_download_trial": {
+    "commit": "3e83f7dca5a2964352f06a30852184f976fd848b",
+    "installer": "Codex_bundled_skill_installer",
+    "method": "authenticated_git",
+    "files": 17,
+    "bytes": 122107,
+    "installed_files_match_reviewed_commit": true,
+    "installed_authorizer_build_and_self_test": "passed"
+  },
+  "ci_path_handling": "resolve_Windows_short_temporary_path_before_containment_check"
 }

@@ -20,7 +20,7 @@ class SkillInstallTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
-        self.root = Path(self.tmp.name)
+        self.root = Path(self.tmp.name).resolve()
         self.skill = self.root / 'installed-skills/dahao'
         for name in release.SKILL_FILES:
             relative = Path(name).relative_to('.agents/skills/dahao')
