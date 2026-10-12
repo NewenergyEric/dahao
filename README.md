@@ -15,13 +15,13 @@
 
 [下载中文 MP4](assets/readme/hero-zh.mp4?raw=true) · [GIF](assets/readme/hero-zh.gif?raw=true) · [短片与文字稿](docs/demo.md) · [本地播放器](docs/watch.html)
 
-**今天可以用：** 第 0 步连接 + 七步安装清单、Windows/Mac 接入流程、本机被动设备发现、单个已确认目标的 SSH 标识检查，以及已验证的 Windows 沙箱示例。真实 SSH 认证、远端 Agent 安装与加载尚未实机验证。[查看当前边界](docs/support-matrix.md)
+**今天可以用：** 第 0 步连接 + 七步安装清单、Windows/Mac 接入流程、Windows 双击连接小助手（本地未签名预览）、本机被动设备发现、单个已确认目标的 SSH 标识检查，以及已验证的 Windows 沙箱示例。已在一台 Windows 上实测指纹核对、只有 PIN 时的临时授权、SSH 登录，以及现有 OpenClaw 的健康检查与合成任务；临时接入已撤销并验证拒绝重连。全新安装、规则/Skill 加载、Mac 实机与真实扫码仍待验证。[查看当前边界](docs/support-matrix.md)
 
 ## 从一张清单开始
 
 取得仓库访问权限后，点击 **Code → Download ZIP** 并解压，用浏览器打开 [`docs/getting-started.html`](docs/getting-started.html)。选择你的方案，再逐项确认；进度保存在当前浏览器，可以复制、下载或打印。
 
-**[打开连接与安装清单](docs/getting-started.html)** · [纯文字版](docs/installation-checklist.md)
+**[打开连接与安装清单](docs/getting-started.html)** · [纯文字版](docs/installation-checklist.md) · **[飞书 / 微信扫码清单](docs/chat-connection-checklist.html)**
 
 | 按顺序准备 | 你需要决定什么 |
 |---|---|
@@ -34,6 +34,8 @@
 | 6. Skills | 先选第一件任务用得上的少量技能 |
 | 7. 验收接续 | 分别检查安装、实际加载、任务结果，留下下一步 |
 
+安装后可按独立扫码清单接入飞书或个人微信，覆盖 OpenClaw/Hermes 四种路线。先核对来源和权限，默认本人私聊；二维码、密码和 token 不公开，扫码与真实可用分别验收。
+
 勾选只记录人工进度，不运行安装。已有可用环境直接复用；换方案会清空旧勾选。页面不接收 token、订阅地址或其他秘密值。
 
 ## 把第一句话交给 Agent
@@ -45,6 +47,10 @@
 | “帮我给同 Wi-Fi 的另一台 Windows 装好助手，先带我找到它。” | 本机 Agent 发现候选、引导确认和接入，再按安装清单推进；未验证项明确保留 |
 | “看看现在准备到哪一步了。” | 检查已有状态，区分已完成、待确认与尚未接入 |
 | “想加一个 Skill，保留我的习惯。” | 在当前支持范围内检查来源、比较变化、保留明确的覆盖项 |
+
+Windows 新手可以让 Agent 提供[双击连接小助手](docs/windows-connect.md)：拷到目标电脑，确认后复制必要连接信息。只检查、不改系统，账号和地址只用于本次协助；遇到安全拦截先停下，不关闭系统保护。
+
+只有 PIN 也可以继续：Agent 准备独立的临时授权小助手，你核对范围后点击，完成后收回本次接入。它允许执行命令，管理员账户权限较高；只读连接小助手和授权小助手是两个不同程序。
 
 不必先研究每个命令。先说明想做的事，Agent 再解释下一步与当前能执行的范围。
 
@@ -79,6 +85,8 @@ python -B demo.py
 python -B -m unittest discover -s tests -v
 python -B tools/release.py check
 ```
+
+本次现有 OpenClaw 2026.9.6 已完成一项合成旅行清单测试；这是独立于上方原创示意的实测案例。安全审计为 0 项严重、8 条提醒，尚未全部处理，不能称为安全验收完成。[脱敏实测记录](docs/live-connection-verification.json)
 
 用户入口仍为 configure / check / update。[远端工作流](docs/remote-workflow.md)由 Agent 的终端工具在目标授权下推进；`--brief` 仍只读。新 helper 不认证、不安装；不读取既有凭据或订阅。[连接能力验证](docs/remote-access-verification.json)与真实目标验收分别记录。
 

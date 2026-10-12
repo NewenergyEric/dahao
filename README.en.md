@@ -13,7 +13,7 @@ Dahao lets an Agent on your computer help prepare another Windows or Mac compute
 
 [Download English MP4](assets/readme/hero-en.mp4?raw=true) · [GIF](assets/readme/hero-en.gif?raw=true) · [Transcript](docs/demo.md) · [Local player](docs/watch.html)
 
-**Available today:** connection step 0 plus the seven-step checklist, Windows/Mac connection instructions, passive LAN discovery, a single selected target SSH-banner check and a verified Windows sandbox example. Real-target SSH authentication, remote Agent installation and loading remain unverified. [Support matrix](docs/support-matrix.md)
+**Available today:** connection step 0 plus the seven-step checklist, Windows/Mac connection instructions, passive LAN discovery, a single selected target SSH-banner check and a verified Windows sandbox example. On one Windows target, host verification, PIN-only temporary authorization, SSH login and an existing OpenClaw installation passed live checks, including a synthetic task. Temporary access was revoked and a new login was rejected. Fresh installation, rule/Skill loading, Mac hardware and actual QR login remain unverified. [Support matrix](docs/support-matrix.md)
 
 ## Start with the checklist
 
@@ -29,6 +29,12 @@ After obtaining repository access, choose **Code → Download ZIP**, extract it 
 | 5. Working rules | Task flow, tools, permissions and confirmation boundaries |
 | 6. Skills | Begin with the few Skills needed for the first task |
 | 7. Verify and continue | Check installation, actual loading and task results separately |
+
+For Windows first-time setup, the [offline connection helper](docs/windows-connect.md) provides a double-click handoff of minimal host information. It is an unsigned local preview, makes no system changes, and does not grant remote access. If Windows blocks it, stop without disabling security protection.
+
+After installation, the [Feishu / WeChat checklist](docs/chat-connection-checklist.html) covers OpenClaw and Hermes QR setup. Verify the source and permissions, restrict access to the intended user, and keep login QR codes and tokens private. QR login alone does not verify the model, access controls or reconnection.
+
+The live test reused OpenClaw 2026.9.6. Its security audit reported 0 critical findings and 8 warnings; hardening remains pending. Functional success is separate from security acceptance. [Redacted evidence](docs/live-connection-verification.json)
 
 Check marks record manual progress; they do not run an installer. Changing the plan clears the previous checks. The page does not collect credentials or subscription URLs.
 

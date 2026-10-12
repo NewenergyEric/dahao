@@ -29,6 +29,8 @@
     "demo.py",
     "docs/behavior-baseline.md",
     "docs/brand.md",
+    "docs/chat-connection-checklist.html",
+    "docs/chat-connection-checklist.md",
     "docs/computer-guide.md",
     "docs/connection-checklist.md",
     "docs/demo.md",
@@ -37,6 +39,7 @@
     "docs/installation-checklist.md",
     "docs/installation-verification.json",
     "docs/launch-workbook.md",
+    "docs/live-connection-verification.json",
     "docs/media-validation.json",
     "docs/publishing.md",
     "docs/remote-access-verification.json",
@@ -45,6 +48,7 @@
     "docs/support-matrix.md",
     "docs/system-guide-evidence.json",
     "docs/watch.html",
+    "docs/windows-connect.md",
     "docs/workflow.md",
     "examples/behavior/AGENTS.template.md",
     "examples/computer-local.json",
@@ -98,7 +102,13 @@
     "tests/test_computer_guide.py",
     "tests/test_discover_target.py",
     "tests/test_release.py",
+    "tests/test_windows_connect.py",
+    "tools/build_windows_connect.py",
     "tools/computer_guide.py",
-    "tools/release.py"
+    "tools/release.py",
+    "tools/windows-connect/DahaoAuthorize.cs",
+    "tools/windows-connect/DahaoConnect.cs",
+    "tools/windows-connect/README.md",
+    "tools/windows-connect/app.manifest"
   ]
 }

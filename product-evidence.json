@@ -30,6 +30,30 @@
       "evidence_ids": [
         "E-DISCOVER-PROBE"
       ]
+    },
+    {
+      "id": "CAP-WINDOWS-HANDOFF",
+      "claim": "Offline Windows GUI previews minimal connection metadata and requires user target confirmation before copying or saving; no remote access grants or system changes",
+      "status": "verified_for_one_real_Windows_target",
+      "evidence_ids": [
+        "E-LIVE-HANDOFF"
+      ]
+    },
+    {
+      "id": "CAP-WINDOWS-TEMP-SSH",
+      "claim": "PIN-only Windows temporary public-key authorization, real SSH authentication, identity and revocation on one existing-SSH local administrator target",
+      "status": "verified_for_one_target",
+      "evidence_ids": [
+        "E-LIVE-HANDOFF"
+      ]
+    },
+    {
+      "id": "CAP-EXISTING-OPENCLAW",
+      "claim": "Reused existing OpenClaw 2026.9.6, verified Gateway health and a synthetic task; security warnings remain pending",
+      "status": "verified_for_stated_functional_scope",
+      "evidence_ids": [
+        "E-LIVE-HANDOFF"
+      ]
     }
   ],
   "evidence": [
@@ -56,6 +80,14 @@
       "sha256": "d75806dac3e123a2f70e66778217ed061622b9c297c21611811a751339e5d43c",
       "outcome": "pass",
       "scope": "Windows passive inventory plus synthetic endpoint and Mac parser tests; real-target SSH and installation not verified"
+    },
+    {
+      "id": "E-LIVE-HANDOFF",
+      "kind": "tool_run",
+      "path": "docs/live-connection-verification.json",
+      "sha256": "6cd220812de8f5f8f1876f2d6e16d606e97f341b91088c3b36f56cd357de17cb",
+      "outcome": "pass",
+      "scope": "One Windows GUI handoff, temporary SSH authentication and revocation; existing OpenClaw health and synthetic task; fresh installation, rule/Skill loading, Mac hardware, actual QR login and complete hardening remain unverified"
     }
   ],
   "cases": [
@@ -80,6 +112,14 @@
       "request": "Configure a real assistant computer and complete a user task through a loaded Skill",
       "status": "not_run",
       "evidence_ids": []
+    },
+    {
+      "id": "CASE-EXISTING-OPENCLAW",
+      "request": "Use PIN-only target authorization, verify an existing OpenClaw with synthetic facts, and revoke temporary access",
+      "status": "passed_for_functional_scope_security_hardening_pending",
+      "evidence_ids": [
+        "E-LIVE-HANDOFF"
+      ]
     }
   ]
 }

@@ -1,0 +1,124 @@
+{
+  "schema": 1,
+  "date_utc": "2026-10-12T06:57:06+00:00",
+  "scope": "one_Windows_target_GUI_handoff_temporary_SSH_existing_OpenClaw_function_and_revocation",
+  "status": "passed_for_stated_scope",
+  "unit_tests": {
+    "passed": 72,
+    "failures": 0,
+    "errors": 0
+  },
+  "fresh_synthetic_installation": "passed",
+  "skill_structure_validation": "passed",
+  "selected_target": {
+    "user_confirmed": true,
+    "os": "Windows_11_Home_23H2_x64_remotely_verified",
+    "tcp_22": "passed",
+    "ssh_banner": "passed",
+    "independent_host_identity": "passed",
+    "authentication": "passed",
+    "agent_installation": "existing_OpenClaw_2026.9.6_reused_not_freshly_installed",
+    "rules_skills_and_task": "rules_and_skills_not_verified_synthetic_task_passed",
+    "remote_identity": "matched",
+    "reconnection": "passed"
+  },
+  "windows_handoff": {
+    "version": "0.1.0",
+    "source_sha256": {
+      "DahaoConnect.cs": "b2f68b4ec88464b3d85b5df5435761b28cdab8768591753c7a8e830deff54d6c",
+      "app.manifest": "b51ce4d0602f9f04c3bab35555b251868b3b89ed73db39e00f0f6574e5a0728c"
+    },
+    "executable": {
+      "name": "Dahao-Connect.exe",
+      "sha256": "e0df2bb8c3c0118e2c209b3b16c74b06f2f8363eae3ea17448fee46d3dcdb05a",
+      "bytes": 17920
+    },
+    "signed": false,
+    "synthetic_security_tests": "passed",
+    "local_controller_metadata_collection": "passed",
+    "synthetic_form_render": "passed",
+    "real_target_execution": "passed_user_returned_metadata_and_matching_public_fingerprint",
+    "clipboard_and_file_dialog_manual_target_test": "clipboard_passed_save_dialog_not_tested",
+    "system_changes": false,
+    "automatic_upload": false,
+    "private_keys_read": false,
+    "target_elevation_requested": true,
+    "elevation_reason": "read_default_host_public_key_when_standard_access_was_denied"
+  },
+  "html_review": {
+    "windows_gui_handoff_and_mac_separate_branch": "passed",
+    "chat_four_routes": "passed",
+    "progress_persistence": "passed",
+    "choice_change_resets_progress": "passed",
+    "copy_and_download": "passed",
+    "console_errors": []
+  },
+  "chat_actual_login_and_authorization_test": "not_verified",
+  "redaction": "No real addresses, usernames, public fingerprints, QR codes, private reports or credential values included.",
+  "temporary_authorization": {
+    "target_user_clicked_approval": true,
+    "local_administrator_account": true,
+    "unsigned_preview": true,
+    "executable_sha256": "030880954223321b88346a5bc302077aead9f0f1a3a905e918664445b9b73ee1",
+    "source_sha256": "fdde829734a1fbc1499e2336f4904410f9032d62f2aab662f628785a2cb84c53",
+    "configured_scope": [
+      "single_new_key",
+      "source_address",
+      "target_account_forced_command",
+      "60_minutes",
+      "no_forwarding",
+      "no_PTY"
+    ],
+    "invalid_frame_rejected_on_real_target": true,
+    "source_mismatch_and_forwarding_adversarial_tests": "not_run",
+    "other_account_and_expiry": "synthetic_tests_passed_real_alternate_account_and_expiry_not_run",
+    "revocation": "passed",
+    "new_login_after_revocation": "rejected",
+    "other_authorized_key_bytes_and_acl": "preserved",
+    "temporary_private_key": "deleted_after_rejection_test"
+  },
+  "openclaw": {
+    "version": "2026.9.6",
+    "node_version": "24.19.0",
+    "installation": "reused_existing",
+    "fresh_installation": "not_verified",
+    "gateway_health": "passed",
+    "default_port_binding": "loopback_only",
+    "first_health_attempt": "timed_out",
+    "bounded_recheck": "passed",
+    "synthetic_task": {
+      "status": "passed",
+      "fresh_session": true,
+      "task": "derive_a_weekend_packing_list_from_supplied_synthetic_facts",
+      "result": {
+        "before_departure": [
+          "check weather"
+        ],
+        "need_to_confirm": [
+          "travel dates"
+        ],
+        "pack": [
+          "umbrella",
+          "charging cable"
+        ]
+      },
+      "external_message_delivery_requested": false
+    },
+    "new_rules_and_skill_loading": "not_verified",
+    "config_rewritten": false,
+    "security_audit": {
+      "critical": 0,
+      "warn": 8,
+      "info": 1,
+      "hardening": "pending_not_approved",
+      "functional_success_is_not_security_acceptance": true
+    }
+  },
+  "cleanup": {
+    "revoked": true,
+    "new_login_rejected": true,
+    "temporary_private_key_removed": true,
+    "existing_ssh_service_preserved": true,
+    "openclaw_preserved": true
+  }
+}
