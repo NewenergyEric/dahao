@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "date": "2026-10-12",
+  "tool": "built-in image_gen",
+  "model": "not provided by tool",
+  "seed": "not provided by tool",
+  "asset": "public/illustrations/dahao-handoff.png",
+  "reference": {
+    "catalog": "visual-material-lab",
+    "reference": "A1 / asset-system-board.png",
+    "role": "drawing-style reference; no private customer imagery"
+  },
+  "transparent_background": true,
+  "prompt": "Use case: illustration-story. Asset: one transparent cutout illustration for a Chinese AI setup skill named Dahao, to be animated in a high-energy editorial product film. The attached image is ONLY a drawing-style reference, NOT a subject/layout/template to reproduce. Keep its confident dark hand-ink outlines, slightly imperfect hand-drawn edges, warm paper-like paint, rounded friendly shapes and dimensional cel shading. Redesign the palette to raspberry pink, blush pink, cream and deep plum. Create one cohesive three-quarter-view hero object: an open blush-pink laptop, a small cream pebble-shaped helper with a plum eye dot pair sitting beside it, and two human hands (one extending from each side) passing the laptop from a helpful person to a beginner. It should communicate 'someone helps you set up AI', warm and inclusive, not a gift-wrapped consumer advertisement. Laptop screen clean cream with just one small simple dark-plum sparkle mark, no UI, no letters, no logos, no text. Dynamic diagonal composition like a printed editorial sticker, strong silhouette, crisp detailed ink with selective soft watercolor texture, gentle shadows confined to the object. One isolated object group, all hands fully framed, fill canvas generously with 6% empty margins. GENUINELY TRANSPARENT BACKGROUND. No rectangle border, no cards, no infographic, no storyboard grid, no PPT-style vector flatness, no photographic room, no flowers or bows, no decorative text. Need production-quality cutout for independent translation, rotation and zoom in a motion scene."
+}

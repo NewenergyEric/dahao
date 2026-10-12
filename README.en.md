@@ -1,14 +1,14 @@
-# Agent Gift · A useful assistant for someone you care about
+# Dahao · 搭好
 
-**Prepare the computer without handing over a pile of setup instructions.**
+**AI setup, for the rest of us.**
 
 [简体中文](README.md) · Private development preview
 
-Start with one everyday task. Choose the tools, work through a clear checklist and set the assistant's working rules. Prepare it for a partner, a customer or yourself—and keep the next update in the same place.
+Dahao is a setup-preparation Skill for people who are new to AI, and for anyone helping a partner, family member or friend get started. Begin with one useful task, choose tools, inspect the environment and set working rules. Keep choices and next steps ready for the next session.
 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/hero-en.png">
-  <img src="assets/readme/hero-en.webp" width="100%" alt="A 24-second original pink illustrated film: a thoughtful computer gift, seven preparation steps, OpenClaw or Hermes choices, working rules and Skills, a weekend packing example, and a clear next step. Real Agent installation is not connected.">
+  <img src="assets/readme/hero-en.webp" width="100%" alt="A 24-second original pink illustrated film: expressive display typography, a hand-drawn computer handoff, a moving seven-step route, tool choices, annotated working rules and an illustrated first task. Real Agent installation is not connected.">
 </picture>
 
 [Download English MP4](assets/readme/hero-en.mp4?raw=true) · [GIF](assets/readme/hero-en.gif?raw=true) · [Transcript](docs/demo.md) · [Local player](docs/watch.html)
@@ -33,7 +33,7 @@ Check marks record manual progress; they do not run an installer. Changing the p
 
 ## Give your Agent one concrete request
 
-Open this project in Codex or your existing workspace and use the [agent-gift Skill](.agents/skills/agent-gift/SKILL.md).
+Open this project in Codex or your existing workspace and use the [`$dahao` Skill](.agents/skills/dahao/SKILL.md).
 
 - “Help me prepare an assistant computer. The first task is a weekend packing list.” → Receive a preparation checklist, choices, gaps and completion criteria.
 - “How far along are we?” → Check existing state and separate completed, unconfirmed and unsupported steps.
@@ -75,4 +75,4 @@ The product commands remain configure / check / update. Mac and remote-computer 
 
 </details>
 
-Agent Gift keeps its independent pink identity. This repository remains private; the author has not yet chosen a license for public open-source release.
+Dahao keeps its independent pink identity. This repository remains private; the author has not yet chosen a license for public open-source release.

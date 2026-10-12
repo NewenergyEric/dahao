@@ -25,7 +25,7 @@ SAFE_TOP = {"docs", "examples", "packages", "recipes", "tests", "tools", ".agent
 SAFE_ROOT = {"README.md", "AGENTS.md", "THIRD_PARTY_NOTICES.md", "client_setup.py", "demo.py",
              "sources.lock.json", "release-files.json", ".gitignore", ".gitattributes", "LICENSE",
              "README.en.md", "product-evidence.json", "showcase-files.json"}
-SKILL_FILES = {".agents/skills/agent-gift/SKILL.md", ".agents/skills/agent-gift/agents/openai.yaml"}
+SKILL_FILES = {".agents/skills/dahao/SKILL.md", ".agents/skills/dahao/agents/openai.yaml"}
 MAX_TOTAL = 64 * 1024 * 1024
 MAX_BINARY = 8 * 1024 * 1024
 BINARY_SLOTS = {f"assets/readme/hero-{lang}.{ext}" for lang in ("zh", "en") for ext in ("mp4", "gif", "webp", "png")}
@@ -36,6 +36,8 @@ BINARY_SLOTS.add("assets/readme/direction-zh.png")
 BINARY_SLOTS |= {"motion/public/illustrations/gift-scene.png",
                  "motion/public/illustrations/weekend-scene.png",
                  "motion/public/fonts/gift-sans.woff2"}
+BINARY_SLOTS |= {"motion/public/illustrations/dahao-handoff.png",
+                 "motion/public/fonts/dahao-display.woff2", "motion/public/fonts/dahao-text.woff2"}
 RULES = {
     "private_key": re.compile(r"-----BEGIN (?:RSA |EC |DSA |OPENSSH |ENCRYPTED )?PRIVATE KEY-----"),
     "provider_token": re.compile(r"\b(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-(?:proj-)?[A-Za-z0-9_-]{20,}|AKIA[A-Z0-9]{16}|xox[baprs]-[A-Za-z0-9-]{20,})\b"),
@@ -282,7 +284,7 @@ def build(root=ROOT):
             archive.writestr(member, data)
     data = stream.getvalue()
     verify_zip(data, payloads)
-    relative = f".release/agent-gift-{cs.digest(data)[:16]}.zip"
+    relative = f".release/dahao-{cs.digest(data)[:16]}.zip"
     archive_path = cs.safe(Path(root), relative)
     if archive_path.exists():
         if archive_path.stat().st_size > MAX_TOTAL or archive_path.read_bytes() != data:

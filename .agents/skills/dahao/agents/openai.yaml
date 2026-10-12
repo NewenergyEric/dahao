@@ -1,0 +1,4 @@
+interface:
+  display_name: "搭好 · dahao"
+  short_description: "帮不太会 AI 的人准备助手电脑，从七步清单走到第一件小事"
+  default_prompt: "用 $dahao 帮我给不太会 AI 的人准备电脑，先确认系统、目标位置和第一件想完成的事，按七步清单检查并说明当前能执行的范围。"

@@ -1,6 +1,8 @@
 {
   "schema": 1,
   "date": "2026-10-12",
+  "brand": "dahao",
+  "version": "kinetic-handdrawn-v2",
   "status": "passed",
   "encoding": {
     "valid": true,
@@ -11,48 +13,53 @@
         "fps": 30.0,
         "frames": 720,
         "seconds": 24.0,
-        "bytes": 1182232
+        "bytes": 1559325
       },
       {
         "file": "hero-en.webp",
         "frames": 480,
         "frame_ms": 50.0,
         "seconds": 24.0,
-        "bytes": 1223332
+        "bytes": 2609092
       },
       {
         "file": "hero-en.gif",
         "frames": 480,
         "frame_ms": 50.0,
         "seconds": 24.0,
-        "bytes": 2884897
+        "bytes": 4748617
       },
       {
         "file": "hero-zh.mp4",
         "fps": 30.0,
         "frames": 720,
         "seconds": 24.0,
-        "bytes": 1087536
+        "bytes": 1541842
       },
       {
         "file": "hero-zh.webp",
         "frames": 480,
         "frame_ms": 50.0,
         "seconds": 24.0,
-        "bytes": 1145768
+        "bytes": 2605594
       },
       {
         "file": "hero-zh.gif",
         "frames": 480,
         "frame_ms": 50.0,
         "seconds": 24.0,
-        "bytes": 2777212
+        "bytes": 4858141
       }
     ]
   },
   "font": {
     "loaded": true,
-    "missing_glyphs": 0
+    "missing_glyphs": 0,
+    "families": [
+      "Dahao Display",
+      "Dahao Text"
+    ],
+    "original_display_font": "Smiley Sans v2.0.1; renamed subset"
   },
   "visual_review": {
     "opening": "passed",
@@ -63,10 +70,18 @@
       "zh",
       "en"
     ],
-    "full_playback": "passed"
+    "full_playback": "passed",
+    "user_style_acceptance": "not_yet_received"
+  },
+  "motion": {
+    "frame_driven": true,
+    "continuous_object_translation_scale_rotation": true,
+    "kinetic_type": true,
+    "sequential_route_and_rule_highlights": true,
+    "not_a_live_agent_recording": true
   },
   "reference": "../assets/readme/media-manifest.json",
-  "product_boundary": "Illustrated preparation route and synthetic travel-task example; real Agent installation and runtime loading remain unverified.",
+  "product_boundary": "Full preparation checklist and Windows sandbox example only; real Agent installation and runtime loading remain unverified.",
   "browser_review": {
     "scope": "read_only_loopback_preview",
     "playback": {
@@ -84,9 +99,12 @@
       }
     },
     "language_switch_and_download_target": "passed",
+    "checklist_selection_persistence_and_reset": "passed",
+    "checklist_default_restored": "OpenClaw",
+    "proof_image": "dahao-film-preview.png",
     "console_errors": [],
     "readme_rendering": "GitHub Markdown API output reviewed locally; new animation and task-board image decoded",
-    "authenticated_GitHub_page": "not_verified_browser_not_signed_in",
+    "authenticated_GitHub_page": "not_verified_in_this_review",
     "remote_content_verification": "performed_separately_after_push"
   }
 }

@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "date_utc": "2026-10-11T16:40:18+00:00",
-  "project": "agent-gift",
+  "date_utc": "2026-10-12T03:33:56+00:00",
+  "project": "dahao",
   "status": "passed",
   "scope": "fresh_allowlisted_export_on_Windows_with_bundled_synthetic_orders",
   "python_version": "3.12.10",

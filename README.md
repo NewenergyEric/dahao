@@ -1,14 +1,16 @@
-# Agent Gift · 给在乎的人，一个用得上的小助手
+# 搭好 · dahao
 
-**想帮她准备好电脑，却不想把一堆安装说明也一起送过去。**
+### 把 AI 搭好，让你用得起来。
+
+**给不太会 AI 的人，准备一个能开始的入口。**
 
 [English](README.en.md) · 私有开发预览
 
-从“想让它帮哪件小事”开始，用一张清单选好工具、理清准备步骤、定下工作规则。给爱人、客户，也给自己。下一次要加一个 Skill，仍从这里接着走。
+搭好是一个面向 AI 新手的部署准备 Skill，也帮助你给爱人、家人或朋友配置助手电脑。从“想让它帮哪件小事”开始，选择工具、检查环境、定好行为规则，再验证第一件任务。下一次添加或更新 Skill，继续沿用清单和接续记录。
 
 <picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/hero-zh.png">
-  <img src="assets/readme/hero-zh.webp" width="100%" alt="24 秒粉色原创插画短片：从一份电脑礼物到七步清单，选择 OpenClaw 或 Hermes，准备行为规则与 Skills，以周末旅行清单说明目标成果，再留下接续记录。真实 Agent 安装尚未接入。">
+  <img src="assets/readme/hero-zh.webp" width="100%" alt="24 秒搭好动效介绍：粉色手绘交接电脑场景、得意黑衍生展示字、连续素材运动和七步路线。给 AI 新手选择工具、准备工作规则与 Skills；真实安装仍待接入。">
 </picture>
 
 [下载中文 MP4](assets/readme/hero-zh.mp4?raw=true) · [GIF](assets/readme/hero-zh.gif?raw=true) · [短片与文字稿](docs/demo.md) · [本地播放器](docs/watch.html)
@@ -19,7 +21,7 @@
 
 取得仓库访问权限后，点击 **Code → Download ZIP** 并解压，用浏览器打开 [`docs/getting-started.html`](docs/getting-started.html)。选择你的方案，再逐项确认；进度保存在当前浏览器，可以复制、下载或打印。
 
-**[打开七步安装清单](docs/getting-started.html)** · [纯文字版](docs/installation-checklist.md)
+**[打开七步准备清单](docs/getting-started.html)** · [纯文字版](docs/installation-checklist.md)
 
 | 按顺序准备 | 你需要决定什么 |
 |---|---|
@@ -35,7 +37,7 @@
 
 ## 把第一句话交给 Agent
 
-在 Codex 或已有工具里打开项目，使用 [agent-gift Skill](.agents/skills/agent-gift/SKILL.md)，从下面任意一句开始。
+在 Codex 或已有工具里打开项目，使用 [`$dahao` Skill](.agents/skills/dahao/SKILL.md)，从下面任意一句开始。
 
 | 你说 | 当前会拿到什么 |
 |---|---|
@@ -83,4 +85,4 @@ python -B tools/release.py check
 
 </details>
 
-Agent Gift 独立维护粉色亲民版。仓库保持私有，公开开源所需的许可证与版权仍由作者决定。
+搭好独立维护粉色亲民版，面向不太会 AI 的使用者。仓库保持私有，公开开源所需的许可证与版权仍由作者决定。

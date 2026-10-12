@@ -1,3 +1,11 @@
+# 搭好改版实际使用 · 2026-10-12
+
+沿用 github-product-launch、visual-material-lab 与 skill-launch-studio；结合 remotion-best-practices 复核按帧运动、字体加载与代表帧。视觉从上一版静物图转向 A1 手绘语言，使用内置 image_gen 实际生成透明交接素材，并采用具有个性的标题字体。全片分别制作中英文版，完整播放与编码单独验证。
+
+本次只修改粉色项目品牌、项目 Skill、文案、媒体与精确发布白名单；共享 Skills 和蓝色 FDE 不变。清单继续简洁，执行范围不扩展。下面为之前版本的制作记录。
+
+---
+
 # 本次 Skill 使用 · 2026-10-12
 
 - github-product-launch 0.2.1：确认现有产品证据、用户所选粉色仓库和交付终点，保留七步清单与当前执行范围。
