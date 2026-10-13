@@ -23,7 +23,7 @@
 | 朋友已经装过 Agent | “先看看能不能用，能用就保留” | 当前状态、缺什么、下一步做什么 |
 | 隔了几天继续 | “接着上次做，给它加一个 Skill” | 原有记录、需要改的部分和试用方法 |
 
-不确定工具怎么选，就先用默认 OpenClaw；已经有能用的助手，就先复用它。给客户做正式交付，可用独立的[落地](https://github.com/NewenergyEric/eric-agent-luodi-skill)。
+不确定工具怎么选，就先用默认 OpenClaw；已经有能用的助手，就先复用它。
 
 ## 三步开始
 
@@ -117,5 +117,3 @@ python -B tools/release.py check
 </details>
 
 [Skill 与写法来源](docs/skill-usage.md) · [发布边界](docs/publishing.md) · [第三方许可](THIRD_PARTY_NOTICES.md)
-
-原创内容采用 [MIT](LICENSE)。粉色「搭好」与蓝色「落地」分别维护。

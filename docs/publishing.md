@@ -4,7 +4,7 @@
 
 绝不将 customers、machines、sandboxes、.control、.demo-runs、.test-runs、.private、.release、日志或本机 DELIVERY.md 加入公共制品。不复制实际 API 值、代理订阅、cookie、聊天与客户数据。凭据引用也不从用户环境取值。
 
-项目复制自明确审核的公开源码子集，采用自己的 README、Skill 入口、营销资产与 ZIP 名称。Client Setup 的用户文件、旧蓝色视频与私有历史没有复制。
+发布包只收录经过审核的源码、README、Skill、文档与媒体；实际用户文件和私有历史不进入公开范围。
 
 ## 默认交付
 

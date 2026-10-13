@@ -44,7 +44,7 @@ The complete Skill contains its scripts, connection and installation checklists,
 | Review the target and proposed changes | Approve necessary access and sign in personally | Connect and configure within the specific authorization |
 | Help try one useful task | Use the assistant themselves | Check connection, installation, loading and output; revoke this session's temporary access |
 
-Already on the target computer? Use the local route. Already have a working Agent? Check and reuse it. Need formal customer delivery? Use [Luodi](https://github.com/NewenergyEric/eric-agent-luodi-skill).
+Already on the target computer? Use the local route. Already have a working Agent? Check and reuse it.
 
 ## Keep going when something is unclear
 
@@ -86,5 +86,3 @@ python -B tools/release.py check
 </details>
 
 [Editorial references](docs/skill-usage.md) · [Publishing rules](docs/publishing.md) · [Third-party notices](THIRD_PARTY_NOTICES.md)
-
-Original content uses [MIT](LICENSE). The pink Dahao brand, hand-drawn artwork, fonts and motion remain in place.
