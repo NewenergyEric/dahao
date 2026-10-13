@@ -30,7 +30,7 @@
     "references/support-matrix.md": "3cef219672f163ba8adb1374ac8e82b8dd07ab024a55be25a3fa0ab1fe0b49fb",
     "references/windows-connect.md": "a129b1f25040c3d463238d31ca64a9d1db894ad203601f9a2e97184df886a61a",
     "references/windows-helper.md": "4d695ef48a44cd7469bb41859cf125b2ce5bb3b36cfc5120441446dbd39a65d4",
-    "scripts/build_mac_helper.py": "b3d2c1d671bdfff68fffa8bd846eb38ddcb115ce951df1b364ff6f0f2d2421b5",
+    "scripts/build_mac_helper.py": "e2a1c1b91c22a316d1adbd1f9e94bfaeccf86b4ddd58621e2f2daf7615188233",
     "scripts/build_windows_connect.py": "be385588aaf150e11f9e341dfd525ec6a25273edf103812b7acfa6921c769205",
     "scripts/discover_target.py": "7ed085d6ed5911c2fb10e710c4371559ec5a14a5b5a2890a9d2b0fd8feea76f1"
   },
@@ -64,7 +64,8 @@
     "dialog_mock_checks": 30,
     "perl_grant_checks": 41,
     "status": "passed",
-    "native_mac_runtime_performed_by_this_check": false
+    "native_mac_runtime_performed_by_this_check": false,
+    "ascii_console_cli": "passed_in_forced_ASCII_subprocess_regression"
   },
   "windows_authorizer_build": "passed_in_isolated_test_suite",
   "revision_scope": "Mac source helpers, public-key-only request packaging and Windows/Mac handoff guidance.",

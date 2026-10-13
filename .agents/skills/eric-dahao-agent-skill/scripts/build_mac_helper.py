@@ -183,7 +183,9 @@ def main() -> int:
         # Do not echo request contents, paths, or exception messages.
         print(json.dumps({'status': 'blocked', 'error_type': type(error).__name__}))
         return 1
-    print(json.dumps(result, ensure_ascii=False, indent=2))
+    # ASCII JSON remains parseable on Windows consoles with a non-UTF-8 codepage.
+    # The ZIP members keep their original UTF-8 filenames and contents.
+    print(json.dumps(result, ensure_ascii=True, indent=2))
     return 0
 
 

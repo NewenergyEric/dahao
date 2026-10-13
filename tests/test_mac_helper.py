@@ -161,14 +161,16 @@ class MacHelperTests(unittest.TestCase):
 
     def test_cli_runs_standalone_and_errors_do_not_echo_request(self):
         script = str(self.skill / 'scripts/build_mac_helper.py')
+        environment = dict(os.environ, PYTHONIOENCODING='ascii', PYTHONUTF8='0')
         proc = subprocess.run([sys.executable, '-B', script, '--kind', 'connect', '--output', str(self.root / 'cli.zip')],
-                              cwd=self.root, capture_output=True, timeout=30)
+                              cwd=self.root, env=environment, capture_output=True, timeout=30)
         self.assertEqual(proc.returncode, 0, proc.stderr)
+        proc.stdout.decode('ascii')
         self.assertEqual(json.loads(proc.stdout)['kind'], 'connect')
         bad = self.root / 'invalid-request.json'
         bad.write_text('SYNTHETIC_PRIVATE_SENTINEL', encoding='utf-8')
         proc = subprocess.run([sys.executable, '-B', script, '--kind', 'authorize', '--request', str(bad),
-                               '--output', str(self.root / 'bad.zip')], cwd=self.root, capture_output=True, timeout=30)
+                               '--output', str(self.root / 'bad.zip')], cwd=self.root, env=environment, capture_output=True, timeout=30)
         self.assertEqual(proc.returncode, 1)
         self.assertEqual(json.loads(proc.stdout)['status'], 'blocked')
         self.assertNotIn(b'SYNTHETIC_PRIVATE_SENTINEL', proc.stdout + proc.stderr)
