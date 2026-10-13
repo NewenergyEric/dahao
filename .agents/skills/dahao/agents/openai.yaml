@@ -1,4 +1,0 @@
-interface:
-  display_name: "搭好 · dahao"
-  short_description: "本机 Agent 带你发现、连接另一台电脑，逐步安装助手并验证可用"
-  default_prompt: "用 $dahao 帮我给同 Wi-Fi 下的另一台电脑部署 AI 助手，先带我发现并确认目标，再连接、检查环境、安装配置和逐项验收。"

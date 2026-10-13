@@ -193,7 +193,7 @@ class ReleaseTests(unittest.TestCase):
             release.check(self.root)
 
     def test_skill_license_must_match_the_reviewed_project_license(self):
-        (self.root / ".agents/skills/dahao/LICENSE").write_text("SYNTHETIC_CHANGED_LICENSE", encoding="utf-8")
+        (self.root / ".agents/skills/eric-dahao-agent-skill/LICENSE").write_text("SYNTHETIC_CHANGED_LICENSE", encoding="utf-8")
         with self.assertRaisesRegex(release.ReleaseError, "skill_license_mismatch"):
             release.check(self.root)
 

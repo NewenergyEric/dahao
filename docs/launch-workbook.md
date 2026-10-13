@@ -54,7 +54,7 @@
 
 本轮交付中文首页与 1280×720 静态关键帧。本地字体覆盖 212 个非空字符、缺字 0；运行时字体加载检查通过，渲染后实际查看布局和文字，无遮挡。没有新全片，因此时长、编码、循环与英文影片检查不适用。待用户确认方向后再决定是否做影片。
 
-人类入口 README.md；Agent 入口 .agents/skills/dahao/SKILL.md；配置/检查/更新沿现有三入口。product-evidence.json 明确区分 verified 与 planned，工具审核只证明引用/哈希及声明一致，不能代替真实部署。
+人类入口 README.md；Agent 入口 .agents/skills/eric-dahao-agent-skill/SKILL.md；配置/检查/更新沿现有三入口。product-evidence.json 明确区分 verified 与 planned，工具审核只证明引用/哈希及声明一致，不能代替真实部署。
 
 ## 当前交付增补
 

@@ -9,7 +9,7 @@ import unittest
 from unittest.mock import Mock, patch
 
 ROOT = Path(__file__).resolve().parents[1]
-SCRIPT = ROOT / '.agents/skills/dahao/scripts/discover_target.py'
+SCRIPT = ROOT / '.agents/skills/eric-dahao-agent-skill/scripts/discover_target.py'
 spec = importlib.util.spec_from_file_location('dahao_discovery', SCRIPT)
 discovery = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(discovery)

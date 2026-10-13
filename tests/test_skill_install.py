@@ -21,9 +21,9 @@ class SkillInstallTests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         self.root = Path(self.tmp.name).resolve()
-        self.skill = self.root / 'installed-skills/dahao'
+        self.skill = self.root / 'installed-skills/eric-dahao-agent-skill'
         for name in release.SKILL_FILES:
-            relative = Path(name).relative_to('.agents/skills/dahao')
+            relative = Path(name).relative_to('.agents/skills/eric-dahao-agent-skill')
             destination = self.skill / relative
             destination.parent.mkdir(parents=True, exist_ok=True)
             destination.write_bytes((cs.ROOT / name).read_bytes())

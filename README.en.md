@@ -1,80 +1,90 @@
-# Dahao · 搭好
+# Dahao · eric-dahao-agent-skill
 
-**AI setup, for the rest of us.**
+**Set up an Agent for someone you care about, then help them finish their first useful task.**
 
-[简体中文](README.md) · [MIT](LICENSE) · Development preview
+[中文](README.md) · For people helping a partner, family member or friend use AI · [MIT](LICENSE)
 
-Dahao lets an Agent on your computer help prepare another Windows or Mac computer for a partner, family member or friend who is new to AI. The Agent leads discovery, target confirmation, SSH access, environment checks, installation, configuration and verification. The user handles choices and any necessary first-time access on the target.
+Install the Skill in your own Codex and explain who you are helping and what they want to do. Dahao guides you through choosing the right computer, checking the environment, preparing the Agent and Skills, and trying one real task. OpenClaw is the default; Hermes or an existing assistant can be selected.
 
 <picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/hero-en.png">
-  <img src="assets/readme/hero-en.webp" width="100%" alt="A 24-second original pink illustrated film: expressive display typography, a hand-drawn computer handoff, a moving seven-step route, tool choices, annotated working rules and an illustrated first task. Real Agent installation is not connected.">
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/readme/hero-zh.png">
+  <img src="assets/readme/hero-zh.webp" width="100%" alt="Pink hand-drawn Dahao workflow: help a friend choose tools, work rules and Skills, then start a useful task.">
 </picture>
 
-[Download English MP4](assets/readme/hero-en.mp4?raw=true) · [GIF](assets/readme/hero-en.gif?raw=true) · [Transcript](docs/demo.md) · [Local player](docs/watch.html)
+[24-second introduction, Chinese](docs/watch.html) · [Checklist, Chinese](docs/installation-checklist.md) · [Capabilities and evidence](docs/support-matrix.md)
 
-**Available today:** connection step 0 plus the seven-step checklist, Windows/Mac connection instructions, passive LAN discovery, a single selected target SSH-banner check and a verified Windows sandbox example. On one Windows target, host verification, PIN-only temporary authorization, SSH login and an existing OpenClaw installation passed live checks, including a synthetic task. Temporary access was revoked and a new login was rejected. Fresh installation, rule/Skill loading, Mac hardware and actual QR login remain unverified. [Support matrix](docs/support-matrix.md)
+## Start in three steps
 
-## Install the Skill in the helper’s Codex, then ask
+**1. You install the Skill.** Send this to Codex on the helper's computer:
 
-Tell Codex:
+```text
+Install this Skill after reviewing its source:
+https://github.com/NewenergyEric/eric-dahao-agent-skill/tree/main/.agents/skills/eric-dahao-agent-skill
+Install the complete folder. Compare any older version first and preserve my work records.
+```
 
-> Install the `.agents/skills/dahao` Skill from https://github.com/NewenergyEric/dahao after reviewing its source.
+**2. Say who needs help and what they want to do:**
 
-On the next turn:
+```text
+$eric-dahao-agent-skill Help me prepare an AI assistant on my friend's Mac.
+Start with OpenClaw. The first task is a weekend packing and travel checklist.
+We are on the same Wi-Fi. Guide us through confirming the computer, checking
+what is already there and setting it up. Give us one immediate step at a time.
+```
 
-> $dahao Help me prepare an AI assistant for my partner’s Windows computer on the same Wi-Fi. Use OpenClaw by default. Find the target and let me confirm it before connecting; guide us through setup and verification, with safety first.
+**3. Follow the next step together.** Your friend confirms their computer, approves necessary access, signs in or scans through the official interface, and tries the first task. Later, ask to check progress or add one Skill while keeping their existing preferences.
 
-The Skill contains the discovery script, connection/setup/chat checklists, behavior template and Windows helper source. No repository checkout, website or HTML download is required. The local Agent needs terminal/file tools; Python helpers use the standard library, and Windows GUI builds require Windows and its installed .NET Framework compiler. The public distribution contains no real connection request or keys.
+The complete Skill contains its scripts, connection and installation checklists, work-rule template and Windows helper source. No webpage or full repository is required to begin. Windows and Mac have preparation routes; exact tooling and implementation limits are in the [support matrix](docs/support-matrix.md).
 
-The recipient confirms their computer, reviews and clicks any necessary temporary authorization, then logs in or scans a code in the official application. Codex maintains the checklist in the conversation. Reuse existing installations, keep unverified steps visible, and store target/session records outside the installed Skill in a private workspace. Mac instructions exist but have not been tested on hardware.
+## Who does what
 
-Optional references: [setup](docs/installation-checklist.md), [Windows/Mac connection](docs/connection-checklist.md), [Feishu/WeChat](docs/chat-connection-checklist.md), [HTML checklist](docs/getting-started.html).
+| You, the helper | Your friend | The Agent |
+|---|---|---|
+| Install the Skill and explain the goal | Confirm their computer | Check existing tools and show the next step |
+| Review the target and proposed changes | Approve necessary access and sign in personally | Connect and configure within the specific authorization |
+| Help try one useful task | Use the assistant themselves | Check connection, installation, loading and output; revoke this session's temporary access |
 
-## Generic tools and private authorization packages
+Already on the target computer? Use the local route. Already have a working Agent? Check and reuse it. Need formal customer delivery? Use [Luodi](https://github.com/NewenergyEric/eric-agent-luodi-skill).
 
-The generic Skill and helper contain no target identity or keys. A per-session package contains the target account/address, a newly generated public key and host fingerprint; it contains no private key, password or token, but is still private authorization material and must never be published or reused. The corresponding private key stays in a restricted controller directory and is deleted after revocation and a rejected-login check.
+## Keep going when something is unclear
 
-Authorization permits command execution as the displayed account; the tested administrator route has broad permissions. The 60-minute limit rejects new logins, not already-running commands. The Windows helpers are unsigned previews: if blocked, verify the source without disabling protection. [Safety details](.agents/skills/dahao/references/safety.md).
+- Cannot identify the computer: ask for help confirming it before any connection.
+- Windows account has only a PIN: use the helper workflow and let the owner review the access request.
+- A step failed: check its current state before repeating an installation.
+- Ready to hand over: let your friend try a task and verify temporary access is revoked.
 
-The live test reused OpenClaw 2026.9.6 and passed health and a synthetic task. Its audit reported 0 critical findings and 8 warnings; hardening remains pending. Fresh installation, rule/Skill loading, Mac hardware and live QR login remain unverified. [Redacted evidence](docs/live-connection-verification.json).
+Passwords, private keys, subscriptions and QR codes stay in the correct native or official interface. Target-specific access bundles are private delivery materials. [Safety details](.agents/skills/eric-dahao-agent-skill/references/safety.md)
 
-## One small task is enough to begin
-
-“We are going away for two days. Help me pack light and separate what to bring from what to check.”
-
-![Original weekend packing illustration showing what to pack, what to check and missing details; not executed by a real Agent](assets/readme/case-board-en.png)
-
-This is an **original illustration of the intended task outcome**, not a live Agent result. [Read the input and example checklist](examples/first-task/weekend.md).
-
-## Set the working boundaries first
-
-The [general AGENTS template](examples/behavior/AGENTS.template.md) covers inspection, tool permissions, secret references, verification and continuation. It borrows the generic layering approach from Cici Foundry without importing private instances, SOUL or USER files. Adapt and verify the actual runtime entry point before claiming the rules are loaded. [Behavior checks](docs/behavior-baseline.md)
-
-[Standalone Skill verification](docs/skill-install-verification.json)
+[Windows/Mac connection](docs/connection-checklist.md) · [Chat channels](docs/chat-connection-checklist.md) · [Optional HTML checklist](docs/getting-started.html)
 
 <details>
-<summary>Runnable example, evidence and maintenance</summary>
+<summary>Existing installations and other Agents</summary>
 
-With Windows and Python 3.12+ already available, no Python dependencies are required:
+The old identifier was `dahao`. Install `eric-dahao-agent-skill`, confirm it can be selected, then remove only the confirmed old Skill directory if needed. Keep private session records and target settings where they are. Select the new Skill in the next conversation turn if the list needs refreshing.
+
+Other Agent Skills-compatible tools can install the full folder using their official method. Actual operations require terminal and file tools. The Python helpers use the standard library; Windows GUI builds use the system .NET Framework on Windows.
+
+</details>
+
+<details>
+<summary>Developer checks, helper builds and real-device scope</summary>
+
+A Windows trial covers temporary SSH access, identity/reconnection, reuse of an existing OpenClaw installation and access revocation. Fresh Agent installation, actual rules/Skill loading, Mac hardware and live QR login are documented separately in the [support matrix](docs/support-matrix.md). Functionality and remaining security work are separate outcomes.
+
+The Windows helper is unsigned. Follow the [build instructions](.agents/skills/eric-dahao-agent-skill/references/windows-helper.md); verify the source if blocked and do not disable security protection. Access permissions and expiry behavior are explained in the safety reference.
+
+The full repository also has a synthetic configuration example for Windows + Python 3.12+:
 
 ```powershell
 python -B demo.py
-```
-
-The isolated example installs package 1.0.0, repeats it, upgrades to 1.1.0, preserves overrides and resumes an interrupted update. The synthetic order result is two orders totaling CNY 47.50, with a largest order of 27.50. This validates the local configuration mechanism, not real Agent deployment or the travel example.
-
-[Installation evidence](docs/installation-verification.json) · [Configuration workflow](docs/workflow.md) · [Media validation](docs/media-validation.json) · [Film rebuild](motion/README.md)
-
-```powershell
 python -B -m unittest discover -s tests -v
 python -B tools/release.py check
 ```
 
-The product commands remain configure / check / update; `--brief` still only generates guidance. The [remote workflow](docs/remote-workflow.md) uses the Agent’s tools within authorization for a specific target. The helper does not authenticate, install software or read existing secrets. [Connection evidence](docs/remote-access-verification.json) distinguishes fixture tests from real-target verification.
-
-[Publishing scope](docs/publishing.md) · [Sources and licensing](THIRD_PARTY_NOTICES.md)
+[Standalone Skill checks](docs/skill-install-verification.json) · [Windows trial](docs/live-connection-verification.json) · [Synthetic example](docs/installation-verification.json) · [Workflow](docs/workflow.md) · [Media source](motion/README.md)
 
 </details>
 
-Dahao keeps its independent pink identity. Original project materials are provided under [MIT](LICENSE); third-party fonts and templates retain their own licenses. See [source notices](THIRD_PARTY_NOTICES.md).
+[Editorial references](docs/skill-usage.md) · [Publishing rules](docs/publishing.md) · [Third-party notices](THIRD_PARTY_NOTICES.md)
+
+Original content uses [MIT](LICENSE). The pink Dahao brand, hand-drawn artwork, fonts and motion remain in place.

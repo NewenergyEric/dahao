@@ -28,24 +28,24 @@ SAFE_ROOT = {"README.md", "AGENTS.md", "THIRD_PARTY_NOTICES.md", "client_setup.p
              "sources.lock.json", "release-files.json", ".gitignore", ".gitattributes", "LICENSE",
              "README.en.md", "product-evidence.json", "showcase-files.json"}
 SKILL_FILES = {
-    '.agents/skills/dahao/LICENSE',
-    '.agents/skills/dahao/SKILL.md',
-    '.agents/skills/dahao/agents/openai.yaml',
-    '.agents/skills/dahao/assets/AGENTS.template.md',
-    '.agents/skills/dahao/assets/windows-connect/DahaoAuthorize.cs',
-    '.agents/skills/dahao/assets/windows-connect/DahaoConnect.cs',
-    '.agents/skills/dahao/assets/windows-connect/app.manifest',
-    '.agents/skills/dahao/references/behavior-baseline.md',
-    '.agents/skills/dahao/references/chat-connection-checklist.md',
-    '.agents/skills/dahao/references/connection-checklist.md',
-    '.agents/skills/dahao/references/installation-checklist.md',
-    '.agents/skills/dahao/references/remote-workflow.md',
-    '.agents/skills/dahao/references/safety.md',
-    '.agents/skills/dahao/references/support-matrix.md',
-    '.agents/skills/dahao/references/windows-connect.md',
-    '.agents/skills/dahao/references/windows-helper.md',
-    '.agents/skills/dahao/scripts/build_windows_connect.py',
-    '.agents/skills/dahao/scripts/discover_target.py',
+    '.agents/skills/eric-dahao-agent-skill/LICENSE',
+    '.agents/skills/eric-dahao-agent-skill/SKILL.md',
+    '.agents/skills/eric-dahao-agent-skill/agents/openai.yaml',
+    '.agents/skills/eric-dahao-agent-skill/assets/AGENTS.template.md',
+    '.agents/skills/eric-dahao-agent-skill/assets/windows-connect/DahaoAuthorize.cs',
+    '.agents/skills/eric-dahao-agent-skill/assets/windows-connect/DahaoConnect.cs',
+    '.agents/skills/eric-dahao-agent-skill/assets/windows-connect/app.manifest',
+    '.agents/skills/eric-dahao-agent-skill/references/behavior-baseline.md',
+    '.agents/skills/eric-dahao-agent-skill/references/chat-connection-checklist.md',
+    '.agents/skills/eric-dahao-agent-skill/references/connection-checklist.md',
+    '.agents/skills/eric-dahao-agent-skill/references/installation-checklist.md',
+    '.agents/skills/eric-dahao-agent-skill/references/remote-workflow.md',
+    '.agents/skills/eric-dahao-agent-skill/references/safety.md',
+    '.agents/skills/eric-dahao-agent-skill/references/support-matrix.md',
+    '.agents/skills/eric-dahao-agent-skill/references/windows-connect.md',
+    '.agents/skills/eric-dahao-agent-skill/references/windows-helper.md',
+    '.agents/skills/eric-dahao-agent-skill/scripts/build_windows_connect.py',
+    '.agents/skills/eric-dahao-agent-skill/scripts/discover_target.py',
 }
 MAX_TOTAL = 64 * 1024 * 1024
 MAX_BINARY = 8 * 1024 * 1024
@@ -209,7 +209,7 @@ def load_sources(root, identifiers=None):
             findings.append({"file": name, "line": 1, "rule": "noncanonical_crlf"})
         findings.extend(scan_text(name, content, identity_values))
         payloads[name] = data
-    if manifest["license_status"] == "selected" and payloads["LICENSE"] != payloads[".agents/skills/dahao/LICENSE"]:
+    if manifest["license_status"] == "selected" and payloads["LICENSE"] != payloads[".agents/skills/eric-dahao-agent-skill/LICENSE"]:
         stop("skill_license_mismatch")
     # Validate the existing recipe pins without rewriting them.
     lock = cs.parse(payloads["sources.lock.json"])

@@ -2,7 +2,7 @@
 from pathlib import Path
 import runpy
 
-SCRIPT = Path(__file__).resolve().parents[1] / ".agents/skills/dahao/scripts/build_windows_connect.py"
+SCRIPT = Path(__file__).resolve().parents[1] / ".agents/skills/eric-dahao-agent-skill/scripts/build_windows_connect.py"
 _module = runpy.run_path(str(SCRIPT))
 build = _module["build"]
 

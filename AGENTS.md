@@ -1,7 +1,7 @@
 # 项目约定
 
-先读 README.md 和 .agents/skills/dahao/SKILL.md；DELIVERY.md 若存在，仅作本机私有接续记录。
-本项目是 搭好 · dahao：粉色、奶油色、莓果色，由本机 Agent 帮用户为另一台 Windows/Mac 电脑发现、接入、安装配置与验收，面向不熟悉 AI 的爱人、家人、朋友或自己。独立于面向 FDE 的 Client Setup。
+先读 README.md 和 .agents/skills/eric-dahao-agent-skill/SKILL.md；DELIVERY.md 若存在，仅作本机私有接续记录。
+本项目是 搭好 · dahao：粉色、奶油色、莓果色，由本机 Agent 帮用户为另一台 Windows/Mac 电脑发现、接入、安装配置与验收，面向不熟悉 AI 的爱人、家人、朋友或自己。独立于面向 FDE 的「落地 · luodi」。
 Skill 以控制端协作推进真实目标；随包工具支持被动设备发现、指定目标 SSH 标识检查和 Windows 项目内合成示例。Mac/Windows 的 --brief 仍只读引导。一台 Windows 已实测临时公钥认证、身份与重连、现有 OpenClaw 健康及合成任务，结束撤销后拒绝新登录；全新安装、规则/Skill 加载、Mac 实机仍待验证。安全提醒单独报告，功能成功不等于安全验收完成。
 用户入口只保留 configure/check/update。公共模板、用户覆盖、机器差异分开，固定来源/version/hash；不自动重新 pin。
 不读取或复制现有凭据、订阅、cookie、聊天或客户数据。凭据仅引用，不读取值。
@@ -10,12 +10,14 @@ Skill 以控制端协作推进真实目标；随包工具支持被动设备发�
 修改执行逻辑后运行 python -B -m unittest discover -s tests -v；发布准备运行 python -B tools/release.py check。
 发布文件逐项列入 release-files.json，客户目录、回执、日志、备份和私有记录全部排除。本项目原创部分许可证已由作者确认采用 MIT；变更许可需作者决定。
 
-产品入口是本机 Agent 安装独立 `$dahao` Skill，在对话中带用户完成清单；不要求下载网页、完整仓库或部署网站。交付包含用户价值、随 Skill 安装的文字清单、Windows/Mac 连接步骤和当前可用版的隔离验证；已有 HTML 仅为可选参考。连接、安装、加载、任务分别报告证据。未接入能力保留未完成状态。
+产品入口是本机 Agent 安装独立 `$eric-dahao-agent-skill` Skill，在对话中带用户完成清单；不要求下载网页、完整仓库或部署网站。交付包含用户价值、随 Skill 安装的文字清单、Windows/Mac 连接步骤和当前可用版的隔离验证；已有 HTML 仅为可选参考。连接、安装、加载、任务分别报告证据。未接入能力保留未完成状态。
 
 Windows 首次交接默认提供双击连接小助手，不要求新手输入技术命令。GUI 只读必要连接元数据和默认主机公钥，不读私钥、不上传；用户确认后才能复制/保存。程序只请求普通用户权限，安全软件拦截时不要求关闭保护。核心 Python 仍只用标准库；可选 Windows GUI 用系统 .NET Framework，源码审阅与测试后本地构建，程序制品不混入源码白名单。
 
 面向新手，安全说明应贴近具体动作：地址用来选目标，指纹用来核验身份；密码、私钥、订阅和二维码不进入聊天或公开制品。扫码清单覆盖 OpenClaw/Hermes × 飞书/个人微信，默认本人私聊与最少工具权限；扫码不等于通过安全或功能验收。
 
-产品名为「搭好 · dahao」，项目 Skill 为 `$dahao`，面向不太会 AI 的人及帮助他们准备电脑的人。后续视觉修改先读 docs/brand.md：保留个性标题字、手绘素材与解释过程的连续动作，避免静态背景配文字淡入的 PPT 式影片。蓝色 FDE 不随此项目更名或换色。
+产品名为「搭好 · dahao」，项目 Skill 为 `$eric-dahao-agent-skill`，面向不太会 AI 的人及帮助他们准备电脑的人。后续视觉修改先读 docs/brand.md：保留个性标题字、手绘素材与解释过程的连续动作，避免静态背景配文字淡入的 PPT 式影片。蓝色 FDE 不随此项目更名或换色。
 
-Skill 的操作参考、模板和小助手源码在 .agents/skills/dahao 内维护为单一来源；仓库 docs 保留跳转入口。真实请求、密钥和目标记录永不写入 Skill 目录。通用构建不生成请求或密钥；每次接入单独生成私人授权包，不能公开或复用。
+Skill 的操作参考、模板和小助手源码在 .agents/skills/eric-dahao-agent-skill 内维护为单一来源；仓库 docs 保留跳转入口。真实请求、密钥和目标记录永不写入 Skill 目录。通用构建不生成请求或密钥；每次接入单独生成私人授权包，不能公开或复用。
+
+Skill 与 GitHub 仓库标识为 `eric-dahao-agent-skill`，中文品牌与既有媒体名称保持不变。使用引导先说明适合谁、安装入口与第一句话，再展开技术细节；按配置 / 检查 / 更新接续，保留真实能力与授权边界。

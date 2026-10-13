@@ -19,52 +19,52 @@
   },
   "sources": {
     "en": {
-      "sha256": "29bfb186176a273ba46f7baaf3aeffaa31c7fdddcb1853e3ec0ed1c643851d0b",
+      "sha256": "574ae84330437b0a3399de8961ad4bfbfe7d50760bfa2933089766efb9a79be4",
       "filename": "dahao-en.mp4"
     },
     "zh": {
-      "sha256": "8c85b9a07928e19a840e4a1d4466a63699abf8823c9656ed1fe22f7e295d947e",
+      "sha256": "a953835528f608a12d56a970d9db1a14439c7a826073adaa9f2a7f1f785965b0",
       "filename": "dahao-zh.mp4"
     }
   },
   "assets": {
     "hero-en.mp4": {
-      "bytes": 1559325,
-      "sha256": "b591e8f83b4b04fddcf963d5c7f93285542897cb38fc571e758ab80ac5f0f295",
+      "bytes": 1580865,
+      "sha256": "bef67a66fcdcb9e885dcc12ae8fcd058ffeb5dd4dafc492ea99910fa40f9074b",
       "duration_seconds": 24.0
     },
     "hero-en.webp": {
-      "bytes": 2609092,
-      "sha256": "c114f9afb303fedd8567ce4298301d24f5eaeaa48c56201383e185a52fe1154c",
+      "bytes": 2647964,
+      "sha256": "469f43ffbcb43b848f8707613ad5ff3e02a2794cdc25fc230379863f76f6304a",
       "duration_seconds": 24.0
     },
     "hero-en.gif": {
-      "bytes": 4748617,
-      "sha256": "05d179591ca1c83a61643ff78708d5e372b81ba5ac70d5e314c07aba4930210e",
+      "bytes": 5041128,
+      "sha256": "80adc465d9ecb5e0cf09431679a899307b9b6fd6890a099bf48108b8b4bbc62a",
       "duration_seconds": 24.0
     },
     "hero-en.png": {
-      "bytes": 693092,
-      "sha256": "c96f7b2ca28e39b88d115c8d0f0c5961ac1c788be2f962b9558ee57f1bb97476"
+      "bytes": 744258,
+      "sha256": "de8df17b2419f8ba69c9d186ff11e7668d70adcc3552f35c919d72c5cc7f8064"
     },
     "hero-zh.mp4": {
-      "bytes": 1541842,
-      "sha256": "0b22496c90e521686968bc822b1aa5f062ed2c3dcedbac5a9e1f7f99d5f7481b",
+      "bytes": 1565705,
+      "sha256": "5a67b4b82ca162cdc0933de24de89ad577af0104a9fa89404bb4c58aa1b77559",
       "duration_seconds": 24.0
     },
     "hero-zh.webp": {
-      "bytes": 2605594,
-      "sha256": "847b4145ebc6a0adaaecfa6388881e3ba43f7cb3b16bafd00de47988b65e735c",
+      "bytes": 2664412,
+      "sha256": "c68c7f8ab33bc9e8ad92e46dee990d57254c7dfdc57df81d48e5f9565adcabaf",
       "duration_seconds": 24.0
     },
     "hero-zh.gif": {
-      "bytes": 4858141,
-      "sha256": "5f3a8b0a7e805569f6f3184fa3fd8d90e5e2f50f7c2f68461792e743e9c5433e",
+      "bytes": 5094040,
+      "sha256": "409dd8fea902bc7518c625423723335afa115a0427021913b0a43e2da35c8a6f",
       "duration_seconds": 24.0
     },
     "hero-zh.png": {
-      "bytes": 685391,
-      "sha256": "d936f968be5ca7f651b98b55c3989700f615d13e28fa7958d19ff62eb06e300f"
+      "bytes": 734413,
+      "sha256": "43941486f862c29510ccef674d4977954cbb3b0a9fd1065356f4c4563a13f78a"
     }
   }
 }

@@ -9,8 +9,8 @@
 | 8.5–12.5 秒 | 按你的习惯来。 | Your tools. Your call. | 进入深梅色场景，Codex/IDE 与默认 OpenClaw、可选 Hermes 分层进场 |
 | 12.5–16.4 秒 | 先定规矩，再加本领。 | Clear rules. Useful Skills. | AGENTS.md 规则页移动转正，逐条标注行为边界 |
 | 16.4–20 秒 | 从她想做的一件小事开始。 | Start with something useful. | 请求逐字写入，再出现物品和待确认事项 |
-| 20–24 秒 | 把 AI 搭好，让你用得起来。 | Get ready for AI. Make the first step yours. | 新名字与 `$dahao` 入口出现，交接主体回到画面中心 |
+| 20–24 秒 | 把 AI 搭好，让你用得起来。 | Get ready for AI. Make the first step yours. | 新名字与 `$eric-dahao-agent-skill` 入口出现，交接主体回到画面中心 |
 
-七步顺序为依赖、通路、工具、日常 Agent、规则、Skills、验收。影片解释准备过程；选择与人工勾选不触发真实安装。周末旅行是原创目标任务示意，尚未由真实 Agent 执行。
+七步顺序为依赖、通路、工具、日常 Agent、规则、Skills、验收。影片解释准备过程；选择与人工勾选不触发真实安装。周末旅行是原创任务示意。
 
-当前可验证的范围仍为完整清单与 Windows 项目内合成示例。真实环境安装、Agent 启动、规则和 Skill 加载待接入。文字与来源见 [品牌约定](brand.md)、[当前验证](installation-verification.json)、[媒体验证](media-validation.json)。
+Windows / Mac 按各自路线准备；安装 Skill 后，直接说清要帮谁、第一件任务是什么，再从当前一步继续。详细执行范围见 [支持矩阵](support-matrix.md)，制作与来源见 [品牌约定](brand.md)、[媒体验证](media-validation.json)。

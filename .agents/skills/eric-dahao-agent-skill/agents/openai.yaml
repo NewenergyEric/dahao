@@ -1,0 +1,4 @@
+interface:
+  display_name: "搭好 · eric-dahao-agent-skill"
+  short_description: "带帮助者为家人朋友准备 Agent，每次一步，直到试用与交接"
+  default_prompt: "用 $eric-dahao-agent-skill 帮我给朋友准备 AI 助手，先确认电脑和第一件小事，再一步一步检查与配置。"

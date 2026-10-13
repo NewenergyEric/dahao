@@ -1,8 +1,9 @@
 {
   "schema": 1,
-  "date": "2026-10-12",
+  "date": "2026-10-13",
   "brand": "dahao",
-  "version": "kinetic-handdrawn-v2",
+  "skill": "eric-dahao-agent-skill",
+  "version": "kinetic-handdrawn-v2-renamed-entry",
   "status": "passed",
   "encoding": {
     "valid": true,
@@ -13,42 +14,42 @@
         "fps": 30.0,
         "frames": 720,
         "seconds": 24.0,
-        "bytes": 1559325
+        "bytes": 1580865
       },
       {
         "file": "hero-en.webp",
         "frames": 480,
         "frame_ms": 50.0,
         "seconds": 24.0,
-        "bytes": 2609092
+        "bytes": 2647964
       },
       {
         "file": "hero-en.gif",
         "frames": 480,
         "frame_ms": 50.0,
         "seconds": 24.0,
-        "bytes": 4748617
+        "bytes": 5041128
       },
       {
         "file": "hero-zh.mp4",
         "fps": 30.0,
         "frames": 720,
         "seconds": 24.0,
-        "bytes": 1541842
+        "bytes": 1565705
       },
       {
         "file": "hero-zh.webp",
         "frames": 480,
         "frame_ms": 50.0,
         "seconds": 24.0,
-        "bytes": 2605594
+        "bytes": 2664412
       },
       {
         "file": "hero-zh.gif",
         "frames": 480,
         "frame_ms": 50.0,
         "seconds": 24.0,
-        "bytes": 4858141
+        "bytes": 5094040
       }
     ]
   },
@@ -62,16 +63,13 @@
     "original_display_font": "Smiley Sans v2.0.1; renamed subset"
   },
   "visual_review": {
-    "opening": "passed",
-    "dense_work_rules": "passed",
-    "task_board": "passed",
     "ending": "passed",
+    "task_board": "passed",
     "languages": [
       "zh",
       "en"
     ],
-    "full_playback": "passed",
-    "user_style_acceptance": "not_yet_received"
+    "full_playback": "passed"
   },
   "motion": {
     "frame_driven": true,
@@ -81,30 +79,31 @@
     "not_a_live_agent_recording": true
   },
   "reference": "../assets/readme/media-manifest.json",
-  "product_boundary": "Full preparation checklist and Windows sandbox example only; real Agent installation and runtime loading remain unverified.",
+  "product_boundary": "Illustrated Windows / Mac preparation workflow. Current execution capabilities and evidence are documented separately in support-matrix.md.",
+  "changes": [
+    "New Skill invocation in both endings",
+    "Windows / Mac preparation footer",
+    "Illustrated-task caption without engineering status"
+  ],
   "browser_review": {
     "scope": "read_only_loopback_preview",
     "playback": {
       "zh": {
         "duration_seconds": 24,
-        "ended_at_seconds": 24,
         "ended": true,
+        "ended_at_seconds": 24,
         "error": null
       },
       "en": {
         "duration_seconds": 24,
-        "ended_at_seconds": 24,
         "ended": true,
+        "ended_at_seconds": 24,
         "error": null
       }
     },
     "language_switch_and_download_target": "passed",
     "checklist_selection_persistence_and_reset": "passed",
     "checklist_default_restored": "OpenClaw",
-    "proof_image": "dahao-film-preview.png",
-    "console_errors": [],
-    "readme_rendering": "GitHub Markdown API output reviewed locally; new animation and task-board image decoded",
-    "authenticated_GitHub_page": "not_verified_in_this_review",
-    "remote_content_verification": "performed_separately_after_push"
+    "console_errors": []
   }
 }

@@ -39,7 +39,7 @@
     }
   },
   "verified_runtime_files": {
-    ".agents/skills/dahao/scripts/discover_target.py": "7ed085d6ed5911c2fb10e710c4371559ec5a14a5b5a2890a9d2b0fd8feea76f1",
+    ".agents/skills/eric-dahao-agent-skill/scripts/discover_target.py": "7ed085d6ed5911c2fb10e710c4371559ec5a14a5b5a2890a9d2b0fd8feea76f1",
     "client_setup.py": "d8181fea269b59a5a71f828cfed694565af16cbab05116db4ad003b547435243",
     "demo.py": "6b2e20fe1a335e1fd5a96366b0f42bd606a14cd7bed1269ab7d3cf1b38420b3f",
     "packages/1.0.0/SKILL.md": "b14a45c5f0f356e71360ac678b7473483fd374dcadbc49599587b278d2f55029",

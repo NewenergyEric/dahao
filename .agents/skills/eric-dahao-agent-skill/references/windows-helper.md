@@ -14,7 +14,7 @@
 
 这是未签名的本地开发预览。如果 Windows、Smart App Control 或组织策略拦截，请停止并告知协助者；不要关闭 Defender/SmartScreen，也不要更改执行策略。正式面向新手分发还需要可信的代码签名与目标设备兼容性验证，不能承诺每台电脑双击即可运行。
 
-可信来源与审阅：项目仓库 https://github.com/NewenergyEric/dahao ，源文件在 Skill 的 assets/windows-connect；同包 source/ 附源码，build-record.json 附源文件及程序 SHA256。校验值应从已信任的交付渠道取得；同包校验文件不能单独证明来源。
+可信来源与审阅：项目仓库 https://github.com/NewenergyEric/eric-dahao-agent-skill ，源文件在 Skill 的 assets/windows-connect；同包 source/ 附源码，build-record.json 附源文件及程序 SHA256。校验值应从已信任的交付渠道取得；同包校验文件不能单独证明来源。
 
 维护者构建（用户无需执行）：在 Skill 目录运行 python -B scripts/build_windows_connect.py。构建工具仅调用 Windows 已安装的 .NET Framework 编译器，先执行合成自检，再输出新目录；不下载依赖、不覆盖旧制品。源码在项目仓库中审阅，EXE 为本地构建制品，当前未列入源码发布包。
 

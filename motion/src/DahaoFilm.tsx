@@ -89,7 +89,7 @@ export const DahaoFilm:React.FC<{lang:Lang}>=({lang})=>{
 
   <Beat f={f} index={4}>
    <div style={{position:'absolute',left:67,top:133,width:1140}}><Display style={{fontSize:zh?85:71,transform:'rotate(-2deg)'}}><KineticLine f={f} start={495}>{pick(lang,'从她想做的一件小事开始。','Start with something useful.')}</KineticLine></Display></div>
-   <div style={{position:'absolute',left:72,top:262,fontSize:19,color:C.rasp,fontWeight:700}}>{pick(lang,'目标任务示意 · 尚未由真实 Agent 执行','ILLUSTRATED GOAL · NOT A LIVE AGENT RESULT')}</div>
+   <div style={{position:'absolute',left:72,top:262,fontSize:19,color:C.rasp,fontWeight:700}}>{pick(lang,'任务示例 · 从一件小事开始','ILLUSTRATED TASK · START WITH SOMETHING USEFUL')}</div>
    <Display style={{position:'absolute',left:65,top:320,width:1100,fontSize:zh?54:48,color:C.rasp}}>{pick(lang,'“周末去两天，带什么？”','“Two days away. What should I pack?”').slice(0,Math.max(0,Math.floor((f-510)/.8)))}</Display>
    <div style={{position:'absolute',left:72,top:422,width:810}}>{(zh?['随身带：手机、证件、充电器','先确认：目的地、日期、同行人数']:['Pack: phone, ID and charger','Confirm: destination, dates and group size']).map((s,i)=><div key={s} style={{fontSize:zh?29:25,padding:'15px 0',borderBottom:'1px solid #dcb7c2',opacity:move(f,544+i*12,15),transform:`translateX(${(1-move(f,544+i*12,18))*35}px)`}}>{s}</div>)}</div>
   </Beat>
@@ -97,10 +97,10 @@ export const DahaoFilm:React.FC<{lang:Lang}>=({lang})=>{
   <Beat f={f} index={5}>
    <Display style={{position:'absolute',left:57,top:138,fontSize:148,color:C.pink,transform:'rotate(-4deg)',zIndex:8}}><KineticLine f={f} start={602}>搭好<span style={{fontSize:74,paddingLeft:25}}>dahao</span></KineticLine></Display>
    <div style={{position:'absolute',left:70,top:325,width:620,zIndex:8}}><Display style={{fontSize:zh?57:46}}><KineticLine f={f} start={620}>{pick(lang,'把 AI 搭好，','Get ready for AI.')}</KineticLine><KineticLine f={f} start={625}>{pick(lang,'让你用得起来。','Make the first step yours.')}</KineticLine></Display><div style={{fontSize:23,color:'#efb3cb',marginTop:25,opacity:move(f,643,18)}}>{pick(lang,'给爱人、家人、朋友，也给自己。','For your partner, family, friends. And you.')}</div></div>
-   <div style={{position:'absolute',left:69,top:555,display:'flex',gap:25,alignItems:'center',zIndex:8,opacity:move(f,660,18)}}><Display style={{fontSize:42,color:C.pink}}>$dahao</Display><div style={{fontSize:22}}>{pick(lang,'从七步清单开始 →','Open the 7-step checklist →')}</div></div>
+   <div style={{position:'absolute',left:69,top:540,display:'flex',flexDirection:'column',gap:8,alignItems:'flex-start',zIndex:8,opacity:move(f,660,18)}}><Display style={{fontSize:32,color:C.pink}}>$eric-dahao-agent-skill</Display><div style={{fontSize:22}}>{pick(lang,'从七步清单开始 →','Open the 7-step checklist →')}</div></div>
   </Beat>
 
-  <div style={{position:'absolute',left:58,right:58,bottom:28,borderTop:`1px solid ${dark?'#efb3cb44':'#a7325833'}`,paddingTop:13,display:'flex',justifyContent:'space-between',alignItems:'center',fontSize:15,color:dark?'#efb3cb':C.mute,zIndex:30}}><span>{pick(lang,'当前：完整清单 + Windows 沙箱示例 · 真实 Agent 安装待接入','Today: checklist + Windows sandbox example · Real Agent installation is not connected')}</span><span>{String(chapter+1).padStart(2,'0')} / 06</span></div>
+  <div style={{position:'absolute',left:58,right:58,bottom:28,borderTop:`1px solid ${dark?'#efb3cb44':'#a7325833'}`,paddingTop:13,display:'flex',justifyContent:'space-between',alignItems:'center',fontSize:15,color:dark?'#efb3cb':C.mute,zIndex:30}}><span>{pick(lang,'Windows / Mac · 从七步清单开始','Windows / Mac · Start with the checklist')}</span><span>{String(chapter+1).padStart(2,'0')} / 06</span></div>
   <div style={{position:'absolute',left:0,bottom:0,height:4,width:(f+1)/720*1280,background:dark?C.pink:C.rasp,zIndex:40}}/>
  </AbsoluteFill>;
 };

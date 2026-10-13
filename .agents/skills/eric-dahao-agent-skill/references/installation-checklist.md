@@ -1,10 +1,16 @@
 # 搭好 · dahao · Agent 电脑安装清单
 
-[飞书 / 微信扫码清单](chat-connection-checklist.md) · [当前示例验证记录](https://github.com/NewenergyEric/dahao/blob/main/docs/installation-verification.json)
+[飞书 / 微信扫码清单](chat-connection-checklist.md) · [当前示例验证记录](https://github.com/NewenergyEric/eric-dahao-agent-skill/blob/main/docs/installation-verification.json)
 
 让本机 Agent 帮你给另一台电脑搭好助手；你确认目标与选择，Agent 带着发现、连接、安装配置和验收。
 
 先做第 0 步，再做后面的 7 步。Skill 可指导终端操作；随包工具包含发现、单目标 SSH 检查、Windows 连接/临时授权 GUI 源码和合成示例。一台 Windows 的真实登录与现有 OpenClaw 可用性已验证；全新安装、规则/Skill 加载与 Mac 实机仍待验证。手动勾选不代表自动验收。默认 OpenClaw，可选 Hermes 或用户指定的 Agent。
+
+## 先让朋友选一件小事
+
+- [ ] 想帮谁、用 Windows 还是 Mac、先让助手做哪件事；不确定的部分由 Agent 带着确认。
+- [ ] 帮助者安装 `$eric-dahao-agent-skill`；朋友只做必要确认、亲自登录和试用。
+- [ ] 每次说明现在在哪一步、眼前要做什么、怎样算完成，已有信息不重复问。
 
 ## 先选择
 
@@ -43,8 +49,8 @@
 
 ## 3. Codex / IDE
 
-- [ ] 在帮助者电脑安装或复用 Codex/所选工具，由本人登录并安装 dahao Skill；接收帮助的人不必安装 Codex，也不必下载网页。
-- [ ] 调用 `$dahao`；以已安装的 SKILL.md 所在目录定位脚本和参考资料，另选私有工作目录保存本次进度。
+- [ ] 在帮助者电脑安装或复用 Codex/所选工具，由本人登录并安装 eric-dahao-agent-skill；接收帮助的人不必安装 Codex，也不必下载网页。
+- [ ] 调用 `$eric-dahao-agent-skill`；以已安装的 SKILL.md 所在目录定位脚本和参考资料，另选私有工作目录保存本次进度。
 - [ ] 完成一个不含私人数据的小任务，确认准备工具可用。
 
 入口：[Codex 官方开始说明](https://developers.openai.com/codex/quickstart)。VS Code / Cursor 从其各自官方站点选择系统对应安装包；选择 IDE 时另外确认所需 Agent 扩展，IDE 本身不等于 Agent 已配置。
@@ -73,7 +79,7 @@
 - [ ] 核对来源、版本、许可、依赖及工具权限，再按选定 Agent 的加载规则安装。
 - [ ] 确认实际发现并调用 Skill，完成相应任务；更新时保留用户覆盖。
 
-当前已支持的 Windows 项目示例：先 check，configure/update 生成差异，审核完整 plan_id 后批准；详见 [工作流](https://github.com/NewenergyEric/dahao/blob/main/docs/workflow.md)。真实 Agent 的 Skill 安装和加载尚未接入。
+当前已支持的 Windows 项目示例：先 check，configure/update 生成差异，审核完整 plan_id 后批准；详见 [工作流](https://github.com/NewenergyEric/eric-dahao-agent-skill/blob/main/docs/workflow.md)。真实 Agent 的 Skill 安装和加载尚未接入。
 
 Windows 首次交接优先使用[双击连接小助手](windows-connect.md)，用户核对后复制必要信息；不要求新手抄技术命令。Mac 按连接清单走系统设置路线。
 
@@ -93,10 +99,10 @@ Windows 首次交接优先使用[双击连接小助手](windows-connect.md)，�
 
 ## 开发者示例是可选项
 
-独立安装的 Skill 已带有操作清单、发现脚本、Windows 小助手源码与构建工具；不依赖仓库根目录或 HTML。另有仓库内 Python 合成示例，仅用于开发者验证配置机制，不是使用前置条件。[历史示例证据](https://github.com/NewenergyEric/dahao/blob/main/docs/installation-verification.json)。
+独立安装的 Skill 已带有操作清单、发现脚本、Windows 小助手源码与构建工具；不依赖仓库根目录或 HTML。另有仓库内 Python 合成示例，仅用于开发者验证配置机制，不是使用前置条件。[历史示例证据](https://github.com/NewenergyEric/eric-dahao-agent-skill/blob/main/docs/installation-verification.json)。
 
 ## 交给 Agent 的话
 
-> 使用 $dahao，在对话里带我完成清单。由本机 Agent 先发现并确认另一台目标电脑，带我建立并核验连接；然后按我选择的方案逐项检查：依赖环境、网络通路、Codex/IDE、日常 Agent、行为约束文件、Skills 与验收。默认 OpenClaw，保留现有设置；不导入 SOUL、USER 或任何私人资料。只执行当前支持且获授权的步骤，逐项留下证据、待办和下一步，不把勾选当作安装成功。
+> 使用 $eric-dahao-agent-skill，在对话里带我完成清单。由本机 Agent 先发现并确认另一台目标电脑，带我建立并核验连接；然后按我选择的方案逐项检查：依赖环境、网络通路、Codex/IDE、日常 Agent、行为约束文件、Skills 与验收。默认 OpenClaw，保留现有设置；不导入 SOUL、USER 或任何私人资料。只执行当前支持且获授权的步骤，逐项留下证据、待办和下一步，不把勾选当作安装成功。
 
 官方入口核对日期：2026-10-12。实际安装前按选定发行版本重新核对要求；本清单未将实时 latest 固定成项目的可执行配方。

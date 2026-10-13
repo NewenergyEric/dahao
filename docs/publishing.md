@@ -14,7 +14,7 @@
 
 ## 独立 Skill 与接入包
 
-普通用户由 Codex 安装 `.agents/skills/dahao` 后调用 `$dahao`，不需要网页、全仓库或合成演示。操作参考、模板和小助手源码在 Skill 内维护，仓库 docs 仅保留入口。
+普通用户由 Codex 安装 `.agents/skills/eric-dahao-agent-skill` 后调用 `$eric-dahao-agent-skill`，不需要网页、全仓库或合成演示。操作参考、模板和小助手源码在 Skill 内维护，仓库 docs 仅保留入口。
 
 公开代码与通用构建没有本次目标资料；私人授权 ZIP 含账户、地址、新公钥、主机校验码，不含私钥/密码/token，但仍禁止公开。每次协助现场生成新密钥，私钥只留控制端；收回临时授权并验证拒绝后清理。公开路径检查还会拒绝 request.json、known_hosts、authorized_keys、公钥文件和临时 client_key，即使误加到白名单也在读取前阻止。
 

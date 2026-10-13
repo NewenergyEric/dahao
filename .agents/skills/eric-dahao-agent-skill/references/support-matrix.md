@@ -27,4 +27,4 @@
 4. 在对应授权下执行，验证安装版本、规则/Skill 加载和一件真实任务；留下私有接续记录。
 5. 同一目标验证重跑、恢复与升级后，再对另一种系统独立验收。
 
-本次 Windows 目标已完成指纹核验、目标端点击临时授权、SSH 认证与身份重连，并复用现有 OpenClaw 完成健康检查和合成任务。临时授权已撤销，实测新登录被拒绝，本次私钥已删除；原有 SSH 和 OpenClaw 保留。未开启服务、修改防火墙、安装或升级全局 Agent。安全审计提醒尚未全部处理，规则/Skill 加载和扫码仍未验证。最新实测及小助手验证见[本次脱敏记录](https://github.com/NewenergyEric/dahao/blob/main/docs/live-connection-verification.json)。最新 helper 验证见 [连接能力验证](https://github.com/NewenergyEric/dahao/blob/main/docs/remote-access-verification.json)，合成安装验证见 [隔离验证](https://github.com/NewenergyEric/dahao/blob/main/docs/installation-verification.json)。
+本次 Windows 目标已完成指纹核验、目标端点击临时授权、SSH 认证与身份重连，并复用现有 OpenClaw 完成健康检查和合成任务。临时授权已撤销，实测新登录被拒绝，本次私钥已删除；原有 SSH 和 OpenClaw 保留。未开启服务、修改防火墙、安装或升级全局 Agent。安全审计提醒尚未全部处理，规则/Skill 加载和扫码仍未验证。最新实测及小助手验证见[本次脱敏记录](https://github.com/NewenergyEric/eric-dahao-agent-skill/blob/main/docs/live-connection-verification.json)。最新 helper 验证见 [连接能力验证](https://github.com/NewenergyEric/eric-dahao-agent-skill/blob/main/docs/remote-access-verification.json)，合成安装验证见 [隔离验证](https://github.com/NewenergyEric/eric-dahao-agent-skill/blob/main/docs/installation-verification.json)。
