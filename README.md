@@ -46,7 +46,7 @@ $eric-dahao-agent-skill 帮我给朋友的 Mac 准备 AI 助手。
 
 **3. 跟着做眼前这一步。** 朋友确认自己的电脑，亲自完成必要的系统授权、登录或扫码，再试着完成第一件小任务。以后直接说“检查上次进度”或“帮她加一个 Skill，保留原来的习惯”。
 
-**只安装 Skill 就能开始，不必下载网页或完整仓库。** 脚本、连接清单、工作规则模板和 Windows 小助手源码都在 Skill 内。Windows / Mac 都有接入流程；具体工具要求、适用范围和实机记录集中在[支持矩阵](docs/support-matrix.md)。
+**只安装 Skill 就能开始，不必下载网页或完整仓库。** 脚本、连接清单、工作规则模板和 Windows/Mac 小助手源码都在 Skill 内。Windows / Mac 都有接入流程；具体工具要求、适用范围和实机记录集中在[支持矩阵](docs/support-matrix.md)。
 
 <details>
 <summary>已有旧版，或使用其他 Agent</summary>
@@ -100,7 +100,9 @@ $eric-dahao-agent-skill 帮我给朋友的 Mac 准备 AI 助手。
 <details>
 <summary>开发者：能力范围、验证与小助手构建</summary>
 
-Skill 提供控制端协作流程，实际动作依赖现有工具、目标权限与版本。Windows 已有一次临时 SSH、身份/重连、复用 OpenClaw 和撤销的实机记录；空白电脑全新安装、规则/Skill 实际加载、Mac 实机与真实扫码的结果以[支持矩阵](docs/support-matrix.md)为准。记录分开列出功能结果和安全待办。
+接受帮助的人默认只做几次点击：确认目标电脑 → 看清权限后临时授权 → 本人在目标填写模型账户 → 打开助手试用。帮助者由 Skill 准备 [Windows 小助手](docs/windows-connect.md)或 [Mac 小助手](docs/mac-connect.md)，交付真实安装路径和打开方式。
+
+Windows 和 Mac 都完成了真实目标验证。Windows 复用已有 OpenClaw，通过健康检查与合成任务；Mac 在用户目录新装 Node/OpenClaw，通过版本核验，使用者随后确认验证成功。两台电脑的临时 SSH 都已撤销并检查拒绝新登录。详见 [Windows 记录](docs/live-connection-verification.json)、[Mac 记录](docs/mac-connection-verification.json)与[支持矩阵](docs/support-matrix.md)；规则/Skill 加载、扫码和安全加固逐项保留各自状态。
 
 Windows 小助手源码随 Skill 提供，按[构建说明](.agents/skills/eric-dahao-agent-skill/references/windows-helper.md)在本地构建；程序未签名，被拦截时先核验来源，不关闭保护。临时授权的账户权限和到期行为见[安全边界](.agents/skills/eric-dahao-agent-skill/references/safety.md)。
 

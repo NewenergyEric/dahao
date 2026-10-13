@@ -17,7 +17,7 @@ description: 本机 Agent 帮用户为不熟悉 AI 的爱人、家人或朋友�
 
 ## 从安装好的 Skill 开始
 
-本文件所在目录就是 Skill 根目录；`scripts/`、`references/` 和 `assets/` 均随 Skill 安装，不需要仓库根目录、client_setup.py 或网页服务。使用脚本绝对路径，或以 Skill 目录为工作目录。先检查可用工具：Python helper 只用标准库；Windows GUI 构建还需要 Windows 已有的 .NET Framework 编译器。Mac 控制端不能直接用该构建器生成 Windows EXE，不承诺已有签名下载包。
+本文件所在目录就是 Skill 根目录；`scripts/`、`references/` 和 `assets/` 均随 Skill 安装，不需要仓库根目录、client_setup.py 或网页服务。使用脚本绝对路径，或以 Skill 目录为工作目录。先检查可用工具：Python helper 只用标准库；Windows GUI 构建还需要 Windows 已有的 .NET Framework 编译器。Mac 控制端不能直接用该构建器生成 Windows EXE。Mac 小助手可由控制端 Python 构建，目标使用系统 JXA/shell/Perl；见[Mac 小助手](references/mac-helper.md)。两种系统均不承诺签名下载包。
 
 另选用户授权的私有工作目录保存进度、目标信息和临时接入材料，默认放在其中的 `.private/remote-sessions/<代号>/`；检查目录权限并避开同步/待发布目录。不要写入 Skill 安装目录。已有本次记录就先核对接续，不搜索旧凭据、聊天或私人配置。
 
@@ -26,10 +26,10 @@ description: 本机 Agent 帮用户为不熟悉 AI 的爱人、家人或朋友�
 在对话里维护简短清单：待确认 / 进行中 / 通过 / 待完成。已知信息直接沿用，每次只交给用户当前必要的一步。默认 OpenClaw，可选择 Hermes；第一项任务由用户用途决定。完整步骤在[安装清单](references/installation-checklist.md)。
 
 1. **发现并确认。** 读[远端工作流](references/remote-workflow.md)。由本机 Agent 调用 [discover_target.py](scripts/discover_target.py) 的 `discover`，只读已有局域网记录，不全网扫描、不自动选第一台。用户认不出时再请其查看目标 IPv4，解释“为了指定要操作哪台电脑”；校验四段 0–255，分离 /24，笔误先确认，不能猜测后连接。
-2. **核验并连接。** 按 [Windows/Mac 连接清单](references/connection-checklist.md)，确认目标后才检查其 SSH。Windows 新手先用[双击连接小助手](references/windows-connect.md)交接必要信息，Mac 走系统设置。无管理通道时必须在目标完成首次开启，不能在本机误改 SSH。独立核对目标公钥指纹后才信任；不跳过主机检查。
-3. **只有 PIN 时。** 不索要 PIN/密码，按[小助手准备说明](references/windows-helper.md)与[安全边界](references/safety.md)生成本次专用公钥授权包。先构建并自检通用程序，再在私有目录准备请求；私钥只留控制端。用户在目标明确点击后才连接。授权是账户级命令执行，管理员权限尤其要说清楚；60 分钟限制新登录，不终止已有命令。当前 GUI 仅验证了已有 OpenSSH 的 Windows 本地管理员与默认授权路径。
+2. **核验并连接。** 按 [Windows/Mac 连接清单](references/connection-checklist.md)，确认目标后才检查其 SSH。Windows 新手先用[双击连接小助手](references/windows-connect.md)，Mac 用[Mac 小助手](references/mac-helper.md)交接必要信息；不让新手抄账户或指纹命令。无管理通道时必须在目标完成首次开启，不能在本机误改 SSH。独立核对目标公钥指纹后才信任；不跳过主机检查。
+3. **只有 PIN 时。** 不索要 PIN/密码，按[小助手准备说明](references/windows-helper.md)与[安全边界](references/safety.md)生成本次专用公钥授权包。先构建并自检通用程序，再在私有目录准备请求；私钥只留控制端。用户在目标明确点击后才连接。授权是账户级命令执行，管理员权限尤其要说清楚；60 分钟限制新登录，不终止已有命令。Windows 实测覆盖已有 OpenSSH 的本地管理员默认授权路径；Mac 按[专用步骤](references/mac-helper.md)给普通账户创建本次公钥授权，不需要向 Agent 提供密码。
 4. **检查、计划、执行。** 在目标核对系统、账户、架构、权限和依赖版本，区分 Windows 原生与 WSL。按依赖 → 网络 → Codex/IDE（目标需要才装）→ 日常 Agent → 行为规则 → Skills 推进。官方来源、确切版本、目录、配置差异、系统影响和恢复方式落实后，执行获授权步骤。已有可用 Agent 先复用；不为完成清单重装。新增 SSH/防火墙/代理/持久访问先说明具体变化，已有具体授权覆盖就继续。
-5. **配置与验证。** 读[行为基线](references/behavior-baseline.md)，只合并选择的键；[AGENTS 模板](assets/AGENTS.template.md)不含 SOUL、USER、记忆或个人资料。规则文本不能代替工具权限。分别验证版本、健康、规则与 Skill 实际加载、第一项任务；新建合成会话，不读旧聊天、不默认投递消息。诊断在目标端取必要状态，不把含凭据的完整日志或配置传回。
+5. **配置与验证。** 读[行为基线](references/behavior-baseline.md)，只合并选择的键；[AGENTS 模板](assets/AGENTS.template.md)不含 SOUL、USER、记忆或个人资料。规则文本不能代替工具权限。分别验证版本、健康、规则与 Skill 实际加载、第一项任务；新建合成会话，不读旧聊天、不默认投递消息。诊断在目标端取必要状态，不把含凭据的完整日志或配置传回。给使用者真实安装位置、可点击的启动入口或原生打开方式，让本人打开并完成第一件任务；SSH 中能运行不等于用户能自己找到入口。
 6. **手机入口。** 用户需要时按[飞书/微信清单](references/chat-connection-checklist.md)选择 OpenClaw/Hermes 路线。核对当前插件来源和权限，默认本人私聊、群聊禁用、最少工具。二维码只在正确目标的官方向导展示，由本人扫码；不传到聊天、截图、日志或 GitHub。渠道在线、本人回复、未授权访问拒绝和重连分别验收。
 7. **收回与接续。** 完工只撤销本次精确公钥和标记，保留其他授权与 ACL；实测新登录被拒绝后清理本次私钥。保留原有 SSH/Agent 服务。记录目标代号、来源/版本/hash、授权范围、已做动作、证据与下一步。失败/超时时先检查状态，不能盲目重复安装或扩大权限。
 
@@ -39,6 +39,6 @@ description: 本机 Agent 帮用户为不熟悉 AI 的爱人、家人或朋友�
 
 成功报告用普通话说明“做成了什么、还缺什么、临时权限是否收回”。安全加固可能影响已有应用时说明具体影响；用户问“成功了吗”不是批准改权限。授权不自动推广到其他电脑、联系人或公开发布。
 
-[支持矩阵](references/support-matrix.md)：一台 Windows 已实测目标核验、PIN-only 临时 SSH、重连与撤销后拒绝；复用 OpenClaw 2026.9.6 的健康和合成任务通过。空白电脑全新安装、规则/Skill 实际加载、Mac 实机与真实扫码仍待验证，安全提醒未全部处理。不要从文档、勾选、端口打开或示例测试推导完整部署成功。
+[支持矩阵](references/support-matrix.md)：Windows 已实测临时 SSH 全流程、现有 OpenClaw 健康与合成任务；Mac 已实测临时 SSH 全流程、用户级新装 Node/OpenClaw 和版本核验，使用者随后确认验证成功。两次授权均已撤销并验证拒绝新登录。Windows 空白机安装、Intel Mac、规则/Skill 加载、Hermes 与实际扫码仍需各自验收；安全提醒单独保留。不能从端口可达或另一次成功推导本次完成。
 
 目标授权资料只保存在本次私人交付目录，不进入公开包。

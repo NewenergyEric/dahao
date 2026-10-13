@@ -46,6 +46,13 @@ SKILL_FILES = {
     '.agents/skills/eric-dahao-agent-skill/references/windows-helper.md',
     '.agents/skills/eric-dahao-agent-skill/scripts/build_windows_connect.py',
     '.agents/skills/eric-dahao-agent-skill/scripts/discover_target.py',
+    '.agents/skills/eric-dahao-agent-skill/references/mac-helper.md',
+    '.agents/skills/eric-dahao-agent-skill/scripts/build_mac_helper.py',
+    '.agents/skills/eric-dahao-agent-skill/assets/mac-connect/DahaoConnect.js',
+    '.agents/skills/eric-dahao-agent-skill/assets/mac-connect/DahaoAuthorize.js',
+    '.agents/skills/eric-dahao-agent-skill/assets/mac-connect/authorize.pl',
+    '.agents/skills/eric-dahao-agent-skill/assets/mac-connect/KeyGrant.pm',
+    '.agents/skills/eric-dahao-agent-skill/assets/mac-connect/Start-OpenClaw.command',
 }
 MAX_TOTAL = 64 * 1024 * 1024
 MAX_BINARY = 8 * 1024 * 1024

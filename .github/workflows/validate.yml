@@ -13,3 +13,21 @@ jobs:
       - run: python -B -m unittest discover -s tests -v
       - run: python -B tools/release.py check
       - run: python -B demo.py
+  mac-helper:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Offline helper packaging and authorization regression
+        run: python -B -m unittest discover -s tests -p test_mac_helper.py -v
+      - name: Native Mac source syntax checks (no dialogs or SSH changes)
+        shell: bash
+        run: |
+          set -eu
+          source_dir=.agents/skills/eric-dahao-agent-skill/assets/mac-connect
+          /usr/bin/osacompile -l JavaScript -o "$RUNNER_TEMP/dahao-connect.scpt" "$source_dir/DahaoConnect.js"
+          /usr/bin/osacompile -l JavaScript -o "$RUNNER_TEMP/dahao-authorize.scpt" "$source_dir/DahaoAuthorize.js"
+          /usr/bin/perl -c "$source_dir/authorize.pl"
+          /bin/bash -n "$source_dir/Start-OpenClaw.command"

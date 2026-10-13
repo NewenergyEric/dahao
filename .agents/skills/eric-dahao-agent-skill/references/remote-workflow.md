@@ -57,7 +57,7 @@ python -B scripts/discover_target.py probe --host TARGET_IPV4 --confirmed-target
 
 安装前查该版本官方文档，确认系统/架构和原生或 WSL 路线，再展示：目标代号、下载来源、确切版本/校验信息、安装目录、所需权限、配置差异、服务变化、失败恢复。上游安装器可能改全局工具或下载额外依赖，要列入计划；不能不审阅就将网络脚本直接管道执行。无法确定来源或版本时保留缺口，不拼凑命令。
 
-官方入口：[OpenClaw 安装](https://docs.openclaw.ai/install)、[Windows 路线](https://docs.openclaw.ai/platforms/windows)、[Hermes 安装](https://hermes-agent.nousresearch.com/docs/getting-started/installation)。2026-10-12 核对过入口，实际执行前仍按选定发行版本核对；这里没有已固定且实测的真实 Agent 安装配方。安装 WSL、重启、系统服务或改代理时分别说明影响，已有具体授权覆盖则直接继续。
+官方入口：[OpenClaw 安装](https://docs.openclaw.ai/install)、[Windows 路线](https://docs.openclaw.ai/platforms/windows)、[Hermes 安装](https://hermes-agent.nousresearch.com/docs/getting-started/installation)。2026-10-12 核对过入口，实际执行前仍按选定发行版本核对；Mac 已有用户级新装的历史实测记录，但这里没有可不经审阅重复用于任意机器的自动安装配方。安装 WSL、重启、系统服务或改代理时分别说明影响，已有具体授权覆盖则直接继续。
 
 账号与订阅由用户在目标工具的官方界面或自己的终端配置。Agent 只验证已配置/可用状态，不读取值。现有行为配置按所选键合并，保存必要的受控差异；不备份整个含秘密的用户目录，不导入 SOUL、USER 或聊天。Skills 先审源码、来源与权限，再按实际运行器加载方式安装。
 
@@ -71,11 +71,11 @@ python -B scripts/discover_target.py probe --host TARGET_IPV4 --confirmed-target
 
 私有接续记录至少含：目标安全代号、具体授权范围、已核验身份引用、目标系统/运行环境、来源与版本/hash、配置计划与已完成动作、逐层验收、未完成项、下一步。公开回执去掉地址、账号、指纹和原始日志。接续先检查连接、身份与漂移，复用原计划，不从头重装。目标原有 SSH 不擅自关闭；本次新开的临时接入按事先约定撤销，实测新登录被拒绝，再删除本次生成的控制端私钥。撤销响应超时时先只读核对状态，不能直接宣布成功或盲目重复其他变更。
 
-当前已实现的 helper 和 Windows 合成引擎见 [支持矩阵](support-matrix.md)。此工作流指导有终端/文件工具的 Agent 推进真实目标；不表示捆绑运行器已完成无人值守远端安装，更不等于两种目标系统均已实测。
+当前已实现的 helper 和 Windows 合成引擎见 [支持矩阵](support-matrix.md)。此工作流指导有终端/文件工具的 Agent 推进真实目标；不表示捆绑运行器已完成无人值守远端安装，Windows 和 Mac 已各有一个实测案例，适用版本、架构和未完成项见支持矩阵，不自动推广到所有目标。
 
 
-## Windows 新手的首次交接
+## Windows / Mac 新手的首次交接
 
-优先交付[双击连接小助手](windows-connect.md)，代替让用户输入账户与公钥命令。Agent 审阅源码、运行构建和合成自检，向用户交付程序、来源与校验记录；用户在目标电脑核对并复制最少信息回来。工具只读且离线，不开启服务或授予访问；程序被系统拦截时不关闭保护。缺少公钥或权限仍需按具体缺口处理。Mac 尚无同等 App，继续系统设置路线。
+优先交付[双击连接小助手](windows-connect.md)，代替让用户输入账户与公钥命令。Agent 审阅源码、运行构建和合成自检，向用户交付程序、来源与校验记录；用户在目标电脑核对并复制最少信息回来。工具只读且离线，不开启服务或授予访问；程序被系统拦截时不关闭保护。缺少公钥或权限仍需按具体缺口处理。Mac 使用[Mac 小助手](mac-helper.md)，必要时由操作者按设置步骤开启远程登录。安装后必须交付真实路径与打开方式；本人能打开并试用才完成使用交接。
 
 只有 PIN 的 Windows 走独立的临时授权程序，见[用户步骤](windows-connect.md)与[Agent 准备说明](windows-helper.md)。新手不需要输入命令；授权界面需要明确说明命令执行权限与到期含义。安全加固改变既有应用权限时单独说明影响；用户只问“成功了吗”时先回答已验证结果，不把问题当作批准。

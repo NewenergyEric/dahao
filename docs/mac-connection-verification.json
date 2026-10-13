@@ -1,0 +1,50 @@
+{
+  "schema": 1,
+  "date": "2026-10-13",
+  "scope": "one_authorized_Apple_silicon_Mac_target",
+  "privacy": "No target addresses, account names, device names, host fingerprints, requests, keys, raw logs or model secrets included.",
+  "environment": {
+    "os": "macOS 27.0.1",
+    "architecture": "arm64",
+    "ssh": "existing Remote Login",
+    "node": "24.21.0",
+    "openclaw": "2026.10.2"
+  },
+  "tool_observed": {
+    "gui_connection_metadata_and_default_host_public_key": "passed",
+    "independent_host_fingerprint_match": "passed",
+    "explicit_target_temporary_public_key_grant": "passed",
+    "ssh_authentication_identity_and_reconnect": "passed",
+    "user_local_node_and_openclaw_fresh_install": "passed",
+    "cli_executable_and_version": "passed",
+    "existing_node_environment_preserved": "passed",
+    "incomplete_download_blocked_then_complete_integrity_verified": "passed",
+    "exact_temporary_grant_revoked": "passed",
+    "fresh_login_after_revocation": "authentication_rejected",
+    "session_private_key_cleanup": "passed"
+  },
+  "operator_confirmation": {
+    "status": "confirmed_success",
+    "source": "explicit_user_report_after_target_use",
+    "statement": "Target user successfully installed OpenClaw and completed verification.",
+    "model_task_output_captured_by_tools": false
+  },
+  "handoff": {
+    "installer_prefix": "user_local",
+    "visible_start_helper": "provided_after_SSH_revocation",
+    "model_provider": "selected_by_user",
+    "secret_entry": "performed_by_owner_on_target; not collected"
+  },
+  "not_verified": [
+    "Intel Mac",
+    "Mac as discovery controller",
+    "all supported macOS versions",
+    "Hermes installation",
+    "new behavior rules or Skills loaded",
+    "Feishu/WeChat QR login",
+    "complete security hardening",
+    "tool-observed model task output"
+  ],
+  "authorization_boundary": "No active temporary access retained; existing SSH service and other grants preserved.",
+  "historical_case_not_unattended_install_recipe": true
+}

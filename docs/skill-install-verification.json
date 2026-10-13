@@ -3,40 +3,70 @@
   "date": "2026-10-13",
   "skill": "eric-dahao-agent-skill",
   "scope": "standalone_skill_structure_relocation_and_project_regression",
-  "skill_files": 18,
-  "structure_validator": "passed",
+  "skill_files": 25,
+  "structure_validator": "metadata_and_license_checks_passed",
   "relative_reference_closure": "passed",
-  "relative_links_checked": 41,
+  "relative_links_checked": 56,
   "source_sha256": {
     "LICENSE": "491ca2870583ab96c3e1c52d80a2f2266d0b4f8d66824b1faff6abffafc01f35",
-    "SKILL.md": "0e4d42b1ba0e976c5f2140c84c2986127ffa797342cb9ed40f4e623177212076",
+    "SKILL.md": "5eb379236f76ccfb05961efa4dc90c7639b952347bb3dd7a1a339149cca8c954",
     "agents/openai.yaml": "25ec154ea778bef5f0842cbf2b3d22cdba648360536b820e01c235afddd5307a",
     "assets/AGENTS.template.md": "65fb4e5754dc53d64793d9c401a069310bf2f9f5a465101439f1e2785be1814b",
+    "assets/mac-connect/DahaoAuthorize.js": "c325db77391f4175a848bf3d06c79cef1e0684b89d139feb4f661b44c9f5dee2",
+    "assets/mac-connect/DahaoConnect.js": "42505fc58de4931b8d7f11ff27feb03df42d6310b2c40d16bffadcebee977118",
+    "assets/mac-connect/KeyGrant.pm": "cbcee26bc516237786b660556987d68f1858a262b24ff3a9b018867ee272585b",
+    "assets/mac-connect/Start-OpenClaw.command": "a5c66168bd987709fe9881ffdae2662915eee648b0300e04d30ffc33f267715b",
+    "assets/mac-connect/authorize.pl": "d5fd132f495477dd2fffb53a469ccdcc1bb3ea67dc9d2556a9cab9906956ea80",
+    "assets/windows-connect/DahaoAuthorize.cs": "fdde829734a1fbc1499e2336f4904410f9032d62f2aab662f628785a2cb84c53",
+    "assets/windows-connect/DahaoConnect.cs": "b2f68b4ec88464b3d85b5df5435761b28cdab8768591753c7a8e830deff54d6c",
+    "assets/windows-connect/app.manifest": "b51ce4d0602f9f04c3bab35555b251868b3b89ed73db39e00f0f6574e5a0728c",
     "references/behavior-baseline.md": "7aff6e6ed6b12c7ace1038f5c1a12bc2e1860d9b333b6e0f04ee28f128b9e4b0",
     "references/chat-connection-checklist.md": "da40b577076eab16c1e619ac9fac796fba8e1714b1e25bd4e242ae3f44f892a4",
-    "references/connection-checklist.md": "c52c0f64ec9cf60e86e9c07e32f419b4887709ff415d999608ea976c756618bd",
-    "references/installation-checklist.md": "c1228259a6db9475921070b412400e65db8445ac9ef9c283dbfe8e5f13eed7a9",
-    "references/remote-workflow.md": "cf10ed501f0b11fff983a0cfdf5f2191f1c53458f3e3c1b4c1fbf37a23546af2",
-    "references/safety.md": "6bf1ff66d5dc87ed1fd8e3681531841c143b6996e87da7baa333646309cca131",
-    "references/support-matrix.md": "b6c49dd22f824c846ef9737f05ddd63317eae0f8f369d50524090be9ea25ebb6",
+    "references/connection-checklist.md": "539f8a9a98a6c418a34fd2b1d1938a881e36738d9140695eb75f24639eaa15b3",
+    "references/installation-checklist.md": "5e9432ab499128d50cc377735daa820c03cdb6cbb3ff7c65cb9fcef941c59a72",
+    "references/mac-helper.md": "01cadee23b269af368a0ccc40ffe1d9d4303a41c306419e49008dba1513aaa56",
+    "references/remote-workflow.md": "96cdcde21eb665ffaabf01934c2e1cccde6c18f5fe7d23892b9b668e12478921",
+    "references/safety.md": "7e3b2ee3f588443fe8c191912cb281643d25c50f2321d8a0d1c3edeef4de00b2",
+    "references/support-matrix.md": "3cef219672f163ba8adb1374ac8e82b8dd07ab024a55be25a3fa0ab1fe0b49fb",
     "references/windows-connect.md": "a129b1f25040c3d463238d31ca64a9d1db894ad203601f9a2e97184df886a61a",
     "references/windows-helper.md": "4d695ef48a44cd7469bb41859cf125b2ce5bb3b36cfc5120441446dbd39a65d4",
+    "scripts/build_mac_helper.py": "b3d2c1d671bdfff68fffa8bd846eb38ddcb115ce951df1b364ff6f0f2d2421b5",
     "scripts/build_windows_connect.py": "be385588aaf150e11f9e341dfd525ec6a25273edf103812b7acfa6921c769205",
-    "scripts/discover_target.py": "7ed085d6ed5911c2fb10e710c4371559ec5a14a5b5a2890a9d2b0fd8feea76f1",
-    "assets/windows-connect/app.manifest": "b51ce4d0602f9f04c3bab35555b251868b3b89ed73db39e00f0f6574e5a0728c",
-    "assets/windows-connect/DahaoAuthorize.cs": "fdde829734a1fbc1499e2336f4904410f9032d62f2aab662f628785a2cb84c53",
-    "assets/windows-connect/DahaoConnect.cs": "b2f68b4ec88464b3d85b5df5435761b28cdab8768591753c7a8e830deff54d6c"
+    "scripts/discover_target.py": "7ed085d6ed5911c2fb10e710c4371559ec5a14a5b5a2890a9d2b0fd8feea76f1"
   },
   "runtime_or_target_installation_claimed": false,
-  "previous_verification_date": "2026-10-12",
-  "previous_live_windows_record": "docs/live-connection-verification.json",
   "project_regression": {
     "command": "python -B -m unittest discover -s tests -v",
-    "tests": 77,
+    "tests": 86,
     "status": "passed"
   },
   "standalone_relocation": "passed",
+  "isolated_project_demo": "passed",
   "license_included": "MIT",
-  "notes": "Standalone helper tests use a temporary copied Skill. No customer device connection or installation is performed by this rename check.",
-  "revision_scope": "Self-contained product copy; no cross-product references or promotional license footer."
+  "mac_offline_builds": {
+    "connect": {
+      "files": 6,
+      "sha256": "225aaa67a6c465753396cd0cb56cf9b00cc1b6f2f86f6f227badb63cd3f32a11",
+      "private_request_included": false
+    },
+    "authorize": {
+      "files": 8,
+      "sha256": "ae2e20f80044a3aaa0b19ea1ab243cc6169f2b695050661e860b4ef15660f441",
+      "private_request_included": false
+    },
+    "start": {
+      "files": 6,
+      "sha256": "bfee1be5c8499840ea4e2340c1454828fa9c7f9ebbc06e5bb2d323f8a9041f9f",
+      "private_request_included": false
+    }
+  },
+  "mac_source_checks": {
+    "dialog_mock_checks": 30,
+    "perl_grant_checks": 41,
+    "status": "passed",
+    "native_mac_runtime_performed_by_this_check": false
+  },
+  "windows_authorizer_build": "passed_in_isolated_test_suite",
+  "revision_scope": "Mac source helpers, public-key-only request packaging and Windows/Mac handoff guidance.",
+  "notes": "Only reviewed Skill files were copied. No target device was connected during publication verification; real case evidence is recorded separately."
 }

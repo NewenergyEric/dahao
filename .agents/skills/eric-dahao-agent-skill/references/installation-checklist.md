@@ -4,7 +4,7 @@
 
 让本机 Agent 帮你给另一台电脑搭好助手；你确认目标与选择，Agent 带着发现、连接、安装配置和验收。
 
-先做第 0 步，再做后面的 7 步。Skill 可指导终端操作；随包工具包含发现、单目标 SSH 检查、Windows 连接/临时授权 GUI 源码和合成示例。一台 Windows 的真实登录与现有 OpenClaw 可用性已验证；全新安装、规则/Skill 加载与 Mac 实机仍待验证。手动勾选不代表自动验收。默认 OpenClaw，可选 Hermes 或用户指定的 Agent。
+先做第 0 步，再做后面的 7 步。Skill 可指导终端操作；随包工具包含发现、单目标 SSH 检查、Windows/Mac 连接与临时授权小助手源码，以及合成示例。Windows 的现有 OpenClaw 健康与任务、Mac 的用户级新装及 CLI 核验都已有实机证据，Mac 使用者随后确认验证成功；规则/Skill 加载和扫码各自验收。手动勾选不代表自动验收。默认 OpenClaw，可选 Hermes 或用户指定的 Agent。
 
 ## 先让朋友选一件小事
 
@@ -26,7 +26,7 @@
 
 - [ ] 本机 Agent 检查控制端工具，读取已有局域网候选；用户确认目标，不先索要整套网络参数。
 - [ ] 确认后检查该目标 SSH；未开启时走 [Windows / Mac checklist](connection-checklist.md) 的对应分支。
-- [ ] 核对目标公钥指纹；只有 PIN 的 Windows 使用独立临时授权小助手，核对权限后点击，无需发送 PIN/密码。Agent 确认远端电脑、账户、系统并重连。
+- [ ] 核对目标公钥指纹；Windows 只有 PIN 或 Mac 需要临时接入时，使用系统对应的独立授权小助手，核对权限后点击，无需发送 PIN/密码。Agent 确认远端电脑、账户、系统并重连。
 - [ ] 连接成功后继续检查环境；无证据的阶段保留未完成，不将端口打开写成已登录。
 
 本机就在目标上时只需确认身份与项目目录，无需 SSH。完整职责与命令见 [Agent 远端工作流](remote-workflow.md)。
@@ -61,7 +61,9 @@
 - [ ] 确定安装位置、工作目录、模型和账号路径；凭据仅在目标工具中配置，项目只记录引用或状态。
 - [ ] 实际核对版本与运行状态，完成最小任务。安装文件存在不算可用。
 
-已有安装先验证再复用。本次复用目标上的 OpenClaw 2026.9.6，版本、健康及合成任务通过；未调用新安装器，也未升级或重写其配置。安全审计提醒另列待办；上游支持某系统不表示搭好已验证全新安装。
+- [ ] 给本人真实安装位置、打开方式和第一句话；在自己的电脑打开并完成小任务后再交接，不能只有 SSH 中的版本输出。Mac 可为已核验前缀准备[启动小助手](mac-helper.md)。
+
+已有安装先验证再复用。Windows 实例复用了 OpenClaw 2026.9.6，健康与合成任务通过；Mac arm64 实例新装 Node 24.21.0 与 OpenClaw 2026.10.2，CLI 核验通过，使用者随后确认验证成功。版本是历史证据，新目标仍按官方来源和选定版本计划；详见[支持矩阵](support-matrix.md)。
 
 ## 5. 行为约束文件
 
@@ -81,7 +83,7 @@
 
 当前已支持的 Windows 项目示例：先 check，configure/update 生成差异，审核完整 plan_id 后批准；详见 [工作流](https://github.com/NewenergyEric/eric-dahao-agent-skill/blob/main/docs/workflow.md)。真实 Agent 的 Skill 安装和加载尚未接入。
 
-Windows 首次交接优先使用[双击连接小助手](windows-connect.md)，用户核对后复制必要信息；不要求新手抄技术命令。Mac 按连接清单走系统设置路线。
+Windows 首次交接优先使用[双击连接小助手](windows-connect.md)，用户核对后复制必要信息；不要求新手抄技术命令。Mac 使用[Mac 小助手](mac-helper.md)，也支持点击临时授权与按实际安装位置生成启动入口。
 
 ## 可选：手机扫码接飞书 / 微信
 
@@ -99,7 +101,7 @@ Windows 首次交接优先使用[双击连接小助手](windows-connect.md)，�
 
 ## 开发者示例是可选项
 
-独立安装的 Skill 已带有操作清单、发现脚本、Windows 小助手源码与构建工具；不依赖仓库根目录或 HTML。另有仓库内 Python 合成示例，仅用于开发者验证配置机制，不是使用前置条件。[历史示例证据](https://github.com/NewenergyEric/eric-dahao-agent-skill/blob/main/docs/installation-verification.json)。
+独立安装的 Skill 已带有操作清单、发现脚本、Windows/Mac 小助手源码与构建工具；不依赖仓库根目录或 HTML。另有仓库内 Python 合成示例，仅用于开发者验证配置机制，不是使用前置条件。[历史示例证据](https://github.com/NewenergyEric/eric-dahao-agent-skill/blob/main/docs/installation-verification.json)。
 
 ## 交给 Agent 的话
 

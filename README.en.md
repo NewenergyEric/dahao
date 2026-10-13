@@ -34,7 +34,7 @@ what is already there and setting it up. Give us one immediate step at a time.
 
 **3. Follow the next step together.** Your friend confirms their computer, approves necessary access, signs in or scans through the official interface, and tries the first task. Later, ask to check progress or add one Skill while keeping their existing preferences.
 
-The complete Skill contains its scripts, connection and installation checklists, work-rule template and Windows helper source. No webpage or full repository is required to begin. Windows and Mac have preparation routes; exact tooling and implementation limits are in the [support matrix](docs/support-matrix.md).
+The complete Skill contains its scripts, connection and installation checklists, work-rule template and Windows/Mac helper source. No webpage or full repository is required to begin. Windows and Mac have preparation routes; exact tooling and implementation limits are in the [support matrix](docs/support-matrix.md).
 
 ## Who does what
 
@@ -55,6 +55,8 @@ Already on the target computer? Use the local route. Already have a working Agen
 
 Passwords, private keys, subscriptions and QR codes stay in the correct native or official interface. Target-specific access bundles are private delivery materials. [Safety details](.agents/skills/eric-dahao-agent-skill/references/safety.md)
 
+The target user can double-click the matching helper, confirm their computer and explicitly approve temporary access. The handoff includes the actual installation path and a way to open the assistant; the owner configures their model account locally and tries a task.
+
 [Windows/Mac connection](docs/connection-checklist.md) · [Chat channels](docs/chat-connection-checklist.md) · [Optional HTML checklist](docs/getting-started.html)
 
 <details>
@@ -69,9 +71,9 @@ Other Agent Skills-compatible tools can install the full folder using their offi
 <details>
 <summary>Developer checks, helper builds and real-device scope</summary>
 
-A Windows trial covers temporary SSH access, identity/reconnection, reuse of an existing OpenClaw installation and access revocation. Fresh Agent installation, actual rules/Skill loading, Mac hardware and live QR login are documented separately in the [support matrix](docs/support-matrix.md). Functionality and remaining security work are separate outcomes.
+Both Windows and an Apple silicon Mac have real-target trials. Windows reused OpenClaw and passed health and synthetic-task checks. Mac completed a user-local Node/OpenClaw installation and CLI checks; the user subsequently confirmed successful verification. Both temporary SSH grants were revoked and fresh logins rejected. Actual rule/Skill loading, QR login and security work retain their own status in the [support matrix](docs/support-matrix.md).
 
-The Windows helper is unsigned. Follow the [build instructions](.agents/skills/eric-dahao-agent-skill/references/windows-helper.md); verify the source if blocked and do not disable security protection. Access permissions and expiry behavior are explained in the safety reference.
+Windows and Mac helpers are unsigned. Follow the [Windows build instructions](.agents/skills/eric-dahao-agent-skill/references/windows-helper.md) or [Mac checklist and builder](docs/mac-connect.md); verify the source if blocked and do not disable security protection. Access permissions and expiry behavior are explained in the safety reference.
 
 The full repository also has a synthetic configuration example for Windows + Python 3.12+:
 
@@ -81,7 +83,7 @@ python -B -m unittest discover -s tests -v
 python -B tools/release.py check
 ```
 
-[Standalone Skill checks](docs/skill-install-verification.json) · [Windows trial](docs/live-connection-verification.json) · [Synthetic example](docs/installation-verification.json) · [Workflow](docs/workflow.md) · [Media source](motion/README.md)
+[Standalone Skill checks](docs/skill-install-verification.json) · [Windows trial](docs/live-connection-verification.json) · [Mac trial](docs/mac-connection-verification.json) · [Synthetic example](docs/installation-verification.json) · [Workflow](docs/workflow.md) · [Media source](motion/README.md)
 
 </details>
 

@@ -57,10 +57,18 @@
     },
     {
       "id": "CAP-STANDALONE-SKILL",
-      "claim": "Install only the Skill folder and use its references, discovery CLI and local Windows helper builder without a repository or webpage",
+      "claim": "Install only the Skill folder; use references, discovery CLI and offline Windows/Mac helper builders without a webpage or full repository",
       "status": "verified_in_isolated_Windows_directory",
       "evidence_ids": [
         "E-STANDALONE-SKILL"
+      ]
+    },
+    {
+      "id": "CAP-MAC-HANDOFF-INSTALL",
+      "claim": "One Apple silicon Mac: GUI handoff, temporary SSH identity/reconnect/revocation, user-local Node/OpenClaw install and CLI version; user subsequently confirmed verification success",
+      "status": "verified_for_stated_case",
+      "evidence_ids": [
+        "E-LIVE-MAC"
       ]
     }
   ],
@@ -95,15 +103,23 @@
       "path": "docs/live-connection-verification.json",
       "sha256": "6cd220812de8f5f8f1876f2d6e16d606e97f341b91088c3b36f56cd357de17cb",
       "outcome": "pass",
-      "scope": "One Windows GUI handoff, temporary SSH authentication and revocation; existing OpenClaw health and synthetic task; fresh installation, rule/Skill loading, Mac hardware, actual QR login and complete hardening remain unverified"
+      "scope": "Historical Windows trial: temporary SSH, existing OpenClaw health and synthetic task, revocation and cleanup; no Windows fresh install, rule/Skill loading, QR login or complete hardening. Mac evidence is separate."
     },
     {
       "id": "E-STANDALONE-SKILL",
       "kind": "tool_run",
       "path": "docs/skill-install-verification.json",
-      "sha256": "cc0e2b8839291164e3878df4f72d0689f6c3f85dcfc490de56a14c48f515dfe7",
+      "sha256": "b30fcbf5d619d69e409ad77e3dbb3d269ce58bd31e2a1ac5a4a03ac5bdb7a4f0",
       "outcome": "pass",
-      "scope": "77 tests; isolated Skill-only copy, local references, Windows authorizer build and MIT distribution; no new target connection or installation"
+      "scope": "86 tests; isolated Skill-only copies, Windows authorizer build, three unbound Mac helper ZIPs, 30 JXA dialog mock checks and 41 Perl checks; no live target operation during publication."
+    },
+    {
+      "id": "E-LIVE-MAC",
+      "kind": "tool_run_and_operator_confirmation",
+      "path": "docs/mac-connection-verification.json",
+      "sha256": "37051dc0ee0799bc439352514f5656ed50f2ba0ace83e3e1cafe230851fe83df",
+      "outcome": "pass_for_stated_scope",
+      "scope": "One arm64 Mac; tooling verified installation and SSH lifecycle. User confirmed installation/use verification. Model task output, rule/Skill loading, Intel Mac, QR login and comprehensive hardening not captured by tools."
     }
   ],
   "cases": [
@@ -135,6 +151,14 @@
       "status": "passed_for_functional_scope_security_hardening_pending",
       "evidence_ids": [
         "E-LIVE-HANDOFF"
+      ]
+    },
+    {
+      "id": "CASE-MAC-OPENCLAW",
+      "request": "Prepare OpenClaw on a confirmed Mac, provide an owner-facing launch entry and revoke temporary access",
+      "status": "installation_and_access_lifecycle_passed_operator_confirmed",
+      "evidence_ids": [
+        "E-LIVE-MAC"
       ]
     }
   ]
